@@ -1161,6 +1161,22 @@
           });
         })();
 
+        (() => {
+          const primaryBtns = document.querySelectorAll('section footer .primary');
+          for(let i = 0; i < primaryBtns.length; i++) {
+            const primaryBtn = primaryBtns[i];
+            primaryBtn.addEventListener('click', (event) => {
+              event.preventDefault();
+              console.log(event.target.closest('section'));
+              try {
+                scrollTo(event.target.closest('section').nextElementSibling.getBoundingClientRect().top - 0);
+              } catch (e) {
+
+              }
+            });
+          }
+        })();
+
         listenDirty();
         document.getElementById('continue').addEventListener('click', (event) => {
             console.log('continue');
