@@ -176,6 +176,10 @@ body {
   margin-top: 1rem;
 }
 
+fieldset.commerce {
+  margin-top: 1em;
+}
+
 a.button {
   @extend %modx-cta;
   display: block;

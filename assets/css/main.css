@@ -477,6 +477,9 @@ body {
 #config-key-details {
   margin-top: 1rem; }
 
+fieldset.commerce {
+  margin-top: 1em; }
+
 a.button {
   display: block;
   color: white;

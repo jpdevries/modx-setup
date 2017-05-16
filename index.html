@@ -843,120 +843,122 @@
             </h2>
             <p>🎉&ensp;Congratulations! Not only have you successfully installed some nifty software &mdash; you've joined a world wide community of web professionals who enjoy authoring the web&nbsp;freely. <a href="https://twitter.com/intent/tweet?text=I%20just%20installed%20the%20MODX%20Content%20Management%20System!%20%23MODX" target="_twitter-installed">Tweet this</a>.</p>
             <p>Now that MODX is installed you may configure it further or skip straight to <a href="#">your new&nbsp;dashboard</a>.</p>
-            <div>
-                <fieldset>
-                    <legend>I want to create a:</legend>
-                    <div class="field">
-                        <label for="want-blog"><input type="radio" id="want-blog" name="i-want">&nbsp;Blog</label>
-                    </div>
-                    <div class="field">
-                        <label for="want-custom-site"><input checked type="radio" id="want-custom-site" name="i-want">&nbsp;Custom Site</label>
-                    </div>
-                    <div class="field">
-                        <label for="want-marketing"><input type="radio" id="want-marketing" name="i-want">&nbsp;Marketing Site</label>
-                    </div>
-                    <div class="field">
-                        <label for="portfolio-site"><input type="radio" id="portfolio-site" name="i-want">&nbsp;Portfolio Site</label>
-                    </div>
-                    <div class="field">
-                        <label for="want-webshop"><input type="radio" id="want-webshop" name="i-want">&nbsp;Webshop</label>
-                    </div>
-                    <div class="field">
-                        <label for="want-webapp"><input type="radio" id="want-webapp" name="i-want">&nbsp;Web App</label>
-                    </div>
-                    <div class="field">
-                        <label for="want-api"><input type="radio" id="want-api" name="i-want">&nbsp;Back End API</label>
-                    </div>
-                </fieldset>
-                <fieldset>
-                  <legend>I'd like to:</legend>
-                  <label class="field" for="i-want-it-all"><input type="checkbox" name="i-want-it-all" id="i-want-it-all">&ensp;Have it all</label>
-                  <label class="field" for="i-like-versionx"><input type="checkbox" name="i-like-versionx" id="i-like-versionx">&ensp;Create versioned backups of my content</label>
-                  <label class="field" for="i-like-formit"><input type="checkbox" name="i-like-formit" id="i-like-formit">&ensp;Create my own Forms without coding</label>
-                  <label class="field" for="i-like-articles"><input type="checkbox" name="i-like-articles" id="i-like-articles">&ensp;Manage content as articles</label>
-                  <label class="field" for="i-like-content-blocks"><input type="checkbox" name="i-like-content-blocks" id="i-like-content-blocks">&ensp;Manage content with layouts and fields</label>
-                  <label class="field" for="i-like-redactor"><input type="checkbox" name="i-like-redactor" id="i-like-redactor">&ensp;Use a premium Rich Text Editor</label>
-                  <label class="field" for="i-like-ace"><input type="checkbox" name="i-like-ace" id="i-like-ace">&ensp;Use a syntax highlighter when viewing code</label>
-                  <label class="field" for="i-like-more-gallery"><input type="checkbox" name="i-like-more-gallery" id="i-like-more-gallery">&ensp;Use a premium photo gallery Extra</label>
-                  <label class="field" for="i-like-media-sources"><input type="checkbox" name="i-like-media-sources" id="i-like-media-sources">&ensp;Manage media by connecting to remote sources</label>
-                  <label class="field" for="i-like-seo"><input type="checkbox" name="i-like-seo" id="i-like-seo">&ensp;Optimize my content for search engines</label>
-                  <label class="field" for="i-like-google-maps-tv"><input type="checkbox" name="i-like-google-maps-tv" id="i-like-google-maps-tv">&ensp;Embed Google Maps in my content</label>
-                  <label class="field" for="i-like-simple-ab"><input type="checkbox" name="i-like-simple-ab" id="i-like-simple-ab">&ensp;Perform A/B testing on my user experience</label>
-                  <label class="field" for="i-like-client-config"><input type="checkbox" name="i-like-client-config" id="i-like-client-config">&ensp;Use a user-friendly interface for making site wide changes</label>
-                  <label class="field" for="i-like-quickstart-buttons"><input type="checkbox" name="i-like-quickstart-buttons" id="i-like-quickstart-buttons">&ensp;Create quick start shortcuts on my dashboard</label>
-                  <label class="field" for="i-like-markdown"><input type="checkbox" name="i-like-markdown" id="i-like-markdown">&ensp;Author Content Using MarkDown</label>
-
-                  <label class="field" for="i-like-commerce"><input type="checkbox" name="i-like-commerce" id="i-like-commerce">&ensp;Accept Payments</label>
-                  <fieldset style="margin-top:1em">
-                    <legend>E&ndash;Commerce</legend>
-                    <label class="field" for="i-like-authorize"><input disabled type="checkbox" name="i-like-authorize" id="i-like-authorize">&ensp;Accept payments using Authorize.NET</label>
-                    <label class="field" for="i-like-paypal"><input disabled type="checkbox" name="i-like-paypal" id="i-like-paypal">&ensp;Accept payments using PayPal</label>
-                    <label class="field" for="i-like-mollie"><input disabled type="checkbox" name="i-like-mollie" id="i-like-mollie">&ensp;Accept payments using Mollie</label>
-                    <label class="field" for="i-like-stripe"><input disabled type="checkbox" name="i-like-stripe" id="i-like-stripe">&ensp;Accept payments using Stripe</label>
-                  </fieldset>
-                </fieldset>
-                <details open>
-                  <summary>Packages to Install</summary>
-                  <div>
-                    <p>The MODX Community has many great extras ranging from free to premium. Here you can specify which packages you'd like to start with.</p>
-                    <fieldset>
-                      <legend>Install these MODX Packages</legend>
-                      <div>
-                        <label for="pkg-getresources" class="field">
-                          <input checked type="radio" name="pkg-getresources-pdotools" id="pkg-getresources">&ensp;getResources
-                        </label>
-                        <label for="pkg-pdotools" class="field">
-                          <input type="radio" name="pkg-getresources-pdotools" id="pkg-pdotools">&ensp;pdoTools
-                        </label>
-                        <label for="pkg-articles" class="field">
-                          <input type="checkbox" name="pkg-articles" id="pkg-articles">&ensp;Articles
-                        </label>
-                        <label for="pkg-blockdown" class="field">
-                          <input type="checkbox" name="pkg-blockdown" id="pkg-blockdown">&ensp;Blockdown
-                        </label>
-                        <label for="pkg-formit" class="field">
-                          <input type="checkbox" name="pkg-formit" id="pkg-formit">&ensp;FormIt
-                        </label>
-                        <label for="pkg-versionx" class="field">
-                          <input type="checkbox" name="pkg-versionx" id="pkg-versionx">&ensp;VersionX
-                        </label>
-                        <label for="pkg-formalicious" class="field">
-                          <input type="checkbox" name="pkg-formalicious" id="pkg-formalicious">&ensp;Formalicious by Sterc
-                        </label>
-                        <label for="pkg-content-blocks" class="field">
-                          <input type="checkbox" name="pkg-content-blocks" id="pkg-content-blocks">&ensp;ContentBlocks by modmore
-                        </label>
-                        <label for="pkg-redactor" class="field">
-                          <input type="checkbox" name="pkg-redactor" id="pkg-redactor">&ensp;Redactor by modmore
-                        </label>
-                        <label for="pkg-ace" class="field">
-                          <input type="radio" name="pkg-ace-codemirror" id="pkg-ace">&ensp;Ace
-                        </label>
-                        <label for="pkg-codemirror" class="field">
-                          <input type="radio" name="pkg-ace-codemirror" id="pkg-codemirror">&ensp;CodeMirror
-                        </label>
-                        <label for="pkg-more-gallery" class="field">
-                          <input type="checkbox" name="pkg-more-gallery" id="pkg-more-gallery">&ensp;MoreGallery by modmore
-                        </label>
-                        <label for="pkg-media-sources" class="field">
-                          <input type="checkbox" name="pkg-media-sources" id="pkg-media-sources">&ensp;Media Sources
-                        </label>
-                        <label for="pkg-eureka" class="field">
-                          <input type="checkbox" name="pkg-eureka" id="pkg-eureka">&ensp;Eureka Media Browser
-                        </label>
-                        <label for="pkg-seo-tab" class="field">
-                          <input type="checkbox" name="pkg-seo-tab" id="pkg-seo-tab">&ensp;SEO Tab by Sterc
-                        </label>
-                        <label for="pkg-seo-pro" class="field">
-                          <input type="checkbox" name="pkg-seo-pro" id="pkg-seo-pro">&ensp;SEO Pro by Sterc
-                        </label>
-                        <label for="pkg-google-analytics-dashboard-widget" class="field">
-                          <input type="checkbox" name="pkg-google-analytics-dashboard-widget" id="pkg-google-analytics-dashboard-widget">&ensp;Google Analytics Dashboard Widget
-                        </label>
+            <div id="packages-to-install">
+              <div>
+                  <fieldset>
+                      <legend>I want to create a:</legend>
+                      <div class="field">
+                          <label for="want-blog"><input type="radio" id="want-blog" name="i-want">&nbsp;Blog</label>
                       </div>
+                      <div class="field">
+                          <label for="want-custom-site"><input checked type="radio" id="want-custom-site" name="i-want">&nbsp;Custom Site</label>
+                      </div>
+                      <div class="field">
+                          <label for="want-marketing"><input type="radio" id="want-marketing" name="i-want">&nbsp;Marketing Site</label>
+                      </div>
+                      <div class="field">
+                          <label for="portfolio-site"><input type="radio" id="portfolio-site" name="i-want">&nbsp;Portfolio Site</label>
+                      </div>
+                      <div class="field">
+                          <label for="want-webshop"><input type="radio" id="want-webshop" name="i-want">&nbsp;Webshop</label>
+                      </div>
+                      <div class="field">
+                          <label for="want-webapp"><input type="radio" id="want-webapp" name="i-want">&nbsp;Web App</label>
+                      </div>
+                      <div class="field">
+                          <label for="want-api"><input type="radio" id="want-api" name="i-want">&nbsp;Back End API</label>
+                      </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>I'd like to:</legend>
+                    <label class="field" for="i-want-it-all"><input type="checkbox" name="i-want-it-all" id="i-want-it-all">&ensp;Have it all</label>
+                    <label class="field" for="i-like-versionx"><input type="checkbox" name="i-like-versionx" id="i-like-versionx">&ensp;Create versioned backups of my content</label>
+                    <label class="field" for="i-like-formit"><input type="checkbox" name="i-like-formit" id="i-like-formit">&ensp;Create my own Forms without coding</label>
+                    <label class="field" for="i-like-articles"><input type="checkbox" name="i-like-articles" id="i-like-articles">&ensp;Manage content as articles</label>
+                    <label class="field" for="i-like-content-blocks"><input type="checkbox" name="i-like-content-blocks" id="i-like-content-blocks">&ensp;Manage content with layouts and fields</label>
+                    <label class="field" for="i-like-redactor"><input type="checkbox" name="i-like-redactor" id="i-like-redactor">&ensp;Use a premium Rich Text Editor</label>
+                    <label class="field" for="i-like-ace"><input type="checkbox" name="i-like-ace" id="i-like-ace">&ensp;Use a syntax highlighter when viewing code</label>
+                    <label class="field" for="i-like-more-gallery"><input type="checkbox" name="i-like-more-gallery" id="i-like-more-gallery">&ensp;Use a premium photo gallery Extra</label>
+                    <label class="field" for="i-like-media-sources"><input type="checkbox" name="i-like-media-sources" id="i-like-media-sources">&ensp;Manage media by connecting to remote sources</label>
+                    <label class="field" for="i-like-seo"><input type="checkbox" name="i-like-seo" id="i-like-seo">&ensp;Optimize my content for search engines</label>
+                    <label class="field" for="i-like-google-maps-tv"><input type="checkbox" name="i-like-google-maps-tv" id="i-like-google-maps-tv">&ensp;Embed Google Maps in my content</label>
+                    <label class="field" for="i-like-simple-ab"><input type="checkbox" name="i-like-simple-ab" id="i-like-simple-ab">&ensp;Perform A/B testing on my user experience</label>
+                    <label class="field" for="i-like-client-config"><input type="checkbox" name="i-like-client-config" id="i-like-client-config">&ensp;Use a user-friendly interface for making site wide changes</label>
+                    <label class="field" for="i-like-quickstart-buttons"><input type="checkbox" name="i-like-quickstart-buttons" id="i-like-quickstart-buttons">&ensp;Create quick start shortcuts on my dashboard</label>
+                    <label class="field" for="i-like-markdown"><input type="checkbox" name="i-like-markdown" id="i-like-markdown">&ensp;Author Content Using MarkDown</label>
+
+                    <label class="field" for="i-like-commerce"><input type="checkbox" name="i-like-commerce" id="i-like-commerce">&ensp;Accept Payments</label>
+                    <fieldset class="commerce">
+                      <legend>Commerce</legend>
+                      <label class="field" for="i-like-authorize"><input disabled type="checkbox" name="i-like-authorize" id="i-like-authorize">&ensp;Accept payments using Authorize.NET</label>
+                      <label class="field" for="i-like-paypal"><input disabled type="checkbox" name="i-like-paypal" id="i-like-paypal">&ensp;Accept payments using PayPal</label>
+                      <label class="field" for="i-like-mollie"><input disabled type="checkbox" name="i-like-mollie" id="i-like-mollie">&ensp;Accept payments using Mollie</label>
+                      <label class="field" for="i-like-stripe"><input disabled type="checkbox" name="i-like-stripe" id="i-like-stripe">&ensp;Accept payments using Stripe</label>
                     </fieldset>
-                  </div>
-                </details>
+                  </fieldset>
+                  <details open>
+                    <summary>Packages to Install</summary>
+                    <div>
+                      <p>The MODX Community has many great extras ranging from free to premium. Here you can specify which packages you'd like to start with.</p>
+                      <fieldset>
+                        <legend>Install these MODX Packages</legend>
+                        <div>
+                          <label for="pkg-getresources" class="field">
+                            <input type="radio" name="pkg-getresources-pdotools" id="pkg-getresources">&ensp;getResources
+                          </label>
+                          <label for="pkg-pdotools" class="field">
+                            <input type="radio" name="pkg-getresources-pdotools" id="pkg-pdotools">&ensp;pdoTools
+                          </label>
+                          <label for="pkg-articles" class="field">
+                            <input type="checkbox" name="pkg-articles" id="pkg-articles">&ensp;Articles
+                          </label>
+                          <label for="pkg-blockdown" class="field">
+                            <input type="checkbox" name="pkg-blockdown" id="pkg-blockdown">&ensp;Blockdown
+                          </label>
+                          <label for="pkg-formit" class="field">
+                            <input type="checkbox" name="pkg-formit" id="pkg-formit">&ensp;FormIt
+                          </label>
+                          <label for="pkg-versionx" class="field">
+                            <input type="checkbox" name="pkg-versionx" id="pkg-versionx">&ensp;VersionX
+                          </label>
+                          <label for="pkg-formalicious" class="field">
+                            <input type="checkbox" name="pkg-formalicious" id="pkg-formalicious">&ensp;Formalicious by Sterc
+                          </label>
+                          <label for="pkg-content-blocks" class="field">
+                            <input type="checkbox" name="pkg-content-blocks" id="pkg-content-blocks">&ensp;ContentBlocks by modmore
+                          </label>
+                          <label for="pkg-redactor" class="field">
+                            <input type="checkbox" name="pkg-redactor" id="pkg-redactor">&ensp;Redactor by modmore
+                          </label>
+                          <label for="pkg-ace" class="field">
+                            <input type="radio" name="pkg-ace-codemirror" id="pkg-ace">&ensp;Ace
+                          </label>
+                          <label for="pkg-codemirror" class="field">
+                            <input type="radio" name="pkg-ace-codemirror" id="pkg-codemirror">&ensp;CodeMirror
+                          </label>
+                          <label for="pkg-more-gallery" class="field">
+                            <input type="checkbox" name="pkg-more-gallery" id="pkg-more-gallery">&ensp;MoreGallery by modmore
+                          </label>
+                          <label for="pkg-media-sources" class="field">
+                            <input type="checkbox" name="pkg-media-sources" id="pkg-media-sources">&ensp;Media Sources
+                          </label>
+                          <label for="pkg-eureka" class="field">
+                            <input type="checkbox" name="pkg-eureka" id="pkg-eureka">&ensp;Eureka Media Browser
+                          </label>
+                          <label for="pkg-seo-tab" class="field">
+                            <input type="checkbox" name="pkg-seo-tab" id="pkg-seo-tab">&ensp;SEO Tab by Sterc
+                          </label>
+                          <label for="pkg-seo-pro" class="field">
+                            <input type="checkbox" name="pkg-seo-pro" id="pkg-seo-pro">&ensp;SEO Pro by Sterc
+                          </label>
+                          <label for="pkg-google-analytics-dashboard-widget" class="field">
+                            <input type="checkbox" name="pkg-google-analytics-dashboard-widget" id="pkg-google-analytics-dashboard-widget">&ensp;Google Analytics Dashboard Widget
+                          </label>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </details>
+            </div>
                 <details>
                   <summary>Choose a Theme</summary>
                   <div>
@@ -971,7 +973,7 @@
                   </div>
                 </details>
                 <hr>
-                <details>
+                <!--details>
                   <summary>Enhance MODX with Premium Extras</summary>
                   <div>
                     <ul>
@@ -983,7 +985,7 @@
                       </li>
                     </ul>
                   </div>
-                </details>
+                </details-->
                 <details>
                     <summary>Explore the MODX Community</summary>
                     <div>
@@ -1112,6 +1114,38 @@
           showHideOctalMessage(octalTable, octal);
 
         }
+
+        document.getElementById('i-want-it-all').addEventListener('change', (event) => {
+          if(event.target.checked) {
+            const inputs = document.querySelectorAll('#packages-to-install input[type="checkbox"]');
+            for(let i = 0; i < inputs.length; i++) {
+              const input = inputs[i];
+              input.disabled = false;
+              input.checked = true;
+            }
+
+            if(!document.getElementById('pkg-ace').checked && !document.getElementById('pkg-codemirror').checked) document.getElementById('pkg-ace').checked = true;
+            if(!document.getElementById('pkg-getresources').checked && !document.getElementById('pkg-pdotools').checked) document.getElementById('pkg-getresources').checked = true;
+          }
+        });
+
+        document.getElementById('i-like-commerce').addEventListener('change', (event) => {
+          const inputs = document.querySelectorAll('fieldset.commerce input[type="checkbox"]');
+          if(event.target.checked) {
+
+            for(let i = 0; i < inputs.length; i++) {
+              const input = inputs[i];
+              input.disabled = false;
+              //input.checked = true;
+            }
+          } else {
+            for(let i = 0; i < inputs.length; i++) {
+              const input = inputs[i];
+              input.disabled = true;
+              //input.checked = false;
+            }
+          }
+        });
 
 
         function scrollTo(to) {
