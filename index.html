@@ -1,0 +1,913 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <main role="main">
+        <div>
+            <section id="welcome">
+                <div>
+                    <img id="logo" src="assets/img/modx-color.svg" alt="MODX Logo">
+                    <h1>Welcome to MODX<br><small>Let's get started</small></h1>
+                    <label for="choose_lang" class="field">Choose a language</label>
+                    <select value="en" name="choose_lang" id="choose_lang">
+                        <option value="en">en (English)</option>
+                        <option value="nl">nl (Dutch)</option>
+                    </select>
+                    <details id="config-key-details">
+                        <summary class="field">Configuration Key</summary>
+                        <div>
+                            <input type="text" placeholder="config" value="config" name="configkey" id="configkey" aria-label="Configuration Key">
+                        </div>
+                    </details>
+                    <p id="a11y-prefs-btn">
+                        <a href="a11y-prefs" class="subtle" title="Accessibility Preferences">♿️<span hidden class="visually-hidden"> Accessibility Preferences</span></a>
+                    </p>
+                    <div>
+                        <a id="continue" href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+                    </div>
+                </div>
+            </section>
+      </div>
+<aside id="breadcrumb">
+  <div>
+    <ul>
+      <li>
+        <a href="#welcome">Welcome</a>
+      </li>
+      <li>
+        <a href="#installation-options">Installation Options</a>
+      </li>
+      <li>
+        <a href="#connection-information">Connection Information</a>
+      </li>
+      <li>
+        <a href="#admin-user">Default Admin User</a>
+      </li>
+      <li>
+        <a href="#context-installation">Context Installation</a>
+      </li>
+      <li>
+        <a href="#installation-status">Installation Status</a>
+      </li>
+      <li>
+        <a href="#setup-complete">Setup Complete</a>
+      </li>
+    </ul>
+  </div>
+</aside>
+      <div>
+        <section hidden id="a11y-prefs">
+            <div>
+                <h2>♿️<br>Accessibility Preferences</h2>
+                <p>At MODX <a href="#">our goal is to provide creative freedom to everyone</a>. Here you can manage your accessibility preferences and adjust MODX to your&nbsp;needs.</p>
+                <p>As always, feel free to <a href="https://forums.modx.com/board?board=281" target="_modx-forum-a11y">discuss accessibility with the MODX&nbsp;Community</a>.</p>
+                <div class="a11y-preference-modules">
+                    <div class="font-size widget">
+                        <div class="neat container">
+                            <h2>Legibility</h2>
+                            <noscript id="fontsize__noscript">Please Enable JavaScript in a modern browser to use manage legibility preferences</noscript>
+                            <fieldset>
+                                <legend id="fontsize__legend"><span a11y-hidden="">Choose a </span>Font Size</legend>
+                                <div>
+                                    
+                                    <label for="fontsize__regular"><input type="radio" id="fontsize__regular" name="fontsize" checked="">&nbsp;Regular</label>
+                                </div>
+                                <div>
+                                    
+                                    <label for="fontsize__large"><input type="radio" id="fontsize__large" name="fontsize" value="large">&nbsp;Large</label>
+                                </div>
+                                <div>
+                                    
+                                    <label for="fontsize__xl"><input type="radio" id="fontsize__xl" name="fontsize" value="xl">&nbsp;Extra–Large</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+    <div class="typeface widget">
+        <div class="neat container">
+            <h2>Typeface</h2>
+            <form>
+                <noscript id="typeface__noscript">Please Enable JavaScript in a modern browser to chose a typeface</noscript>
+                <fieldset>
+                    <legend id="typeface__legend"><span a11y-hidden="">Choose a </span>Typeface</legend>
+                    <div>
+                        
+                        <label for="typeface__system"><input type="radio" id="typeface__system" name="typeface" checked="">&nbsp;System</label>
+                    </div>
+                    <div>
+                        
+                        <label for="typeface__opendyslexic"><input type="radio" id="typeface__opendyslexic" name="typeface" value="opendyslexic">&nbsp;OpenDyslexic</label>
+                    </div>
+                    <div>
+                        
+                        <label for="typeface__opensans"><input type="radio" id="typeface__opensans" name="typeface" value="opensans">&nbsp;Open Sans</label>
+                    </div>
+                    <div>
+                        
+                        <label for="typeface__raleway"><input type="radio" id="typeface__raleway" name="typeface" value="raleway">&nbsp;Raleway</label>
+                    </div>
+                    <div>
+                        
+                        <label for="typeface__ubuntu"><input type="radio" id="typeface__ubuntu" name="typeface" value="ubuntu">&nbsp;Ubuntu</label>
+                    </div>
+                    <div>
+                        
+                        <label for="typeface__fira"><input type="radio" id="typeface__fira" name="typeface" value="fira">&nbsp;Fira</label>
+                    </div>
+                    <div>
+                        
+                        <label for="typeface__anonpro"><input type="radio" id="typeface__anonpro" name="typeface" value="anonpro">&nbsp;Anonymous Pro</label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="contrast widget">
+        <div class="neat container">
+            <h2>Contrast</h2>
+            <form>
+                <noscript id="contrast__noscript">Please Enable JavaScript in a modern browser to manage contrast preferences</noscript>
+                <fieldset>
+                    <legend id="contrast__legend">Contrast Preference<span aria-hidden="true">s</span></legend>
+                    <div>
+                        <label for="contrast__normal"><input type="radio" id="contrast__normal" name="contrast" checked="">&nbsp;Normal</label>
+                    </div>
+                    <div>
+                        <label for="contrast__highcontrast"><input type="radio" id="contrast__highcontrast" name="contrast" value="highcontrast">&nbsp;Black on White</label>
+                    </div>
+                    <div>
+                        <label for="contrast__highcontrast_white-on-black"><input type="radio" id="contrast__highcontrast_white-on-black" name="contrast" value="contrast__highcontrast_white-on-black">&nbsp;White on Black</label>
+                    </div>
+                    <div>
+                        
+                        <label for="contrast__auto"><input type="radio" id="contrast__auto" name="contrast" value="auto">&nbsp;Auto<span a11y-hidden="">matic</span></label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="reducemotion widget">
+        <div class="neat container">
+            <h2>Motor</h2>
+            <form>
+                <noscript id="reducemotion__noscript">Please Enable JavaScript in a modern browser manage animation preferences</noscript>
+                <div>
+                    <label for="drag-n-drop">
+                      <input type="checkbox" id="drag-n-drop" name="reducemotion" value="yes">&nbsp;Disable Drag 'N Drop
+                    </label>
+                </div>
+                <div>
+                    <label for="hit-areas">
+                      <input type="checkbox" id="hit-areas" name="hit-areas" value="yes">&nbsp;Increase Hit Areas
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="reducemotion widget">
+        <div class="neat container">
+            <h2>Animation</h2>
+            <form>
+                <noscript id="reducemotion__noscript">Please Enable JavaScript in a modern browser manage animation preferences</noscript>
+                <div>
+                    
+                    <label for="reducemotion"><input type="checkbox" id="reducemotion" name="reducemotion" value="yes">&nbsp;Reduce Motion</label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="visibility widget">
+        <div class="neat container">
+            <h2>Visibility</h2>
+            <form>
+                <noscript id="visibility__noscript">Please Enable JavaScript in a modern browser to manage visibility preferences</noscript>
+                <div>
+                    
+                    <label for="visibility__focus"><input type="checkbox" id="visibility__focus" name="focus" value="yes">&nbsp;Exaggerate Focused Cells</label>
+                </div>
+        </div>
+    </div>
+    </div>
+    
+    
+    <footer>
+      <div class="button-bar">
+        <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
+        <button type="reset">Reset<span class="visually-hidden"> to Default Options</span></button>
+        <a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+      </div>
+    </footer>
+
+    </div>
+    </section>
+    <section id="installation-options">
+        <div>
+            <h2><span class="emoji">📦</span><br>Installation Options</h2>
+            <fieldset>
+                <legend>How would you like to install&nbsp;MODX?</legend>
+                <div class="field">
+                    <label for="new_install">
+                        <input checked type="radio" name="how_install" id="new_install">&nbsp;New Installation
+                    </label>
+                </div>
+                <div class="field">
+                    <label for="upgrade_install">
+                        <input type="radio" name="how_install" id="upgrade_install">&nbsp;Upgrade Existing
+                    </label>
+                </div>
+                <div class="field">
+                    <label for="adv_install">
+                        <input type="radio" name="how_install" id="adv_install">&nbsp;Advanced Upgrade
+                    </label>
+                </div>
+            </fieldset>
+            <!--p class="balanced"><a href="#">Help me choose<span class="visually-hidden"> which installation to use</span>.</a></p-->
+            <details>
+                <summary>More Options</summary>
+                <div>
+                  <p>You probably shouldn't mess with this stuff unless you really know what you are&nbsp;doing.</p>
+                    <div class="field">
+                        
+                        <label for="new-folder-permissions"><input size="4" type="text" name="new-folder=permissions" id="new-folder=permissions" placeholder="0755">&nbsp;New Folder Permissions</label>
+                    </div>
+                    <div class="field">
+                        
+                        <label for="new-file-permissions"><input size="4" type="text" name="new-file-permissions" id="new-file-permissions" placeholder="0644">&nbsp;New File Permissions</label>
+                    </div>
+                    <div class="field">
+                        <label for="powered-by">
+                          <input checked type="checkbox" name="powered-by" id="powered-by"> Send X-Powered-By Header (Credit MODX for empowering your content)
+                        </label>
+                    </div>
+                    <div class="field">
+                        <label for="core-unpacked">
+                            <input checked type="checkbox" name="core-unpacked" id="core-unpacked"> Core Package has been manually unpacked (Recommended for installation on shared servers.)</label>
+                    </div>
+                    <div class="field">
+                        <label for="files-in-place">
+                            <input checked type="checkbox" name="files-in-place" id="files-in-place"> Files are already in-place (Recommended for installation on shared servers.)</label>
+                    </div>
+                </div>
+            </details>
+            <footer>
+              <div class="button-bar">
+                <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+              </div>
+            </footer>
+        </div>
+    </section>
+
+    <section id="connection-information">
+        <div>
+            <h2><span class="emoji">🗄</span><br>Connection Information</h2>
+            <p>MODX needs to connect to a database to get&nbsp;started.</p>
+            <!--p>We all need help from time to time. <a href="#">Find a certified MODX developer.</a></p-->
+            <!--label for="database_type">Database Type</label>
+            <select name="database_type" id="database_type">
+              <option value="">mysql</option>
+              <option value="">sqlsrv</option>
+            </select-->
+            <fieldset>
+                <legend>Database Type</legend>
+                <div class="field">
+                  <label for="mysql">
+                  <input checked type="radio" id="mysql" name="db_type"> mysql</label>
+                </div>
+                <div class="field">
+                  <label for="sqlsrv">
+                  <input type="radio" id="sqlsrv" name="db_type"> sqlsrv</label>
+                </div>
+            </fieldset>
+            <div class="field">
+                <label for="db_host">Database Host</label>
+                <input type="text" name="db_host" placeholder="localhost">
+            </div>
+            <div class="field">
+                <label for="db_login">Database Login Name</label>
+                <input type="text" name="db_login" placeholder="root">
+            </div>
+            <div class="field">
+                <label for="db_password">Database Password</label>
+                <input type="text" name="db_password">
+            </div>
+            <div class="field">
+                <label for="db_name">Database Name</label>
+                <input type="text" name="db_name" placeholder="modx">
+            </div>
+            <div class="field">
+                <label for="db_name">Table Prefix</label>
+                <input type="text" name="table_prefix" placeholder="modx_" value="modx_">
+            </div>
+            <button>Test database server connection and view collations.</button>
+            <hr>
+            <div class="field">
+              <label for="connection_charset">Connection character set:</label>
+              <select id="database-connection-charset" value="utf8" name="database_connection_charset">
+                  <option value="armscii8">armscii8</option>
+                  <option value="ascii">ascii</option>
+                  <option value="big5">big5</option>
+                  <option value="binary">binary</option>
+                  <option value="cp1250">cp1250</option>
+                  <option value="cp1251">cp1251</option>
+                  <option value="cp1256">cp1256</option>
+                  <option value="cp1257">cp1257</option>
+                  <option value="cp850">cp850</option>
+                  <option value="cp852">cp852</option>
+                  <option value="cp866">cp866</option>
+                  <option value="cp932">cp932</option>
+                  <option value="dec8">dec8</option>
+                  <option value="eucjpms">eucjpms</option>
+                  <option value="euckr">euckr</option>
+                  <option value="gb18030">gb18030</option>
+                  <option value="gb2312">gb2312</option>
+                  <option value="gbk">gbk</option>
+                  <option value="geostd8">geostd8</option>
+                  <option value="greek">greek</option>
+                  <option value="hebrew">hebrew</option>
+                  <option value="hp8">hp8</option>
+                  <option value="keybcs2">keybcs2</option>
+                  <option value="koi8r">koi8r</option>
+                  <option value="koi8u">koi8u</option>
+                  <option value="latin1">latin1</option>
+                  <option value="latin2">latin2</option>
+                  <option value="latin5">latin5</option>
+                  <option value="latin7">latin7</option>
+                  <option value="macce">macce</option>
+                  <option value="macroman">macroman</option>
+                  <option value="sjis">sjis</option>
+                  <option value="swe7">swe7</option>
+                  <option value="tis620">tis620</option>
+                  <option value="ucs2">ucs2</option>
+                  <option value="ujis">ujis</option>
+                  <option value="utf16">utf16</option>
+                  <option value="utf16le">utf16le</option>
+                  <option value="utf32">utf32</option>
+                  <option value="utf8" selected="selected">utf8</option>
+                  <option value="utf8mb4">utf8mb4</option>
+              </select>
+            </div>
+            <div class="field">
+                <label for="db_collation">Collation</label>
+                <select id="db_collation" name="db_collation">
+                    <option value="armscii8_bin">armscii8_bin</option>
+                    <option value="armscii8_general_ci">armscii8_general_ci</option>
+                    <option value="ascii_bin">ascii_bin</option>
+                    <option value="ascii_general_ci">ascii_general_ci</option>
+                    <option value="big5_bin">big5_bin</option>
+                    <option value="big5_chinese_ci">big5_chinese_ci</option>
+                    <option value="binary">binary</option>
+                    <option value="cp1250_bin">cp1250_bin</option>
+                    <option value="cp1250_croatian_ci">cp1250_croatian_ci</option>
+                    <option value="cp1250_czech_cs">cp1250_czech_cs</option>
+                    <option value="cp1250_general_ci">cp1250_general_ci</option>
+                    <option value="cp1250_polish_ci">cp1250_polish_ci</option>
+                    <option value="cp1251_bin">cp1251_bin</option>
+                    <option value="cp1251_bulgarian_ci">cp1251_bulgarian_ci</option>
+                    <option value="cp1251_general_ci">cp1251_general_ci</option>
+                    <option value="cp1251_general_cs">cp1251_general_cs</option>
+                    <option value="cp1251_ukrainian_ci">cp1251_ukrainian_ci</option>
+                    <option value="cp1256_bin">cp1256_bin</option>
+                    <option value="cp1256_general_ci">cp1256_general_ci</option>
+                    <option value="cp1257_bin">cp1257_bin</option>
+                    <option value="cp1257_general_ci">cp1257_general_ci</option>
+                    <option value="cp1257_lithuanian_ci">cp1257_lithuanian_ci</option>
+                    <option value="cp850_bin">cp850_bin</option>
+                    <option value="cp850_general_ci">cp850_general_ci</option>
+                    <option value="cp852_bin">cp852_bin</option>
+                    <option value="cp852_general_ci">cp852_general_ci</option>
+                    <option value="cp866_bin">cp866_bin</option>
+                    <option value="cp866_general_ci">cp866_general_ci</option>
+                    <option value="cp932_bin">cp932_bin</option>
+                    <option value="cp932_japanese_ci">cp932_japanese_ci</option>
+                    <option value="dec8_bin">dec8_bin</option>
+                    <option value="dec8_swedish_ci">dec8_swedish_ci</option>
+                    <option value="eucjpms_bin">eucjpms_bin</option>
+                    <option value="eucjpms_japanese_ci">eucjpms_japanese_ci</option>
+                    <option value="euckr_bin">euckr_bin</option>
+                    <option value="euckr_korean_ci">euckr_korean_ci</option>
+                    <option value="gb18030_bin">gb18030_bin</option>
+                    <option value="gb18030_chinese_ci">gb18030_chinese_ci</option>
+                    <option value="gb18030_unicode_520_ci">gb18030_unicode_520_ci</option>
+                    <option value="gb2312_bin">gb2312_bin</option>
+                    <option value="gb2312_chinese_ci">gb2312_chinese_ci</option>
+                    <option value="gbk_bin">gbk_bin</option>
+                    <option value="gbk_chinese_ci">gbk_chinese_ci</option>
+                    <option value="geostd8_bin">geostd8_bin</option>
+                    <option value="geostd8_general_ci">geostd8_general_ci</option>
+                    <option value="greek_bin">greek_bin</option>
+                    <option value="greek_general_ci">greek_general_ci</option>
+                    <option value="hebrew_bin">hebrew_bin</option>
+                    <option value="hebrew_general_ci">hebrew_general_ci</option>
+                    <option value="hp8_bin">hp8_bin</option>
+                    <option value="hp8_english_ci">hp8_english_ci</option>
+                    <option value="keybcs2_bin">keybcs2_bin</option>
+                    <option value="keybcs2_general_ci">keybcs2_general_ci</option>
+                    <option value="koi8r_bin">koi8r_bin</option>
+                    <option value="koi8r_general_ci">koi8r_general_ci</option>
+                    <option value="koi8u_bin">koi8u_bin</option>
+                    <option value="koi8u_general_ci">koi8u_general_ci</option>
+                    <option value="latin1_bin">latin1_bin</option>
+                    <option value="latin1_danish_ci">latin1_danish_ci</option>
+                    <option value="latin1_general_ci">latin1_general_ci</option>
+                    <option value="latin1_general_cs">latin1_general_cs</option>
+                    <option value="latin1_german1_ci">latin1_german1_ci</option>
+                    <option value="latin1_german2_ci">latin1_german2_ci</option>
+                    <option value="latin1_spanish_ci">latin1_spanish_ci</option>
+                    <option value="latin1_swedish_ci">latin1_swedish_ci</option>
+                    <option value="latin2_bin">latin2_bin</option>
+                    <option value="latin2_croatian_ci">latin2_croatian_ci</option>
+                    <option value="latin2_czech_cs">latin2_czech_cs</option>
+                    <option value="latin2_general_ci">latin2_general_ci</option>
+                    <option value="latin2_hungarian_ci">latin2_hungarian_ci</option>
+                    <option value="latin5_bin">latin5_bin</option>
+                    <option value="latin5_turkish_ci">latin5_turkish_ci</option>
+                    <option value="latin7_bin">latin7_bin</option>
+                    <option value="latin7_estonian_cs">latin7_estonian_cs</option>
+                    <option value="latin7_general_ci">latin7_general_ci</option>
+                    <option value="latin7_general_cs">latin7_general_cs</option>
+                    <option value="macce_bin">macce_bin</option>
+                    <option value="macce_general_ci">macce_general_ci</option>
+                    <option value="macroman_bin">macroman_bin</option>
+                    <option value="macroman_general_ci">macroman_general_ci</option>
+                    <option value="sjis_bin">sjis_bin</option>
+                    <option value="sjis_japanese_ci">sjis_japanese_ci</option>
+                    <option value="swe7_bin">swe7_bin</option>
+                    <option value="swe7_swedish_ci">swe7_swedish_ci</option>
+                    <option value="tis620_bin">tis620_bin</option>
+                    <option value="tis620_thai_ci">tis620_thai_ci</option>
+                    <option value="ucs2_bin">ucs2_bin</option>
+                    <option value="ucs2_croatian_ci">ucs2_croatian_ci</option>
+                    <option value="ucs2_czech_ci">ucs2_czech_ci</option>
+                    <option value="ucs2_danish_ci">ucs2_danish_ci</option>
+                    <option value="ucs2_esperanto_ci">ucs2_esperanto_ci</option>
+                    <option value="ucs2_estonian_ci">ucs2_estonian_ci</option>
+                    <option value="ucs2_general_ci">ucs2_general_ci</option>
+                    <option value="ucs2_general_mysql500_ci">ucs2_general_mysql500_ci</option>
+                    <option value="ucs2_german2_ci">ucs2_german2_ci</option>
+                    <option value="ucs2_hungarian_ci">ucs2_hungarian_ci</option>
+                    <option value="ucs2_icelandic_ci">ucs2_icelandic_ci</option>
+                    <option value="ucs2_latvian_ci">ucs2_latvian_ci</option>
+                    <option value="ucs2_lithuanian_ci">ucs2_lithuanian_ci</option>
+                    <option value="ucs2_persian_ci">ucs2_persian_ci</option>
+                    <option value="ucs2_polish_ci">ucs2_polish_ci</option>
+                    <option value="ucs2_roman_ci">ucs2_roman_ci</option>
+                    <option value="ucs2_romanian_ci">ucs2_romanian_ci</option>
+                    <option value="ucs2_sinhala_ci">ucs2_sinhala_ci</option>
+                    <option value="ucs2_slovak_ci">ucs2_slovak_ci</option>
+                    <option value="ucs2_slovenian_ci">ucs2_slovenian_ci</option>
+                    <option value="ucs2_spanish2_ci">ucs2_spanish2_ci</option>
+                    <option value="ucs2_spanish_ci">ucs2_spanish_ci</option>
+                    <option value="ucs2_swedish_ci">ucs2_swedish_ci</option>
+                    <option value="ucs2_turkish_ci">ucs2_turkish_ci</option>
+                    <option value="ucs2_unicode_520_ci">ucs2_unicode_520_ci</option>
+                    <option value="ucs2_unicode_ci">ucs2_unicode_ci</option>
+                    <option value="ucs2_vietnamese_ci">ucs2_vietnamese_ci</option>
+                    <option value="ujis_bin">ujis_bin</option>
+                    <option value="ujis_japanese_ci">ujis_japanese_ci</option>
+                    <option value="utf16_bin">utf16_bin</option>
+                    <option value="utf16_croatian_ci">utf16_croatian_ci</option>
+                    <option value="utf16_czech_ci">utf16_czech_ci</option>
+                    <option value="utf16_danish_ci">utf16_danish_ci</option>
+                    <option value="utf16_esperanto_ci">utf16_esperanto_ci</option>
+                    <option value="utf16_estonian_ci">utf16_estonian_ci</option>
+                    <option value="utf16_general_ci">utf16_general_ci</option>
+                    <option value="utf16_german2_ci">utf16_german2_ci</option>
+                    <option value="utf16_hungarian_ci">utf16_hungarian_ci</option>
+                    <option value="utf16_icelandic_ci">utf16_icelandic_ci</option>
+                    <option value="utf16_latvian_ci">utf16_latvian_ci</option>
+                    <option value="utf16_lithuanian_ci">utf16_lithuanian_ci</option>
+                    <option value="utf16_persian_ci">utf16_persian_ci</option>
+                    <option value="utf16_polish_ci">utf16_polish_ci</option>
+                    <option value="utf16_roman_ci">utf16_roman_ci</option>
+                    <option value="utf16_romanian_ci">utf16_romanian_ci</option>
+                    <option value="utf16_sinhala_ci">utf16_sinhala_ci</option>
+                    <option value="utf16_slovak_ci">utf16_slovak_ci</option>
+                    <option value="utf16_slovenian_ci">utf16_slovenian_ci</option>
+                    <option value="utf16_spanish2_ci">utf16_spanish2_ci</option>
+                    <option value="utf16_spanish_ci">utf16_spanish_ci</option>
+                    <option value="utf16_swedish_ci">utf16_swedish_ci</option>
+                    <option value="utf16_turkish_ci">utf16_turkish_ci</option>
+                    <option value="utf16_unicode_520_ci">utf16_unicode_520_ci</option>
+                    <option value="utf16_unicode_ci">utf16_unicode_ci</option>
+                    <option value="utf16_vietnamese_ci">utf16_vietnamese_ci</option>
+                    <option value="utf16le_bin">utf16le_bin</option>
+                    <option value="utf16le_general_ci">utf16le_general_ci</option>
+                    <option value="utf32_bin">utf32_bin</option>
+                    <option value="utf32_croatian_ci">utf32_croatian_ci</option>
+                    <option value="utf32_czech_ci">utf32_czech_ci</option>
+                    <option value="utf32_danish_ci">utf32_danish_ci</option>
+                    <option value="utf32_esperanto_ci">utf32_esperanto_ci</option>
+                    <option value="utf32_estonian_ci">utf32_estonian_ci</option>
+                    <option value="utf32_general_ci">utf32_general_ci</option>
+                    <option value="utf32_german2_ci">utf32_german2_ci</option>
+                    <option value="utf32_hungarian_ci">utf32_hungarian_ci</option>
+                    <option value="utf32_icelandic_ci">utf32_icelandic_ci</option>
+                    <option value="utf32_latvian_ci">utf32_latvian_ci</option>
+                    <option value="utf32_lithuanian_ci">utf32_lithuanian_ci</option>
+                    <option value="utf32_persian_ci">utf32_persian_ci</option>
+                    <option value="utf32_polish_ci">utf32_polish_ci</option>
+                    <option value="utf32_roman_ci">utf32_roman_ci</option>
+                    <option value="utf32_romanian_ci">utf32_romanian_ci</option>
+                    <option value="utf32_sinhala_ci">utf32_sinhala_ci</option>
+                    <option value="utf32_slovak_ci">utf32_slovak_ci</option>
+                    <option value="utf32_slovenian_ci">utf32_slovenian_ci</option>
+                    <option value="utf32_spanish2_ci">utf32_spanish2_ci</option>
+                    <option value="utf32_spanish_ci">utf32_spanish_ci</option>
+                    <option value="utf32_swedish_ci">utf32_swedish_ci</option>
+                    <option value="utf32_turkish_ci">utf32_turkish_ci</option>
+                    <option value="utf32_unicode_520_ci">utf32_unicode_520_ci</option>
+                    <option value="utf32_unicode_ci">utf32_unicode_ci</option>
+                    <option value="utf32_vietnamese_ci">utf32_vietnamese_ci</option>
+                    <option value="utf8_bin" selected="selected">utf8_bin</option>
+                    <option value="utf8_croatian_ci">utf8_croatian_ci</option>
+                    <option value="utf8_czech_ci">utf8_czech_ci</option>
+                    <option value="utf8_danish_ci">utf8_danish_ci</option>
+                    <option value="utf8_esperanto_ci">utf8_esperanto_ci</option>
+                    <option value="utf8_estonian_ci">utf8_estonian_ci</option>
+                    <option value="utf8_general_ci">utf8_general_ci</option>
+                    <option value="utf8_general_mysql500_ci">utf8_general_mysql500_ci</option>
+                    <option value="utf8_german2_ci">utf8_german2_ci</option>
+                    <option value="utf8_hungarian_ci">utf8_hungarian_ci</option>
+                    <option value="utf8_icelandic_ci">utf8_icelandic_ci</option>
+                    <option value="utf8_latvian_ci">utf8_latvian_ci</option>
+                    <option value="utf8_lithuanian_ci">utf8_lithuanian_ci</option>
+                    <option value="utf8_persian_ci">utf8_persian_ci</option>
+                    <option value="utf8_polish_ci">utf8_polish_ci</option>
+                    <option value="utf8_roman_ci">utf8_roman_ci</option>
+                    <option value="utf8_romanian_ci">utf8_romanian_ci</option>
+                    <option value="utf8_sinhala_ci">utf8_sinhala_ci</option>
+                    <option value="utf8_slovak_ci">utf8_slovak_ci</option>
+                    <option value="utf8_slovenian_ci">utf8_slovenian_ci</option>
+                    <option value="utf8_spanish2_ci">utf8_spanish2_ci</option>
+                    <option value="utf8_spanish_ci">utf8_spanish_ci</option>
+                    <option value="utf8_swedish_ci">utf8_swedish_ci</option>
+                    <option value="utf8_turkish_ci">utf8_turkish_ci</option>
+                    <option value="utf8_unicode_520_ci">utf8_unicode_520_ci</option>
+                    <option value="utf8_unicode_ci">utf8_unicode_ci</option>
+                    <option value="utf8_vietnamese_ci">utf8_vietnamese_ci</option>
+                    <option value="utf8mb4_bin">utf8mb4_bin</option>
+                    <option value="utf8mb4_croatian_ci">utf8mb4_croatian_ci</option>
+                    <option value="utf8mb4_czech_ci">utf8mb4_czech_ci</option>
+                    <option value="utf8mb4_danish_ci">utf8mb4_danish_ci</option>
+                    <option value="utf8mb4_esperanto_ci">utf8mb4_esperanto_ci</option>
+                    <option value="utf8mb4_estonian_ci">utf8mb4_estonian_ci</option>
+                    <option value="utf8mb4_general_ci">utf8mb4_general_ci</option>
+                    <option value="utf8mb4_german2_ci">utf8mb4_german2_ci</option>
+                    <option value="utf8mb4_hungarian_ci">utf8mb4_hungarian_ci</option>
+                    <option value="utf8mb4_icelandic_ci">utf8mb4_icelandic_ci</option>
+                    <option value="utf8mb4_latvian_ci">utf8mb4_latvian_ci</option>
+                    <option value="utf8mb4_lithuanian_ci">utf8mb4_lithuanian_ci</option>
+                    <option value="utf8mb4_persian_ci">utf8mb4_persian_ci</option>
+                    <option value="utf8mb4_polish_ci">utf8mb4_polish_ci</option>
+                    <option value="utf8mb4_roman_ci">utf8mb4_roman_ci</option>
+                    <option value="utf8mb4_romanian_ci">utf8mb4_romanian_ci</option>
+                    <option value="utf8mb4_sinhala_ci">utf8mb4_sinhala_ci</option>
+                    <option value="utf8mb4_slovak_ci">utf8mb4_slovak_ci</option>
+                    <option value="utf8mb4_slovenian_ci">utf8mb4_slovenian_ci</option>
+                    <option value="utf8mb4_spanish2_ci">utf8mb4_spanish2_ci</option>
+                    <option value="utf8mb4_spanish_ci">utf8mb4_spanish_ci</option>
+                    <option value="utf8mb4_swedish_ci">utf8mb4_swedish_ci</option>
+                    <option value="utf8mb4_turkish_ci">utf8mb4_turkish_ci</option>
+                    <option value="utf8mb4_unicode_520_ci">utf8mb4_unicode_520_ci</option>
+                    <option value="utf8mb4_unicode_ci">utf8mb4_unicode_ci</option>
+                    <option value="utf8mb4_vietnamese_ci">utf8mb4_vietnamese_ci</option>
+                </select>
+            </div>
+            
+            <div>
+              <details>
+                <summary>FAQs</summary>
+                <div>
+                  <dl>
+                    <dt>What is a database?</dt>
+                    <dd>A database is where stuff goes.</dd>
+                    <dt>I'm lost. I need help.</dt>
+                    <dd>We all need help from time to time. <a href="#">Find a certified MODX developer.</a></dd>
+                    <dt>How do I create a database?</dt>
+                    <dd>Ask your host.</dd>
+                    <dt>What is a database prefix?</dt>
+                    <dd>Blah blah</dd>
+                    <dt>Can I try out MODX without creating a database?</dt>
+                    <dd>Yes. You are free to <a href="https://demo.modmore.com" target="_modmoredemo">try the modmore demo</a> at&nbsp;anytime.</dd>
+                  </dl>
+                </div>
+              </details>
+            </div>
+            
+            <footer>
+              <div class="button-bar">
+                <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+              </div>
+            </footer>
+        </div>
+
+    </section>
+    <section id="admin-user">
+        <div>
+            <h2><span class="emoji">👤</span><br>Default Admin User</h2>
+            <p class="balanced">Somebody has to captain this ship. Who should it be?</p>
+            <div class="field">
+              <button class="balanced">Import my MODX User Information</button>
+            </div>
+            <div class="field">
+                <label for="admin_username">Administrator username:</label>
+                <input required type="text" name="admin_username" id="admin_username" placeholder="boatymcboatface">
+            </div>
+            <div class="field">
+                <label for="admin_email">Administrator email:</label>
+                <input required type="email" name="admin_email" id="admin_email" class="email" placeholder="boaty@mcboatface.com">
+            </div>
+            <div class="field">
+              <button>Generate a Secure Password</button>
+            </div>
+            <div class="field">
+                <label for="admin_password">Administrator password:</label>
+                <input required type="password" name="admin_password" id="admin_password">
+            </div>
+            <div class="field">
+                <label for="confirm_password">Confirm password:</label>
+                <input required type="password" name="confirm_password" id="confirm_password">
+            </div>
+            <div class="field">
+              <details>
+                <summary>Optional fields</summary>
+                <div>
+                  <div class="field">
+                      <label for="given_name">Given Name:</label>
+                      <input required type="text" name="given_name" id="given_name" placeholder="Jane">
+                  </div>
+                  <div class="field">
+                      <label for="family_name">Family Name:</label>
+                      <input required type="text" name="family_name" id="family_name" placeholder="Doe">
+                  </div>
+                  <div class="field">
+                      <label for="birthday">Birthday:</label>
+                      <input required type="date" name="birthday" id="birthday" placeholder="03/10/1986">
+                  </div>
+                  <div class="field">
+                      <label for="gender">Gender:</label>
+                      <select name="gender" id="gender">
+                        <option value="">Unspecified</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                      </select>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <footer>
+              <div class="button-bar">
+                <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+              </div>
+            </footer>
+        </div>
+    </section>
+    <section id="context-installation">
+        <div>
+            <h2><span class="emoji">🔀</span><br>Context Installation</h2>
+            <p>Here you specify where MODX is or should be located, the relative URL your MODX install will be hosted at, and where your connectors will be&nbsp;located.</p>
+            <div class="field">
+                <label for="context_path">Absolute Filesystem path to MODX:</label>
+                <input aria-label="Use custom context path" type="checkbox" name="do_context_path" id="do_context_path">&ensp;
+                <input type="text" name="context_path" id="context_path" placeholder="/" value="/">
+            </div>
+            <div class="field">
+                <label for="url_web_context">URL for web context:</label>
+                <input aria-label="Use custom URL for web context" type="checkbox" name="do_web_context_path" id="do_web_context_path">&ensp;
+                <input type="text" name="url_web_context" id="url_web_context" value="/" placeholder="/">
+            </div>
+            <div class="field">
+                <label for="url_web_context">Filesystem path for connectors:</label>
+                <input aria-label="Use custom filesystem path for connectors" type="checkbox" name="do_custom_filesystem_connectors_path" id="do_custom_filesystem_connectors_path">&ensp;
+                <input type="text" name="url_web_context" id="url_web_context" placeholder="/modx/connectors">
+            </div>
+            <div class="field">
+                <label for="url_web_context">URL for connectors:</label>
+                <input aria-label="Use custom URL for connectors" type="checkbox" name="do_custom_connectors_url" id="do_custom_connectors_url">&ensp;
+                <input type="text" name="url_web_context" id="url_web_context" placeholder="/connectors">
+            </div>
+            <div>
+              <details>
+                <summary>FAQs</summary>
+                <div>
+                  <dl>
+                    <dt>What are connectors?</dt>
+                    <dd>Stuff and Stuff</dd>
+                    <dt>What is a web context?</dt>
+                    <dd>Your thingy</dd>
+                  </dl>
+                </div>
+              </details>
+            </div>
+            <footer>
+              <div class="button-bar">
+                <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#" class="primary button">Skip<span class="visually-hidden"> to Installation Options</span></a>
+                <!--a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a-->
+              </div>
+            </footer>
+        </div>
+    </section>
+    <section id="installation-status">
+        <div>
+            <h2>⚠️<br>Installation Succeeded with Warnings</h2>
+            <details>
+                <summary>Installation Log</summary>
+                <div>
+                    <pre>Stuff happened</pre>
+                </div>
+            </details>
+            <details>
+                <summary>Success Messages</summary>
+                <div>
+                    <pre>Success</pre>
+                </div>
+            </details>
+            <details open>
+                <summary>Warning Messages</summary>
+                <div>
+                    <pre>Uh oh</pre>
+                </div>
+            </details>
+            <footer>
+              <div class="button-bar">
+                <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+              </div>
+            </footer>
+        </div>
+    </section>
+    <section id="setup-complete">
+        <div>
+            <h2>
+              <span class="emoji">🏁</span><br>
+              Setup Complete
+              <small>Welcome to the MODX Community</small>
+            </h2>
+            <p>🎉&ensp;Congratulations! Not only have you successfully installed some nifty software &mdash; you've joined a world wide community of web professionals who enjoy authoring the web&nbsp;freely. <a href="https://twitter.com/intent/tweet?text=I%20just%20installed%20the%20MODX%20Content%20Management%20System!%20%23MODX" target="_twitter-installed">Tweet this</a>.</p>
+            <p>Now that MODX is installed you may configure it further or skip straight to <a href="#">your new&nbsp;dashboard</a>.</p>
+            <div>
+                <fieldset>
+                    <legend>I want to create a:</legend>
+                    <div>
+                        <label for="want-blog"><input type="radio" id="want-blog" name="i-want">&nbsp;Blog</label>
+                    </div>
+                    <div>
+                        <label for="want-custom-site"><input checked type="radio" id="want-custom-site" name="i-want">&nbsp;Custom Site</label>
+                    </div>
+                    <div>
+                        <label for="want-marketing"><input type="radio" id="want-marketing" name="i-want">&nbsp;Marketing Site</label>
+                    </div>
+                    <div>
+                        <label for="portfolio-site"><input type="radio" id="portfolio-site" name="i-want">&nbsp;Portfolio Site</label>
+                    </div>
+                    <div>
+                        <label for="want-webshop"><input type="radio" id="want-webshop" name="i-want">&nbsp;Webshop</label>
+                    </div>
+                </fieldset>
+                <details>
+                  <summary>Packages to Install</summary>
+                  <div>
+                    <p>The MODX Community has many great extras ranging from free to premium. Here you can specify which packages you'd like to start with.</p>
+                    <fieldset>
+                      <legend>Install these MODX Packages</legend>
+                      <div>
+                        <label for="pkg-getresources" class="field">
+                          <input type="checkbox" name="pkg-getresources" id="pkg-getresources">&ensp;getResources
+                        </label>
+                        <label for="pkg-articles" class="field">
+                          <input type="checkbox" name="pkg-articles" id="pkg-articles">&ensp;Articles
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </details>
+                <details>
+                  <summary>Choose a Theme</summary>
+                  <div>
+                    <p>With MODX you can start from scratch or with your favorite theme.</p>
+                  </div>
+                </details>
+                <details>
+                  <summary>Inject Teleport Snapshots</summary>
+                  <div>
+                    <p>MODX Teleport allows you to do cool stuff. Inject one or more snapshots.</p>
+                    <button>Add Teleport Snapshot</button>
+                  </div>
+                </details>
+                <hr>
+                <details>
+                  <summary>Enhance MODX with Premium Extras</summary>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="https://modmore.com" target="_modmore">modmore</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_modstore">modstore</a>
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+                <details>
+                    <summary>Join the MODX Community</summary>
+                    <div>
+                        <ul>
+                            <li><a href="#">MODX Forums</a></li>
+                            <li><a href="#">MODX Slack Channel</a></li>
+                            <li><a href="#">Follow MODX on Twitter</a></li>
+                            <li><a href="#">Follow MODX on GitHub</a></li>
+                            <li><a href="#">MODX on LinkedIn</a></li>
+                            <li><a href="#">MODX Facebook Page</a></li>
+                            <li><a href="#">Find a MODX Meetup near you</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+            </div>
+            <footer>
+              <div class="button-bar">
+                <a href="#" class="primary button">Login to MODX<span class="visually-hidden"> to Installation Options</span></a>
+              </div>
+            </footer>
+        </div>
+    </section>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.getElementById('continue').addEventListener('click', (event) => {
+            console.log('continue');
+            event.preventDefault();
+            scrollTo(document.getElementById('install-options').getBoundingClientRect().top - 0);
+        })
+        document.querySelector('#a11y-prefs-btn a').addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.hash = 'a11y-prefs';
+            document.getElementById('a11y-prefs').removeAttribute('hidden');
+            scrollTo(document.getElementById('a11y-prefs').getBoundingClientRect().top - 0);
+        });
+
+        setTimeout(() => {
+          document.querySelector('#a11y-prefs-btn a').click();
+        }, 20);
+
+        function scrollTo(to) {
+            window.scrollBy({
+                top: to,
+                //left: 0,
+                behavior: 'smooth'
+            });
+        }
+      });
+    </script>
+
+    <!--script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script-->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function() {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = 'https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "modx-setup",
+  "authors": [
+    "JP de Vries <mail@devries.jp>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bourbon": "^4.3.4",
+    "neat": "^2.0.0",
+    "html5-boilerplate": "^5.3.0"
+  }
+}
