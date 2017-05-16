@@ -50,17 +50,17 @@
 <aside id="breadcrumb">
   <div>
     <ul>
-      <li>
+      <li class="active">
         <a href="#welcome">Welcome</a>
       </li>
-      <li>
+      <li class="active">
         <a href="#installation-options">Installation Options</a>
       </li>
       <li>
         <a href="#connection-information">Connection Information</a>
       </li>
       <li>
-        <a href="#admin-user">Default Admin User</a>
+        <a href="#admin-user">Admin User</a>
       </li>
       <li>
         <a href="#context-installation">Context Installation</a>
@@ -244,10 +244,7 @@
             <details open>
                 <summary>More Options</summary>
                 <div>
-                  <p>You probably shouldn't mess with this stuff unless you really know what you are&nbsp;doing.</p>
-                  <div class="">
-
-                  </div>
+                  <p class="balanced">You probably shouldn't mess with this stuff unless you really know what you are&nbsp;doing.</p>
                     <fieldset>
                       <legend>Permissions</legend>
                       <div class="flexible">
@@ -307,7 +304,7 @@
                                 <td>User:</td>
                                 <td><input checked type="checkbox" name="id" id="" data-octal="400">&nbsp;Read</td>
                                 <td><input checked type="checkbox" name="id" id="" data-octal="200">&nbsp;Write</td>
-                                <td><input checked type="checkbox" name="id" id="" data-octal="100">&nbsp;Execute</td>
+                                <td><input type="checkbox" name="id" id="" data-octal="100">&nbsp;Execute</td>
                               </tr>
                               <tr>
                                 <td>Group:</td>
@@ -372,27 +369,37 @@
                   <input type="radio" id="sqlsrv" name="db_type"> sqlsrv</label>
                 </div>
             </fieldset>
-            <div class="field">
-                <label for="db_host">Database Host</label>
-                <input type="text" name="db_host" placeholder="localhost">
+            <fieldset>
+              <legend>Connection Information</legend>
+              <div class="field">
+                  <label for="db_host">Database Host</label>
+                  <input type="text" name="db_host" placeholder="localhost">
+              </div>
+              <div class="field">
+                  <label for="db_name">Database Name</label>
+                  <input type="text" name="db_name" placeholder="modx">
+              </div>
+              <div class="field">
+                  <label for="db_name">Table Prefix</label>
+                  <input type="text" name="table_prefix" placeholder="modx_" value="modx_">
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Credentials</legend>
+              <div class="field">
+                  <label for="db_login">Database Login Name</label>
+                  <input type="text" name="db_login" placeholder="root">
+              </div>
+              <div class="field">
+                  <label for="db_password">Database Password</label>
+                  <input type="text" name="db_password">
+              </div>
+            </fieldset>
+
+
+            <div class="balanced">
+              <button class="balanced subtle primary">Test database server connection and view&nbsp;collations.</button>
             </div>
-            <div class="field">
-                <label for="db_login">Database Login Name</label>
-                <input type="text" name="db_login" placeholder="root">
-            </div>
-            <div class="field">
-                <label for="db_password">Database Password</label>
-                <input type="text" name="db_password">
-            </div>
-            <div class="field">
-                <label for="db_name">Database Name</label>
-                <input type="text" name="db_name" placeholder="modx">
-            </div>
-            <div class="field">
-                <label for="db_name">Table Prefix</label>
-                <input type="text" name="table_prefix" placeholder="modx_" value="modx_">
-            </div>
-            <button>Test database server connection and view collations.</button>
             <hr>
             <div class="field">
               <label for="connection_charset">Connection character set:</label>
@@ -691,7 +698,7 @@
             <footer>
               <div class="button-bar">
                 <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
-                <a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+                <button disabled type="submit" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></button>
               </div>
             </footer>
         </div>
@@ -701,8 +708,8 @@
         <div>
             <h2><span class="emoji">👤</span><br>Default Admin User</h2>
             <p class="balanced">Somebody has to captain this ship. Who should it be?</p>
-            <div class="field">
-              <button class="balanced">Import my MODX User Information</button>
+            <div class="balanced field">
+              <button class="subtle balanced">Import my MODX User Information</button>
             </div>
             <div class="field">
                 <label for="admin_username">Administrator username:</label>
@@ -712,8 +719,8 @@
                 <label for="admin_email">Administrator email:</label>
                 <input required type="email" name="admin_email" id="admin_email" class="email" placeholder="boaty@mcboatface.com">
             </div>
-            <div class="field">
-              <button>Generate a Secure Password</button>
+            <div class="balanced field">
+              <button class="subtle balanced">Generate a Secure Password</button>
             </div>
             <div class="field">
                 <label for="admin_password">Administrator password:</label>
@@ -845,115 +852,241 @@
             <p>Now that MODX is installed you may configure it further or skip straight to <a href="#">your new&nbsp;dashboard</a>.</p>
             <div id="packages-to-install">
               <div>
-                  <fieldset>
-                      <legend>I want to create a:</legend>
-                      <div class="field">
-                          <label for="want-blog"><input type="radio" id="want-blog" name="i-want">&nbsp;Blog</label>
-                      </div>
-                      <div class="field">
-                          <label for="want-custom-site"><input checked type="radio" id="want-custom-site" name="i-want">&nbsp;Custom Site</label>
-                      </div>
-                      <div class="field">
-                          <label for="want-marketing"><input type="radio" id="want-marketing" name="i-want">&nbsp;Marketing Site</label>
-                      </div>
-                      <div class="field">
-                          <label for="portfolio-site"><input type="radio" id="portfolio-site" name="i-want">&nbsp;Portfolio Site</label>
-                      </div>
-                      <div class="field">
-                          <label for="want-webshop"><input type="radio" id="want-webshop" name="i-want">&nbsp;Webshop</label>
-                      </div>
-                      <div class="field">
-                          <label for="want-webapp"><input type="radio" id="want-webapp" name="i-want">&nbsp;Web App</label>
-                      </div>
-                      <div class="field">
-                          <label for="want-api"><input type="radio" id="want-api" name="i-want">&nbsp;Back End API</label>
-                      </div>
-                  </fieldset>
-                  <fieldset>
-                    <legend>I'd like to:</legend>
-                    <label class="field" for="i-want-it-all"><input type="checkbox" name="i-want-it-all" id="i-want-it-all">&ensp;Have it all</label>
-                    <label class="field" for="i-like-versionx"><input type="checkbox" name="i-like-versionx" id="i-like-versionx">&ensp;Create versioned backups of my content</label>
-                    <label class="field" for="i-like-formit"><input type="checkbox" name="i-like-formit" id="i-like-formit">&ensp;Create my own Forms without coding</label>
-                    <label class="field" for="i-like-articles"><input type="checkbox" name="i-like-articles" id="i-like-articles">&ensp;Manage content as articles</label>
-                    <label class="field" for="i-like-content-blocks"><input type="checkbox" name="i-like-content-blocks" id="i-like-content-blocks">&ensp;Manage content with layouts and fields</label>
-                    <label class="field" for="i-like-redactor"><input type="checkbox" name="i-like-redactor" id="i-like-redactor">&ensp;Use a premium Rich Text Editor</label>
-                    <label class="field" for="i-like-ace"><input type="checkbox" name="i-like-ace" id="i-like-ace">&ensp;Use a syntax highlighter when viewing code</label>
-                    <label class="field" for="i-like-more-gallery"><input type="checkbox" name="i-like-more-gallery" id="i-like-more-gallery">&ensp;Use a premium photo gallery Extra</label>
-                    <label class="field" for="i-like-media-sources"><input type="checkbox" name="i-like-media-sources" id="i-like-media-sources">&ensp;Manage media by connecting to remote sources</label>
-                    <label class="field" for="i-like-seo"><input type="checkbox" name="i-like-seo" id="i-like-seo">&ensp;Optimize my content for search engines</label>
-                    <label class="field" for="i-like-google-maps-tv"><input type="checkbox" name="i-like-google-maps-tv" id="i-like-google-maps-tv">&ensp;Embed Google Maps in my content</label>
-                    <label class="field" for="i-like-simple-ab"><input type="checkbox" name="i-like-simple-ab" id="i-like-simple-ab">&ensp;Perform A/B testing on my user experience</label>
-                    <label class="field" for="i-like-client-config"><input type="checkbox" name="i-like-client-config" id="i-like-client-config">&ensp;Use a user-friendly interface for making site wide changes</label>
-                    <label class="field" for="i-like-quickstart-buttons"><input type="checkbox" name="i-like-quickstart-buttons" id="i-like-quickstart-buttons">&ensp;Create quick start shortcuts on my dashboard</label>
-                    <label class="field" for="i-like-markdown"><input type="checkbox" name="i-like-markdown" id="i-like-markdown">&ensp;Author Content Using MarkDown</label>
-
-                    <label class="field" for="i-like-commerce"><input type="checkbox" name="i-like-commerce" id="i-like-commerce">&ensp;Accept Payments</label>
-                    <fieldset class="commerce">
-                      <legend>Commerce</legend>
-                      <label class="field" for="i-like-authorize"><input disabled type="checkbox" name="i-like-authorize" id="i-like-authorize">&ensp;Accept payments using Authorize.NET</label>
-                      <label class="field" for="i-like-paypal"><input disabled type="checkbox" name="i-like-paypal" id="i-like-paypal">&ensp;Accept payments using PayPal</label>
-                      <label class="field" for="i-like-mollie"><input disabled type="checkbox" name="i-like-mollie" id="i-like-mollie">&ensp;Accept payments using Mollie</label>
-                      <label class="field" for="i-like-stripe"><input disabled type="checkbox" name="i-like-stripe" id="i-like-stripe">&ensp;Accept payments using Stripe</label>
-                    </fieldset>
-                  </fieldset>
                   <details open>
+                    <summary>What I'll be managing</summary>
+                    <fieldset id="i-want-to-create-a">
+                        <legend>I want to create a:</legend>
+                        <div class="field">
+                            <label for="want-blog"><input type="radio" id="want-blog" name="i-want" data-dependent="pkg-getresources pkg-collections pkg-blockdown pkg-formit pkg-formalicious pkg-content-blocks pkg-redactor pkg-getpage pkg-seo-tab pkg-seo-pro pkg-google-analytics-dashboard-widget pkg-wayfinder pkg-breadcrumbs pkg-googlesitemap pkg-simplesearch pkg-twitterx pkg-batcher pkg-taglister pkg-archivist pkg-quip pkg-tagger">&nbsp;Blog</label>
+                        </div>
+                        <div class="field">
+                            <label for="want-custom-site"><input checked type="radio" id="want-custom-site" name="i-want" data-dependent="">&nbsp;Custom Site</label>
+                        </div>
+                        <div class="field">
+                            <label for="want-marketing"><input type="radio" id="want-marketing" name="i-want">&nbsp;Marketing Site</label>
+                        </div>
+                        <div class="field">
+                            <label for="portfolio-site"><input type="radio" id="portfolio-site" name="i-want" data-dependent="pkg-media-sources pkg-media-manager pkg-eureka pkg-ace">&nbsp;Portfolio Site</label>
+                        </div>
+                        <div class="field">
+                            <label for="want-webshop"><input type="radio" id="want-webshop" name="i-want" data-dependent="pkg-simpleab pkg-commerce pkg-seo-tab pkg-seo-pro">&nbsp;Webshop</label>
+                        </div>
+                        <div class="field">
+                            <label for="want-webapp"><input type="radio" id="want-webapp" name="i-want" data-dependent="pkg-getcache pkg-statcache pkg-hybridauth pkg-google-analytics-dashboard-widget pkg-scheduler">&nbsp;Web App</label>
+                        </div>
+                        <div class="field">
+                            <label for="want-api"><input type="radio" id="want-api" name="i-want"  data-dependent="pkg-getcache pkg-statcache pkg-contextrouter pkg-ace pkg-scheduler">&nbsp;Back End API</label>
+                        </div>
+                    </fieldset>
+                  </details>
+                  <details>
+                    <summary>What I want</summary>
+                    <fieldset id="i-would-like-to">
+                      <legend>I'd like to:</legend>
+                      <label class="field" for="i-want-it-all"><input type="checkbox" name="i-want-it-all" id="i-want-it-all">&ensp;Have it all</label>
+                      <label class="field" for="i-like-versionx"><input type="checkbox" name="i-like-versionx" id="i-like-versionx" data-dependent="pkg-versionx">&ensp;Create versioned backups of my content</label>
+                      <label class="field" for="i-like-formit"><input type="checkbox" name="i-like-formit" id="i-like-formit"  data-dependent="pkg-formit">&ensp;Create my own Forms without coding</label>
+                      <label class="field" for="i-like-collections"><input type="checkbox" name="i-like-collections" id="i-like-collections" data-dependent="want-blog pkg-collections">&ensp;Manage content as collections</label>
+                      <label class="field" for="i-like-content-blocks"><input type="checkbox" name="i-like-content-blocks" id="i-like-content-blocks"  data-dependent="pkg-content-blocks">&ensp;Manage content with layouts and fields</label>
+                      <label class="field" for="i-like-redactor"><input type="radio" name="i-like-rte" id="i-like-redactor"  data-dependent="pkg-redactor">&ensp;Use a premium Rich Text Editor</label>
+                      <label class="field" for="i-like-tinymce"><input type="radio" name="i-like-rte" id="i-like-tinymce"  data-dependent="pkg-tinymce">&ensp;Use a free Rich Text Editor</label>
+                      <label class="field" for="i-like-ace"><input type="checkbox" name="i-like-ace" id="i-like-ace"  data-dependent="pkg-ace">&ensp;Use a syntax highlighter when viewing code</label>
+                      <label class="field" for="i-like-more-gallery"><input type="checkbox" name="i-like-more-gallery" id="i-like-more-gallery"  data-dependent="pkg-more-gallery">&ensp;Use a premium photo gallery Extra</label>
+                      <label class="field" for="i-like-media-sources"><input type="checkbox" name="i-like-media-sources" id="i-like-media-sources"  data-dependent="pkg-media-sources pkg-eureka">&ensp;Manage media by connecting to remote sources</label>
+                      <label class="field" for="i-like-media-manager"><input type="checkbox" name="i-like-media-manager" id="i-like-media-manager"  data-dependent="pkg-media-sources pkg-media-manager">&ensp;Manage media with tags and crops</label>
+                      <label class="field" for="i-like-seo"><input type="checkbox" name="i-like-seo" id="i-like-seo"  data-dependent="pkg-googlesitemap">&ensp;Optimize my content for search engines</label>
+                      <label class="field" for="i-like-google-maps-tv"><input type="checkbox" name="i-like-google-maps-tv" id="i-like-google-maps-tv"  data-dependent="">&ensp;Embed Google Maps in my content</label>
+                      <label class="field" for="i-like-simple-ab"><input type="checkbox" name="i-like-simple-ab" id="i-like-simple-ab"  data-dependent="pkg-simpleab">&ensp;Perform A/B testing</label>
+                      <label class="field" for="i-like-client-config"><input type="checkbox" name="i-like-client-config" id="i-like-client-config"  data-dependent="pkg-client-config">&ensp;Use a user-friendly interface for making site wide changes</label>
+                      <label class="field" for="i-like-quickstart-buttons"><input type="checkbox" name="i-like-quickstart-buttons" id="i-like-quickstart-buttons"  data-dependent="pkg-quickstart-buttons">&ensp;Create quick start shortcuts on my dashboard</label>
+                      <label class="field" for="i-like-markdown"><input type="checkbox" name="i-like-markdown" id="i-like-markdown"  data-dependent="pkg-blockdown">&ensp;Author Content Using MarkDown</label>
+                      <label class="field" for="i-like-hybridauth"><input type="checkbox" name="i-like-hybridauth" id="i-like-hybridauth"  data-dependent="pkg-hybridauth">&ensp;Allow authorization through social networks and other services</label>
+                      <label class="field" for="i-like-babel"><input type="checkbox" name="i-like-babel" id="i-like-babel" data-dependent="pkg-babel">&ensp;I'll be managing Multi&ndash;lingual content</label>
+                      <label class="field" for="i-like-commerce"><input type="checkbox" name="i-like-commerce" id="i-like-commerce">&ensp;Accept Payments</label>
+                      <fieldset class="commerce">
+                        <legend>Commerce</legend>
+                        <label class="field" for="i-like-authorize"><input disabled type="checkbox" data-dirty="true" name="i-like-authorize" id="i-like-authorize">&ensp;Accept payments using Authorize.NET</label>
+                        <label class="field" for="i-like-paypal"><input disabled type="checkbox" data-dirty="true" name="i-like-paypal" id="i-like-paypal">&ensp;Accept payments using PayPal</label>
+                        <label class="field" for="i-like-mollie"><input disabled type="checkbox" data-dirty="true" name="i-like-mollie" id="i-like-mollie">&ensp;Accept payments using Mollie</label>
+                        <label class="field" for="i-like-stripe"><input disabled type="checkbox" data-dirty="true" name="i-like-stripe" id="i-like-stripe">&ensp;Accept payments using Stripe</label>
+                      </fieldset>
+                    </fieldset>
+                  </details>
+                  <details>
                     <summary>Packages to Install</summary>
                     <div>
                       <p>The MODX Community has many great extras ranging from free to premium. Here you can specify which packages you'd like to start with.</p>
-                      <fieldset>
+                      <fieldset id="install-these-packages">
                         <legend>Install these MODX Packages</legend>
                         <div>
-                          <label for="pkg-getresources" class="field">
-                            <input type="radio" name="pkg-getresources-pdotools" id="pkg-getresources">&ensp;getResources
-                          </label>
-                          <label for="pkg-pdotools" class="field">
-                            <input type="radio" name="pkg-getresources-pdotools" id="pkg-pdotools">&ensp;pdoTools
-                          </label>
-                          <label for="pkg-articles" class="field">
-                            <input type="checkbox" name="pkg-articles" id="pkg-articles">&ensp;Articles
-                          </label>
-                          <label for="pkg-blockdown" class="field">
-                            <input type="checkbox" name="pkg-blockdown" id="pkg-blockdown">&ensp;Blockdown
-                          </label>
-                          <label for="pkg-formit" class="field">
-                            <input type="checkbox" name="pkg-formit" id="pkg-formit">&ensp;FormIt
-                          </label>
-                          <label for="pkg-versionx" class="field">
-                            <input type="checkbox" name="pkg-versionx" id="pkg-versionx">&ensp;VersionX
-                          </label>
-                          <label for="pkg-formalicious" class="field">
-                            <input type="checkbox" name="pkg-formalicious" id="pkg-formalicious">&ensp;Formalicious by Sterc
-                          </label>
-                          <label for="pkg-content-blocks" class="field">
-                            <input type="checkbox" name="pkg-content-blocks" id="pkg-content-blocks">&ensp;ContentBlocks by modmore
-                          </label>
-                          <label for="pkg-redactor" class="field">
-                            <input type="checkbox" name="pkg-redactor" id="pkg-redactor">&ensp;Redactor by modmore
-                          </label>
-                          <label for="pkg-ace" class="field">
-                            <input type="radio" name="pkg-ace-codemirror" id="pkg-ace">&ensp;Ace
-                          </label>
-                          <label for="pkg-codemirror" class="field">
-                            <input type="radio" name="pkg-ace-codemirror" id="pkg-codemirror">&ensp;CodeMirror
-                          </label>
-                          <label for="pkg-more-gallery" class="field">
-                            <input type="checkbox" name="pkg-more-gallery" id="pkg-more-gallery">&ensp;MoreGallery by modmore
-                          </label>
-                          <label for="pkg-media-sources" class="field">
-                            <input type="checkbox" name="pkg-media-sources" id="pkg-media-sources">&ensp;Media Sources
-                          </label>
-                          <label for="pkg-eureka" class="field">
-                            <input type="checkbox" name="pkg-eureka" id="pkg-eureka">&ensp;Eureka Media Browser
-                          </label>
-                          <label for="pkg-seo-tab" class="field">
-                            <input type="checkbox" name="pkg-seo-tab" id="pkg-seo-tab">&ensp;SEO Tab by Sterc
-                          </label>
-                          <label for="pkg-seo-pro" class="field">
-                            <input type="checkbox" name="pkg-seo-pro" id="pkg-seo-pro">&ensp;SEO Pro by Sterc
-                          </label>
-                          <label for="pkg-google-analytics-dashboard-widget" class="field">
-                            <input type="checkbox" name="pkg-google-analytics-dashboard-widget" id="pkg-google-analytics-dashboard-widget">&ensp;Google Analytics Dashboard Widget
-                          </label>
+                          <details open>
+                            <summary>Editing Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Editing Packages</legend>
+                              <label for="pkg-redactor" class="field">
+                                <input type="radio" name="pkg-redactor-tinymce" id="pkg-redactor" data-preset="blog">&ensp;Redactor by modmore&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Redactor by modmore</span></small></a>
+                              </label>
+                              <label for="pkg-tinymce" class="field">
+                                <input type="radio" name="pkg-redactor-tinymce" id="pkg-tinymce">&ensp;TinyMCE&ensp;<a href="#"><small>more info<span class="visually-hidden"> about TinyMCE</span></small></a>
+                              </label>
+                              <label for="pkg-ace" class="field">
+                                <input type="radio" name="pkg-ace-codemirror" id="pkg-ace">&ensp;Ace&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Ace</span></small></a>
+                              </label>
+                              <label for="pkg-codemirror" class="field">
+                                <input type="radio" name="pkg-ace-codemirror" id="pkg-codemirror">&ensp;CodeMirror&ensp;<a href="#"><small>more info<span class="visually-hidden"> about CodeMirror</span></small></a>
+                              </label>
+                              <label for="pkg-blockdown" class="field">
+                                <input type="checkbox" name="pkg-blockdown" id="pkg-blockdown">&ensp;Blockdown&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Blockdown</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Media Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Media Packages</legend>
+                              <label for="pkg-media-manager" class="field">
+                                <input type="checkbox" name="pkg-media-manager" id="pkg-media-manager">&ensp;Media Manager by Sterc&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Media Manager by Sterc</span></small></a>
+                              </label>
+                              <label for="pkg-more-gallery" class="field">
+                                <input type="checkbox" name="pkg-more-gallery" id="pkg-more-gallery">&ensp;MoreGallery by modmore&ensp;<a href="#"><small>more info<span class="visually-hidden"> about MoreGallery by modmore</span></small></a>
+                              </label>
+                              <label for="pkg-media-sources" class="field">
+                                <input type="checkbox" name="pkg-media-sources" id="pkg-media-sources">&ensp;Media Sources&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Media Sources</span></small></a>
+                              </label>
+                              <label for="pkg-eureka" class="field">
+                                <input type="checkbox" name="pkg-eureka" id="pkg-eureka">&ensp;Eureka Media Browser&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Eureka Media Browser</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Content Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Content Packages</legend>
+                              <label for="pkg-collections" class="field">
+                                <input type="checkbox" name="pkg-collections" id="pkg-collections" data-preset="blog">&ensp;Collections&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Collections</span></small></a>
+                              </label>
+                              <label for="pkg-content-blocks" class="field">
+                                <input type="checkbox" name="pkg-content-blocks" id="pkg-content-blocks">&ensp;ContentBlocks by modmore&ensp;<a href="#"><small>more info<span class="visually-hidden"> about ContentBlocks by modmore</span></small></a>
+                              </label>
+                              <label for="pkg-batcher" class="field">
+                                <input type="checkbox" name="pkg-batcher" id="pkg-batcher">&ensp;Batcher&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Batcher</span></small></a>
+                              </label>
+                              <label for="pkg-getpage" class="field">
+                                <input type="checkbox" name="pkg-getpage" id="pkg-getpage" data-preset="blog" data-pkg-exempt="pkg-pdotools">&ensp;getPage&ensp;<a href="#"><small>more info<span class="visually-hidden"> about getPage</span></small></a>
+                              </label>
+                              <label for="pkg-taglister" class="field">
+                                <input type="checkbox" name="pkg-taglister" id="pkg-taglister" data-preset="blog">&ensp;tagLister&ensp;<a href="#"><small>more info<span class="visually-hidden"> about tagLister</span></small></a>
+                              </label>
+                              <label for="pkg-archivist" class="field">
+                                <input type="checkbox" name="pkg-archivist" id="pkg-archivist" data-preset="blog">&ensp;Archivist&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Archivist</span></small></a>
+                              </label>
+                              <label for="pkg-versionx" class="field">
+                                <input type="checkbox" name="pkg-versionx" id="pkg-versionx">&ensp;VersionX&ensp;<a href="#"><small>more info<span class="visually-hidden"> about VersionX</span></small></a>
+                              </label>
+                              <label for="pkg-formit" class="field">
+                                <input type="checkbox" name="pkg-formit" id="pkg-formit" data-preset="blog">&ensp;FormIt&ensp;<a href="#"><small>more info<span class="visually-hidden"> about FormIt</span></small></a>
+                              </label>
+                              <label for="pkg-formalicious" class="field">
+                                <input type="checkbox" name="pkg-formalicious" id="pkg-formalicious">&ensp;Formalicious by Sterc&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Formalicious by Sterc</span></small></a>
+                              </label>
+                              <label for="pkg-wayfinder" class="field">
+                                <input type="checkbox" name="pkg-wayfinder" id="pkg-wayfinder">&ensp;Wayfinder&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Wayfinder</span></small></a>
+                              </label>
+                              <label for="pkg-breadcrumbs" class="field">
+                                <input type="checkbox" name="pkg-breadcrumbs" id="pkg-breadcrumbs">&ensp;Breadcrumbs&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Breadcrumbs</span></small></a>
+                              </label>
+                              <label for="pkg-simplesearch" class="field">
+                                <input type="checkbox" name="pkg-simplesearch" id="pkg-simplesearch">&ensp;SimpleSearch&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Breadcrumbs</span></small></a>
+                              </label>
+                              <label for="pkg-tagger" class="field">
+                                <input type="checkbox" name="pkg-tagger" id="pkg-tagger">&ensp;Tagger&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Tagger</span></small></a>
+                              </label>
+                              <label for="pkg-quip" class="field">
+                                <input type="checkbox" name="pkg-quip" id="pkg-quip">&ensp;Quip&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Quip</span></small></a>
+                              </label>
+                              <label for="pkg-babel" class="field">
+                                <input type="checkbox" name="pkg-babel" id="pkg-babel">&ensp;Babel&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Babel</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Marketing Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Marketing Packages</legend>
+                              <label for="pkg-seo-tab" class="field">
+                                <input type="checkbox" name="pkg-seo-tab" id="pkg-seo-tab" data-preset="blog">&ensp;SEO Tab by Sterc&ensp;<a href="#"><small>more info<span class="visually-hidden"> about SEO Tab by Sterc</span></small></a>
+                              </label>
+                              <label for="pkg-seo-pro" class="field">
+                                <input type="checkbox" name="pkg-seo-pro" id="pkg-seo-pro" data-preset="blog">&ensp;SEO Pro by Sterc&ensp;<a href="#"><small>more info<span class="visually-hidden"> about SEO Pro by Sterc</span></small></a>
+                              </label>
+                              <label for="pkg-google-analytics-dashboard-widget" class="field">
+                                <input type="checkbox" name="pkg-google-analytics-dashboard-widget" id="pkg-google-analytics-dashboard-widget">&ensp;Google Analytics Dashboard Widget&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Google Analytics Dashboard Widget</span></small></a>
+                              </label>
+                              <label for="pkg-simpleab" class="field">
+                                <input type="checkbox" name="pkg-simpleab" id="pkg-simpleab">&ensp;SimpleAB by modmore&ensp;<a href="#"><small>more info<span class="visually-hidden"> about SimpleAB by modmore</span></small></a>
+                              </label>
+                              <label for="pkg-googlesitemap" class="field">
+                                <input type="checkbox" name="pkg-googlesitemap" id="pkg-googlesitemap">&ensp;GoogleSiteMap&ensp;<a href="#"><small>more info<span class="visually-hidden"> about GoogleSiteMap</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Social Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Social Packages</legend>
+                              <label for="pkg-hybridauth" class="field">
+                                <input type="checkbox" name="pkg-hybridauth" id="pkg-hybridauth">&ensp;HybridAuth&ensp;<a href="#"><small>more info<span class="visually-hidden"> about HybridAuth</span></small></a>
+                              </label>
+                              <label for="pkg-twitterx" class="field">
+                                <input type="checkbox" name="pkg-twitterx" id="pkg-twitterx">&ensp;TwitterX&ensp;<a href="#"><small>more info<span class="visually-hidden"> about TwitterX</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>E&ndash;Commerce Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">E&ndash;Commerce Packages</legend>
+                              <label for="pkg-commerce" class="field">
+                                <input type="checkbox" name="pkg-commerce" id="pkg-commerce">&ensp;Commerce&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Commerce</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Cacheing Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Cacheing Packages</legend>
+                              <label for="pkg-getcache" class="field">
+                                <input type="checkbox" name="pkg-getcache" id="pkg-getcache" data-preset="blog">&ensp;getCache&ensp;<a href="#"><small>more info<span class="visually-hidden"> about getCache</span></small></a>
+                              </label>
+                              <label for="pkg-statcache" class="field">
+                                <input type="checkbox" name="pkg-statcache" id="pkg-statcache" data-preset="blog">&ensp;statCache&ensp;<a href="#"><small>more info<span class="visually-hidden"> about statCache</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Utility Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Utility Packages</legend>
+                              <label for="pkg-getresources" class="field">
+                                <input type="radio" name="pkg-getresources-pdotools" id="pkg-getresources" data-preset="blog" data-pkg-exempt="pkg-pdotools">&ensp;getResources&ensp;<a href="https://modx.com/extras/package/getresources" target="_getResources"><small>more info<span class="visually-hidden"> about THIS</span></small></a>
+                              </label>
+                              <label for="pkg-pdotools" class="field">
+                                <input type="radio" name="pkg-getresources-pdotools" id="pkg-pdotools">&ensp;pdoTools&ensp;<a href="#"><small>more info<span class="visually-hidden"> about pdoTools</span></small></a>
+                              </label>
+                              <label for="pkg-contextrouter" class="field">
+                                <input type="checkbox" name="pkg-contextrouter" id="pkg-contextrouter">&ensp;ContextRouter&ensp;<a href="#"><small>more info<span class="visually-hidden"> about ContextRouter</span></small></a>
+                              </label>
+                              <label for="pkg-quickstart-buttons" class="field">
+                                <input type="checkbox" name="pkg-quickstart-buttons" id="pkg-quickstart-buttons">&ensp;QuickStart Buttons&ensp;<a href="#"><small>more info<span class="visually-hidden"> about QuickStart Buttons</span></small></a>
+                              </label>
+                              <label for="pkg-client-config" class="field">
+                                <input type="checkbox" name="pkg-client-config" id="pkg-client-config">&ensp;ClientConfig&ensp;<a href="#"><small>more info<span class="visually-hidden"> about ClientConfig</span></small></a>
+                              </label>
+                              <label for="pkg-scheduler" class="field">
+                                <input type="checkbox" name="pkg-scheduler" id="pkg-scheduler">&ensp;Scheduler&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Scheduler</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
                         </div>
                       </fieldset>
                     </div>
@@ -962,14 +1095,16 @@
                 <details>
                   <summary>Choose a Theme</summary>
                   <div>
-                    <p>With MODX you can start from scratch or with your favorite theme.</p>
+                    <p>With MODX you can start from scratch or with your favorite theme. WIP.</p>
                   </div>
                 </details>
                 <details>
                   <summary>Inject Teleport Snapshots</summary>
                   <div>
                     <p>MODX Teleport allows you to do cool stuff. Inject one or more snapshots.</p>
-                    <button>Add Teleport Snapshot</button>
+                    <div class="balanced">
+                      <button class="subtle balanced">Add Teleport Snapshot</button>
+                    </div>
                   </div>
                 </details>
                 <hr>
@@ -1014,6 +1149,19 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', (event) => {
+
+        (() => {
+          document.getElementById('i-want-to-create-a').addEventListener('change', (event) => {
+            const inputs = document.querySelectorAll('#i-would-like-to input, #install-these-packages input');
+            for(let i = 0; i < inputs.length; i++) {
+              const input = inputs[i];
+              if(input.dataset.dirty !== 'false') input.checked = false;
+              //input.checked = false;
+            }
+          });
+        })();
+
+        listenDirty();
         document.getElementById('continue').addEventListener('click', (event) => {
             console.log('continue');
             event.preventDefault();
@@ -1059,6 +1207,18 @@
         function clearInputChecked(octalTable) {
           const inputs = octalTable.querySelectorAll('input[type="checkbox"]');
           for(let i = 0; i < inputs.length; i++) inputs[i].checked = false;
+        }
+
+
+
+        function listenDirty() {
+          const inputs = document.querySelectorAll('input');
+          for(let i = 0; i < inputs.length; i++) {
+            const input = inputs[i];
+            input.addEventListener('change', (event) => {
+              input.dataset.dirty = 'false';
+            })
+          }
         }
 
         function showHideOctalMessage(octalTable, octal) {
@@ -1115,6 +1275,61 @@
 
         }
 
+        function checkWhatIWantDependent(event, dependent) {
+          console.log(event.target.checked, event.target.dataset);
+          if(event.target.checked) {
+
+            const inputs = document.getElementById('i-would-like-to').querySelectorAll(`input[data-dependent*="${event.target.getAttribute('id')}"]`);
+            console.log(inputs);
+            for(let i = 0; i < inputs.length; i++) {
+              const input = inputs[i];
+              if(input.dataset.dirty !== 'false') {
+                //console.log('holy fuck', input);
+                console.log('checking!!! ', dependent);
+                if(!shouldExempt(input)) {
+                  input.checked = true;
+                }
+              }
+            }
+          }
+        }
+
+        function shouldExempt(element) {
+          try {
+            return (element.dataset.pkgExempt && document.getElementById(element.dataset.pkgExempt).checked)
+          } catch (e) {
+            return false
+          }
+        }
+
+        document.getElementById('packages-to-install').addEventListener('change', (event) => {
+          //console.log(event);
+
+          if(event.target.checked) {
+            if(event.target.dataset.dependent) {
+              const dependents = event.target.dataset.dependent.trim().split(' ');
+              dependents.map((dependent) => {
+                checkWhatIWantDependent(event, dependent);
+                try {
+                  const element = document.getElementById(dependent.trim());
+                  //if(element.dataset.dirty !== 'false') element.checked = true;
+                  console.log(element, element.dataset);
+                  if(!shouldExempt(element)) {
+                    console.log('checking', dependent);
+                    element.checked = true;
+                  }
+
+                } catch (e) {
+                  console.log(event.target.dataset.dependent.trim());
+                  console.log(e);
+                }
+              });
+
+
+            }
+          }
+        });
+
         document.getElementById('i-want-it-all').addEventListener('change', (event) => {
           if(event.target.checked) {
             const inputs = document.querySelectorAll('#packages-to-install input[type="checkbox"]');
@@ -1124,8 +1339,10 @@
               input.checked = true;
             }
 
-            if(!document.getElementById('pkg-ace').checked && !document.getElementById('pkg-codemirror').checked) document.getElementById('pkg-ace').checked = true;
-            if(!document.getElementById('pkg-getresources').checked && !document.getElementById('pkg-pdotools').checked) document.getElementById('pkg-getresources').checked = true;
+            //if(!document.getElementById('pkg-ace').checked && !document.getElementById('pkg-codemirror').checked) document.getElementById('pkg-ace').checked = true;
+            //if(!document.getElementById('pkg-getresources').checked && !document.getElementById('pkg-pdotools').checked) document.getElementById('pkg-getresources').checked = true;
+            //if(!document.getElementById('i-like-redactor').checked && !document.getElementById('i-like-tinymce').checked) document.getElementById('i-like-redactor').checked = true;
+            //if(!document.getElementById('pkg-redactor').checked && !document.getElementById('pkg-tinymce').checked) document.getElementById('pkg-redactor').checked = true;
           }
         });
 
@@ -1136,13 +1353,13 @@
             for(let i = 0; i < inputs.length; i++) {
               const input = inputs[i];
               input.disabled = false;
-              //input.checked = true;
+              if(input.dataset.dirty == 'true') input.checked = true;
             }
           } else {
             for(let i = 0; i < inputs.length; i++) {
               const input = inputs[i];
               input.disabled = true;
-              //input.checked = false;
+              if(input.dataset.dirty == 'true') input.checked = false;
             }
           }
         });

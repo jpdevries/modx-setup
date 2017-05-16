@@ -5,6 +5,8 @@
 
 @import "spec/tacular";
 
+$lightGreen: #99db76;
+
 $gt-mobile: (
   columns: 12,
   gutter: 1em,
@@ -31,20 +33,33 @@ body {
 %modx-cta {
   line-height: 1;
   //width: 100%;
-  display: block;
+  border: none;
   //font-size: 1.7rem;
   text-align: center;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+
   //margin: 1.6rem 0 1.6rem 0;
   border-radius: 3px;
   background-clip: padding-box;
   text-shadow: 0 0 2px rgba(0,0,0,0.8);
-  background-color: #66a747;
+  background: #66a747;
+  border: 1px solid darken(#66a747, 6%);
   box-shadow: 0 2px 1px rgba(0,1,1,0.34), 0 0 7px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.51);
   background-image: linear-gradient(bottom, saturate(#66a747, 100%) 0%,saturate(#66a747, 100%) 27.76%,saturate(#9ec650, 100%) 100%);
   &:not(.primary) {
     filter: grayscale(100%);
+  }
+  &[disabled] {
+    filter: grayscale(100%);
+  }
+  &:not(.subtle) {
+    display: block;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+  &.subtle {
+    font-size: .875em;
   }
 }
 
@@ -54,6 +69,11 @@ body {
 
 .visually-hidden {
   @extend %visually-hidden;
+}
+
+button {
+  color: white;
+  @extend %modx-cta;
 }
 
 .balanced {
@@ -78,6 +98,24 @@ section:not(#welcome) {
     @include grid-container;
     max-width: 48rem;
     margin: 0 auto;
+  }
+}
+
+#install-these-packages {
+  a {
+    color: currentColor;
+    &:hover, &:target {
+      color: darken(#118AFF, 10%);
+    }
+    &:focus {
+      color: darken(#118AFF, 10%);
+    }
+  }
+}
+
+details {
+  > fieldset {
+    margin-top: .5em;
   }
 }
 
@@ -137,7 +175,7 @@ section {
   }
 
   &#welcome {
-    border-bottom: 1px solid darken(#3f4850, 4%);
+    //border-bottom: 1px solid darken(#3f4850, 4%);
     footer {
       @include grid-media($gt-mobile) {
         bottom: 3rem;
@@ -273,6 +311,19 @@ hr {
   margin: 1rem 0;
 }
 
+a {
+  small {
+    text-transform: uppercase;
+    font-variant-caps: all-small-caps;
+    color: rgb(120, 120, 120);
+  }
+  &:hover, &:active, &:focus {
+    small {
+      color: currentColor;
+    }
+  }
+}
+
 #breadcrumb {
   position: sticky;
   top: 0;
@@ -280,9 +331,11 @@ hr {
   right: 0;
   z-index: 100;
   background: var(--mainnav-bg, #3f4850);
-  background: #002033;
-  background: darken(#6EA745, 30%);
-  background: rgba(lighten(green, 18%), .98);
+  //background: #002033;
+  //background: darken(#6EA745, 30%);
+  //background: rgba(lighten(green, 18%), .98);
+  //background: rgb(220, 220, 220);
+
   text-transform: uppercase;
   font-variant-caps: all-small-caps;
   //background: rgb(220, 220, 220);
@@ -290,6 +343,7 @@ hr {
   color: rgb(220, 220, 220);
   color: darken(#1d4168, 12%);
   border-bottom: 1px solid darken(#3f4850, 4%);
+
   a {
     @extend %very-subtle;
     //background: rgb(220, 220, 220);
@@ -297,10 +351,10 @@ hr {
   }
   ul {
     margin: 0;
-    padding: .5rem 0;
+    //padding: .5rem 0;
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
   }
   li {
     display: inline-block;
@@ -309,6 +363,106 @@ hr {
       //opacity: 1;
     }
   }
+}
+
+#breadcrumb{
+  overflow: hidden;
+  width: 100%;
+}
+
+#breadcrumb li{
+  float: left;
+  margin: 0 .5em 0 1em;
+}
+
+#breadcrumb a{
+  background: #a4d1f0;
+  background: #a4d1f0;
+  padding: .35em 1em;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  position: relative;
+}
+
+#breadcrumb li.active {
+  &:first-of-type {
+    position: relative;
+    &:before {
+      display: block;
+      content: " ";
+      background: $lightGreen;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100em;
+      bottom: 0;
+    }
+  }
+}
+
+#breadcrumb a:hover {
+  background: lighten(#a4d1f0, 6%);
+}
+
+#breadcrumb li.active a {
+  background: $lightGreen;
+  &:hover {
+    background: lighten($lightGreen, 6%);
+  }
+}
+
+#breadcrumb a::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  border-width: 1.5em 0 1.5em 1em;
+  border-style: solid;
+  border-color: #a4d1f0 #a4d1f0 #a4d1f0 transparent;
+  left: -1em;
+}
+
+#breadcrumb a:hover::before, #breadcrumb li.active a::before {
+  border-color: $lightGreen $lightGreen $lightGreen transparent;
+}
+
+#breadcrumb li.active a:hover::before {
+  border-color:  lighten($lightGreen, 6%)  lighten($lightGreen, 6%) lighten($lightGreen, 6%) transparent;
+}
+
+#breadcrumb a::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-left: 1em solid #a4d1f0;
+  right: -1em;
+}
+
+#breadcrumb a.active {
+  background: $lightGreen;
+  &:last-of-type {
+    outline: 1px solid red;
+  }
+}
+
+#breadcrumb a:hover::after, #breadcrumb .active a::after {
+  border-left-color: $lightGreen;
+}
+
+#breadcrumb .current,
+#breadcrumb .current:hover{
+  font-weight: bold;
+  background: none;
+}
+
+#breadcrumb .current::after,
+#breadcrumb .current::before{
+  content: normal;
 }
 
 details {
