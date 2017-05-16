@@ -390,15 +390,19 @@ a.button {
   line-height: 1;
   display: block;
   text-align: center;
-  padding: 0.8rem 0;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   border-radius: 3px;
   background-clip: padding-box;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   background-color: #66a747;
   box-shadow: 0 2px 1px rgba(0, 1, 1, 0.34), 0 0 7px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.51);
-  background-image: linear-gradient(bottom, #66a747 0%, #66a747 27.76%, #9ec650 100%); }
+  background-image: linear-gradient(bottom, #4dee00 0%, #4dee00 27.76%, #b0ff17 100%); }
   a.button:not(.primary) {
     filter: grayscale(100%); }
+
+.flexible {
+  display: flex; }
 
 h1 small, h2 small, h3 small {
   font-weight: normal;
@@ -416,6 +420,25 @@ section:not(#welcome) > * {
     clear: both;
     content: "";
     display: block; }
+
+.dangerous {
+  background: rgba(255, 0, 0, 0.2);
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  border-radius: .4em;
+  padding: 0.25em 1em;
+  color: #660000;
+  font-size: .875em;
+  line-height: 1.5; }
+
+.wa-octal-table {
+  font-size: .875em; }
+  .wa-octal-table tbody tr:first-child {
+    text-align: right; }
+  .wa-octal-table tbody td {
+    padding: .25rem; }
+
+.wa-octal-table-wrapper h3 {
+  margin: 0 auto 1rem 0; }
 
 section {
   padding: 1rem;
@@ -444,6 +467,9 @@ section {
 
 body {
   margin: 0 auto; }
+
+.flexible {
+  justify-content: space-around; }
 
 #welcome h1 {
   margin-top: 0; }
@@ -481,12 +507,18 @@ label {
 h1, h2, h3 {
   text-align: center; }
 
+.button-bar > * {
+  padding: 0 1rem; }
+
 @media only screen and (min-width: 40.0625em) {
   .button-bar {
-    display: flex; }
+    display: flex;
+    justify-content: center; }
     .button-bar > * {
-      flex: 1 0 auto;
+      flex: 0 0 auto;
       margin-right: 1rem; }
+      .wa-exaggerate-tap-areas .button-bar > * {
+        flex-grow: 1; }
       .button-bar > *:last-child {
         margin-right: 0; } }
 

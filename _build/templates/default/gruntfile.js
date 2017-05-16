@@ -7,6 +7,7 @@ module.exports = function(grunt) {
     dirs:{
       static:'./static/',
       theme:'../../../',
+      lib:'./lib/',
       assets:'./assets/',
       js:'./js/',
       css:'./css/',
@@ -100,34 +101,6 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      /*eureka: {
-        files: [{
-          src: '<%= dirs.build %><%= dirs.static %><%= dirs.js %>main.*.js',
-          dest: '<%= dirs.build %><%= dirs.assets %><%= dirs.js %>eureka.<%= pkg.version %>.min.js'
-        }]
-      },*/
-      img: {
-        files: [{
-          src: '<%= dirs.build %><%= dirs.assets %><%= dirs.img %>*.svg',
-          dest: '<%= dirs.theme %><%= dirs.assets %><%= dirs.img %>',
-          flatten: true,
-          expand: true
-        }]
-      },
-      css: {
-        files: [{
-          src: '<%= dirs.theme %><%= dirs.assets %><%= dirs.css %>main.css',
-          dest: '<%= dirs.theme %><%= dirs.assets %><%= dirs.css %>eureka.<%= pkg.version %>.css'
-        },{
-          src: '<%= dirs.theme %><%= dirs.assets %><%= dirs.css %>main.min.css',
-          dest: '<%= dirs.theme %><%= dirs.assets %><%= dirs.css %>eureka.<%= pkg.version %>.min.css'
-        },{
-          src: '<%= dirs.theme %><%= dirs.assets %><%= dirs.css %>/**/*',
-          dest: '<%= dirs.build %><%= dirs.assets %><%= dirs.css %>',
-          flatten: true,
-          expand: true
-        }]
-      },
       bower: {
         files: [{
             src: 'bourbon/**/*',
@@ -144,14 +117,17 @@ module.exports = function(grunt) {
             cwd: '<%= dirs.lib %>spectacular/',
             dest: '<%= dirs.scss %>',
             expand: true
-        },/*,{
-          src: '<%= dirs.theme %><%= dirs.assets %><%= dirs.img %>icons.svg',
-          dest: '<%= dirs.theme %><%= dirs.assets %><%= dirs.img %>icons.<%= pkg.version %>.svg'
-        }*//*,{
-          src: '<%= dirs.build %><%= dirs.static %><%= dirs.js %>main.*.js',
-          dest: '<%= dirs.build %><%= dirs.assets %><%= dirs.js %>eureka.<%= pkg.version %>.min.js'
-        }*/]
-      }
+        }]
+      },
+      "html5-boilerplate": {
+        files: [{
+            src: '<%= dirs.lib %>html5-boilerplate/css/main.css',
+            dest: '<%= dirs.scss %>html5-boilerplate/main.scss'
+        }, {
+            src: '<%= dirs.lib %>html5-boilerplate/css/normalize.css',
+            dest: '<%= dirs.scss %>html5-boilerplate/normalize.scss'
+        }]
+      },
     },
     sass:{
       dev: {
@@ -330,7 +306,7 @@ module.exports = function(grunt) {
     },
   });
 
-  
+
 
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks("grunt-modernizr");

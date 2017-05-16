@@ -18,5 +18,16 @@
     "bourbon": "^4.3.4",
     "neat": "^2.0.0",
     "html5-boilerplate": "^5.3.0"
+  },
+  "exportsOverride": {
+    "bourbon": {
+      "": "app/assets/stylesheets/"
+    },
+    "html5-boilerplate": {
+      "": "dist/"
+    },
+    "neat": {
+      "": "core/"
+    }
   }
 }

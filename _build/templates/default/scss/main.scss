@@ -16,7 +16,7 @@ $gt-mobile: (
 }
 
 body {
-  --mainnav-bg: radial-gradient(circle, #3f4850 0%, #365462 46%, #3e5554 60%, #42554d 68%, #573d4e 100%); 
+  --mainnav-bg: radial-gradient(circle, #3f4850 0%, #365462 46%, #3e5554 60%, #42554d 68%, #573d4e 100%);
   font-family: -apple-system,
        BlinkMacSystemFont,
        "Segoe UI",
@@ -34,17 +34,22 @@ body {
   display: block;
   //font-size: 1.7rem;
   text-align: center;
-  padding: 0.8rem 0;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   //margin: 1.6rem 0 1.6rem 0;
   border-radius: 3px;
   background-clip: padding-box;
   text-shadow: 0 0 2px rgba(0,0,0,0.8);
   background-color: #66a747;
   box-shadow: 0 2px 1px rgba(0,1,1,0.34), 0 0 7px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.51);
-  background-image: linear-gradient(bottom, #66a747 0%,#66a747 27.76%,#9ec650 100%);
+  background-image: linear-gradient(bottom, saturate(#66a747, 100%) 0%,saturate(#66a747, 100%) 27.76%,saturate(#9ec650, 100%) 100%);
   &:not(.primary) {
     filter: grayscale(100%);
   }
+}
+
+%flexible {
+  display: flex;
 }
 
 .visually-hidden {
@@ -57,7 +62,7 @@ body {
 
 h1,h2,h3 {
   small {
-    font-weight: normal; 
+    font-weight: normal;
     display: block;
   }
 }
@@ -70,23 +75,58 @@ h1,h2,h3 {
 
 section:not(#welcome) {
   > * {
-    @include grid-container; 
+    @include grid-container;
     max-width: 48rem;
     margin: 0 auto;
   }
 }
 
+.dangerous {
+  background: rgba(red, 0.2);
+  border:1px solid rgba(red, 0.4);
+  border-radius: .4em;
+  padding:0.25em 1em;
+  color: darken(red, 30%);
+  font-size: .875em;
+  line-height: 1.5;
+}
+
+.wa-octal-table {
+  font-size: .875em;
+  thead {
+
+  }
+  tbody {
+    tr {
+      &:first-child {
+        text-align: right;
+      }
+    }
+    td {
+      padding: .25rem;
+    }
+  }
+}
+
+.wa-octal-table-wrapper {
+  h3 {
+    margin:0 auto 1rem 0;
+    //font-weight: normal;
+    //font-size: 1em;
+  }
+}
+
 section {
-  padding: 1rem;  
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  
+
   @include grid-media($gt-mobile) {
     padding-bottom: 6rem;
   }
-  
+
   footer {
     @include grid-media($gt-mobile) {
       position: absolute;
@@ -95,7 +135,7 @@ section {
       right: 1rem;
     }
   }
-  
+
   &#welcome {
     border-bottom: 1px solid darken(#3f4850, 4%);
     footer {
@@ -104,7 +144,7 @@ section {
       }
     }
   }
-  
+
   > div {
     > * {
       &:first-child {
@@ -119,6 +159,11 @@ section {
 
 body {
   margin: 0 auto;
+}
+
+.flexible {
+  @extend %flexible;
+  justify-content: space-around;
 }
 
 #welcome {
@@ -170,11 +215,20 @@ h1,h2,h3 {
 }
 
 .button-bar {
+  > * {
+    padding: 0 1rem;
+  }
   @include grid-media($gt-mobile) {
     display: flex;
+    justify-content: center;
     > * {
-      flex: 1 0 auto;
+      flex: 0 0 auto;
       margin-right: 1rem;
+
+      .wa-exaggerate-tap-areas & {
+        flex-grow: 1;
+      }
+
       &:last-child {
         margin-right: 0;
       }
@@ -242,7 +296,7 @@ hr {
     padding: .5rem 0;
     list-style-type: none;
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
   }
   li {
     display: inline-block;
@@ -287,7 +341,7 @@ fieldset {
 }
 
 .emoji {
-  font-family: initial; 
+  font-family: initial;
 }
 
 #a11y-prefs {
@@ -302,18 +356,18 @@ section#welcome {
   text-align: center;
   background: var(--mainnav-bg);
   h1, p, details, label {
-  color: white;  
+  color: white;
   }
-  
+
   #continue {
     transform: translateY(2rem);
   }
-  
+
   input {
     color: black;
   }
 
-  
+
   min-height: 100vh;
   display:flex;
   justify-content: center;

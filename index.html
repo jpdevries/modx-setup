@@ -15,7 +15,7 @@
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body>
+<body class="">
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -88,15 +88,15 @@
                             <fieldset>
                                 <legend id="fontsize__legend"><span a11y-hidden="">Choose a </span>Font Size</legend>
                                 <div>
-                                    
+
                                     <label for="fontsize__regular"><input type="radio" id="fontsize__regular" name="fontsize" checked="">&nbsp;Regular</label>
                                 </div>
                                 <div>
-                                    
+
                                     <label for="fontsize__large"><input type="radio" id="fontsize__large" name="fontsize" value="large">&nbsp;Large</label>
                                 </div>
                                 <div>
-                                    
+
                                     <label for="fontsize__xl"><input type="radio" id="fontsize__xl" name="fontsize" value="xl">&nbsp;Extra–Large</label>
                                 </div>
                             </fieldset>
@@ -110,31 +110,31 @@
                 <fieldset>
                     <legend id="typeface__legend"><span a11y-hidden="">Choose a </span>Typeface</legend>
                     <div>
-                        
+
                         <label for="typeface__system"><input type="radio" id="typeface__system" name="typeface" checked="">&nbsp;System</label>
                     </div>
                     <div>
-                        
+
                         <label for="typeface__opendyslexic"><input type="radio" id="typeface__opendyslexic" name="typeface" value="opendyslexic">&nbsp;OpenDyslexic</label>
                     </div>
                     <div>
-                        
+
                         <label for="typeface__opensans"><input type="radio" id="typeface__opensans" name="typeface" value="opensans">&nbsp;Open Sans</label>
                     </div>
                     <div>
-                        
+
                         <label for="typeface__raleway"><input type="radio" id="typeface__raleway" name="typeface" value="raleway">&nbsp;Raleway</label>
                     </div>
                     <div>
-                        
+
                         <label for="typeface__ubuntu"><input type="radio" id="typeface__ubuntu" name="typeface" value="ubuntu">&nbsp;Ubuntu</label>
                     </div>
                     <div>
-                        
+
                         <label for="typeface__fira"><input type="radio" id="typeface__fira" name="typeface" value="fira">&nbsp;Fira</label>
                     </div>
                     <div>
-                        
+
                         <label for="typeface__anonpro"><input type="radio" id="typeface__anonpro" name="typeface" value="anonpro">&nbsp;Anonymous Pro</label>
                     </div>
                 </fieldset>
@@ -158,7 +158,7 @@
                         <label for="contrast__highcontrast_white-on-black"><input type="radio" id="contrast__highcontrast_white-on-black" name="contrast" value="contrast__highcontrast_white-on-black">&nbsp;White on Black</label>
                     </div>
                     <div>
-                        
+
                         <label for="contrast__auto"><input type="radio" id="contrast__auto" name="contrast" value="auto">&nbsp;Auto<span a11y-hidden="">matic</span></label>
                     </div>
                 </fieldset>
@@ -189,7 +189,7 @@
             <form>
                 <noscript id="reducemotion__noscript">Please Enable JavaScript in a modern browser manage animation preferences</noscript>
                 <div>
-                    
+
                     <label for="reducemotion"><input type="checkbox" id="reducemotion" name="reducemotion" value="yes">&nbsp;Reduce Motion</label>
                 </div>
             </form>
@@ -201,14 +201,14 @@
             <form>
                 <noscript id="visibility__noscript">Please Enable JavaScript in a modern browser to manage visibility preferences</noscript>
                 <div>
-                    
+
                     <label for="visibility__focus"><input type="checkbox" id="visibility__focus" name="focus" value="yes">&nbsp;Exaggerate Focused Cells</label>
                 </div>
         </div>
     </div>
     </div>
-    
-    
+
+
     <footer>
       <div class="button-bar">
         <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
@@ -241,18 +241,92 @@
                 </div>
             </fieldset>
             <!--p class="balanced"><a href="#">Help me choose<span class="visually-hidden"> which installation to use</span>.</a></p-->
-            <details>
+            <details open>
                 <summary>More Options</summary>
                 <div>
                   <p>You probably shouldn't mess with this stuff unless you really know what you are&nbsp;doing.</p>
-                    <div class="field">
-                        
-                        <label for="new-folder-permissions"><input size="4" type="text" name="new-folder=permissions" id="new-folder=permissions" placeholder="0755">&nbsp;New Folder Permissions</label>
-                    </div>
-                    <div class="field">
-                        
-                        <label for="new-file-permissions"><input size="4" type="text" name="new-file-permissions" id="new-file-permissions" placeholder="0644">&nbsp;New File Permissions</label>
-                    </div>
+                  <div class="">
+
+                  </div>
+                    <fieldset>
+                      <legend>Permissions</legend>
+                      <div class="flexible">
+                        <div class="wa-octal-table-wrapper">
+                          <h3>New Folder</h3>
+                          <div aria-live="assertive" aria-atomic="true">
+                            <p hidden aria-label="Probably don't set new folders to be publicly writable and executable" class="dangerous balanced message">📛&ensp;Probably don't do that!!&ensp;📛</p>
+                          </div>
+                          <table class="wa-octal-table" data-octal-target="new-folder-permissions">
+                            <thead>
+                              <tr>
+                                <th>Users</th>
+                                <th colspan="3">Permissions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>User:</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="400">&nbsp;Read</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="200">&nbsp;Write</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="100">&nbsp;Execute</td>
+                              </tr>
+                              <tr>
+                                <td>Group:</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="40">&nbsp;Read</td>
+                                <td><input type="checkbox" name="id" id="" data-octal="20">&nbsp;Write</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="10">&nbsp;Execute</td>
+                              </tr>
+                              <tr>
+                                <td>World:</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="4">&nbsp;Read</td>
+                                <td><input type="checkbox" name="id" id="" data-octal="2">&nbsp;Write</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="1">&nbsp;Execute</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <label for="new-folder-permissions"><input size="4" type="text" name="new-folder-permissions" id="new-folder-permissions" placeholder="0755">&nbsp;Octal</label>
+                        </div>
+
+
+
+                        <div class="wa-octal-table-wrapper">
+
+                          <h3>New File</h3>
+                          <div aria-live="assertive" aria-atomic="true">
+                            <p hidden aria-label="Probably don't set new folders to be publicly writable and executable" class="dangerous balanced message">📛&ensp;Probably don't do that!!&ensp;📛</p>
+                          </div>
+                          <table class="wa-octal-table" data-octal-target="new-file-permissions">
+                            <thead>
+                              <tr>
+                                <th>Users</th>
+                                <th colspan="3">Permissions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>User:</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="400">&nbsp;Read</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="200">&nbsp;Write</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="100">&nbsp;Execute</td>
+                              </tr>
+                              <tr>
+                                <td>Group:</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="40">&nbsp;Read</td>
+                                <td><input type="checkbox" name="id" id="" data-octal="20">&nbsp;Write</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="10">&nbsp;Execute</td>
+                              </tr>
+                              <tr>
+                                <td>World:</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="4">&nbsp;Read</td>
+                                <td><input type="checkbox" name="id" id="" data-octal="2">&nbsp;Write</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="1">&nbsp;Execute</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <label for="new-file-permissions"><input size="4" type="text" name="new-file-permissions" id="new-file-permissions" placeholder="0644">&nbsp;Octal</label>
+                        </div>
+                      </div>
+                    </fieldset>
                     <div class="field">
                         <label for="powered-by">
                           <input checked type="checkbox" name="powered-by" id="powered-by"> Send X-Powered-By Header (Credit MODX for empowering your content)
@@ -593,7 +667,7 @@
                     <option value="utf8mb4_vietnamese_ci">utf8mb4_vietnamese_ci</option>
                 </select>
             </div>
-            
+
             <div>
               <details>
                 <summary>FAQs</summary>
@@ -607,13 +681,13 @@
                     <dd>Ask your host.</dd>
                     <dt>What is a database prefix?</dt>
                     <dd>Blah blah</dd>
-                    <dt>Can I try out MODX without creating a database?</dt>
-                    <dd>Yes. You are free to <a href="https://demo.modmore.com" target="_modmoredemo">try the modmore demo</a> at&nbsp;anytime.</dd>
+                    <dt>Can I use MODX without manually creating a database?</dt>
+                    <dd>Yes. <a href="https://modxcloud.com" target="_modxcloud">MODX Cloud</a>. You are also free to <a href="https://demo.modmore.com" target="_modmoredemo">try the modmore demo</a> at&nbsp;anytime.</dd>
                   </dl>
                 </div>
               </details>
             </div>
-            
+
             <footer>
               <div class="button-bar">
                 <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
@@ -772,23 +846,56 @@
             <div>
                 <fieldset>
                     <legend>I want to create a:</legend>
-                    <div>
+                    <div class="field">
                         <label for="want-blog"><input type="radio" id="want-blog" name="i-want">&nbsp;Blog</label>
                     </div>
-                    <div>
+                    <div class="field">
                         <label for="want-custom-site"><input checked type="radio" id="want-custom-site" name="i-want">&nbsp;Custom Site</label>
                     </div>
-                    <div>
+                    <div class="field">
                         <label for="want-marketing"><input type="radio" id="want-marketing" name="i-want">&nbsp;Marketing Site</label>
                     </div>
-                    <div>
+                    <div class="field">
                         <label for="portfolio-site"><input type="radio" id="portfolio-site" name="i-want">&nbsp;Portfolio Site</label>
                     </div>
-                    <div>
+                    <div class="field">
                         <label for="want-webshop"><input type="radio" id="want-webshop" name="i-want">&nbsp;Webshop</label>
                     </div>
+                    <div class="field">
+                        <label for="want-webapp"><input type="radio" id="want-webapp" name="i-want">&nbsp;Web App</label>
+                    </div>
+                    <div class="field">
+                        <label for="want-api"><input type="radio" id="want-api" name="i-want">&nbsp;Back End API</label>
+                    </div>
                 </fieldset>
-                <details>
+                <fieldset>
+                  <legend>I'd like to:</legend>
+                  <label class="field" for="i-want-it-all"><input type="checkbox" name="i-want-it-all" id="i-want-it-all">&ensp;Have it all</label>
+                  <label class="field" for="i-like-versionx"><input type="checkbox" name="i-like-versionx" id="i-like-versionx">&ensp;Create versioned backups of my content</label>
+                  <label class="field" for="i-like-formit"><input type="checkbox" name="i-like-formit" id="i-like-formit">&ensp;Create my own Forms without coding</label>
+                  <label class="field" for="i-like-articles"><input type="checkbox" name="i-like-articles" id="i-like-articles">&ensp;Manage content as articles</label>
+                  <label class="field" for="i-like-content-blocks"><input type="checkbox" name="i-like-content-blocks" id="i-like-content-blocks">&ensp;Manage content with layouts and fields</label>
+                  <label class="field" for="i-like-redactor"><input type="checkbox" name="i-like-redactor" id="i-like-redactor">&ensp;Use a premium Rich Text Editor</label>
+                  <label class="field" for="i-like-ace"><input type="checkbox" name="i-like-ace" id="i-like-ace">&ensp;Use a syntax highlighter when viewing code</label>
+                  <label class="field" for="i-like-more-gallery"><input type="checkbox" name="i-like-more-gallery" id="i-like-more-gallery">&ensp;Use a premium photo gallery Extra</label>
+                  <label class="field" for="i-like-media-sources"><input type="checkbox" name="i-like-media-sources" id="i-like-media-sources">&ensp;Manage media by connecting to remote sources</label>
+                  <label class="field" for="i-like-seo"><input type="checkbox" name="i-like-seo" id="i-like-seo">&ensp;Optimize my content for search engines</label>
+                  <label class="field" for="i-like-google-maps-tv"><input type="checkbox" name="i-like-google-maps-tv" id="i-like-google-maps-tv">&ensp;Embed Google Maps in my content</label>
+                  <label class="field" for="i-like-simple-ab"><input type="checkbox" name="i-like-simple-ab" id="i-like-simple-ab">&ensp;Perform A/B testing on my user experience</label>
+                  <label class="field" for="i-like-client-config"><input type="checkbox" name="i-like-client-config" id="i-like-client-config">&ensp;Use a user-friendly interface for making site wide changes</label>
+                  <label class="field" for="i-like-quickstart-buttons"><input type="checkbox" name="i-like-quickstart-buttons" id="i-like-quickstart-buttons">&ensp;Create quick start shortcuts on my dashboard</label>
+                  <label class="field" for="i-like-markdown"><input type="checkbox" name="i-like-markdown" id="i-like-markdown">&ensp;Author Content Using MarkDown</label>
+
+                  <label class="field" for="i-like-commerce"><input type="checkbox" name="i-like-commerce" id="i-like-commerce">&ensp;Accept Payments</label>
+                  <fieldset style="margin-top:1em">
+                    <legend>E&ndash;Commerce</legend>
+                    <label class="field" for="i-like-authorize"><input disabled type="checkbox" name="i-like-authorize" id="i-like-authorize">&ensp;Accept payments using Authorize.NET</label>
+                    <label class="field" for="i-like-paypal"><input disabled type="checkbox" name="i-like-paypal" id="i-like-paypal">&ensp;Accept payments using PayPal</label>
+                    <label class="field" for="i-like-mollie"><input disabled type="checkbox" name="i-like-mollie" id="i-like-mollie">&ensp;Accept payments using Mollie</label>
+                    <label class="field" for="i-like-stripe"><input disabled type="checkbox" name="i-like-stripe" id="i-like-stripe">&ensp;Accept payments using Stripe</label>
+                  </fieldset>
+                </fieldset>
+                <details open>
                   <summary>Packages to Install</summary>
                   <div>
                     <p>The MODX Community has many great extras ranging from free to premium. Here you can specify which packages you'd like to start with.</p>
@@ -796,10 +903,55 @@
                       <legend>Install these MODX Packages</legend>
                       <div>
                         <label for="pkg-getresources" class="field">
-                          <input type="checkbox" name="pkg-getresources" id="pkg-getresources">&ensp;getResources
+                          <input checked type="radio" name="pkg-getresources-pdotools" id="pkg-getresources">&ensp;getResources
+                        </label>
+                        <label for="pkg-pdotools" class="field">
+                          <input type="radio" name="pkg-getresources-pdotools" id="pkg-pdotools">&ensp;pdoTools
                         </label>
                         <label for="pkg-articles" class="field">
                           <input type="checkbox" name="pkg-articles" id="pkg-articles">&ensp;Articles
+                        </label>
+                        <label for="pkg-blockdown" class="field">
+                          <input type="checkbox" name="pkg-blockdown" id="pkg-blockdown">&ensp;Blockdown
+                        </label>
+                        <label for="pkg-formit" class="field">
+                          <input type="checkbox" name="pkg-formit" id="pkg-formit">&ensp;FormIt
+                        </label>
+                        <label for="pkg-versionx" class="field">
+                          <input type="checkbox" name="pkg-versionx" id="pkg-versionx">&ensp;VersionX
+                        </label>
+                        <label for="pkg-formalicious" class="field">
+                          <input type="checkbox" name="pkg-formalicious" id="pkg-formalicious">&ensp;Formalicious by Sterc
+                        </label>
+                        <label for="pkg-content-blocks" class="field">
+                          <input type="checkbox" name="pkg-content-blocks" id="pkg-content-blocks">&ensp;ContentBlocks by modmore
+                        </label>
+                        <label for="pkg-redactor" class="field">
+                          <input type="checkbox" name="pkg-redactor" id="pkg-redactor">&ensp;Redactor by modmore
+                        </label>
+                        <label for="pkg-ace" class="field">
+                          <input type="radio" name="pkg-ace-codemirror" id="pkg-ace">&ensp;Ace
+                        </label>
+                        <label for="pkg-codemirror" class="field">
+                          <input type="radio" name="pkg-ace-codemirror" id="pkg-codemirror">&ensp;CodeMirror
+                        </label>
+                        <label for="pkg-more-gallery" class="field">
+                          <input type="checkbox" name="pkg-more-gallery" id="pkg-more-gallery">&ensp;MoreGallery by modmore
+                        </label>
+                        <label for="pkg-media-sources" class="field">
+                          <input type="checkbox" name="pkg-media-sources" id="pkg-media-sources">&ensp;Media Sources
+                        </label>
+                        <label for="pkg-eureka" class="field">
+                          <input type="checkbox" name="pkg-eureka" id="pkg-eureka">&ensp;Eureka Media Browser
+                        </label>
+                        <label for="pkg-seo-tab" class="field">
+                          <input type="checkbox" name="pkg-seo-tab" id="pkg-seo-tab">&ensp;SEO Tab by Sterc
+                        </label>
+                        <label for="pkg-seo-pro" class="field">
+                          <input type="checkbox" name="pkg-seo-pro" id="pkg-seo-pro">&ensp;SEO Pro by Sterc
+                        </label>
+                        <label for="pkg-google-analytics-dashboard-widget" class="field">
+                          <input type="checkbox" name="pkg-google-analytics-dashboard-widget" id="pkg-google-analytics-dashboard-widget">&ensp;Google Analytics Dashboard Widget
                         </label>
                       </div>
                     </fieldset>
@@ -833,7 +985,7 @@
                   </div>
                 </details>
                 <details>
-                    <summary>Join the MODX Community</summary>
+                    <summary>Explore the MODX Community</summary>
                     <div>
                         <ul>
                             <li><a href="#">MODX Forums</a></li>
@@ -863,7 +1015,7 @@
         document.getElementById('continue').addEventListener('click', (event) => {
             console.log('continue');
             event.preventDefault();
-            scrollTo(document.getElementById('install-options').getBoundingClientRect().top - 0);
+            scrollTo(document.getElementById('installation-options').getBoundingClientRect().top - 0);
         })
         document.querySelector('#a11y-prefs-btn a').addEventListener('click', (event) => {
             event.preventDefault();
@@ -872,9 +1024,95 @@
             scrollTo(document.getElementById('a11y-prefs').getBoundingClientRect().top - 0);
         });
 
-        setTimeout(() => {
-          document.querySelector('#a11y-prefs-btn a').click();
-        }, 20);
+        document.getElementById('hit-areas').addEventListener('change', (event) => {
+          if(event.target.checked) {
+            document.body.classList.add('wa-exaggerate-tap-areas');
+          } else {
+            document.body.classList.remove('wa-exaggerate-tap-areas');
+          }
+        })
+
+        if(window.location.hash === '#a11y-prefs') {
+          setTimeout(() => {
+            document.querySelector('#a11y-prefs-btn a').click();
+          }, 120);
+        }
+
+        const octalTables = document.querySelectorAll('.wa-octal-table');
+        for(let i = 0; i < octalTables.length; i++) {
+          const octalTable = octalTables[i];
+          octalTable.addEventListener('change', (event) => {
+            console.log(event.target);
+            updateOctalTable(octalTable, event);
+          });
+          const octalTarget = document.getElementById(octalTable.dataset.octalTarget);
+          octalTarget.addEventListener('change', (event) => {
+            handleOctalTargetChange(octalTable, event);
+          });
+          octalTarget.addEventListener('input', (event) => {
+            handleOctalTargetChange(octalTable, event);
+          });
+        }
+
+        function clearInputChecked(octalTable) {
+          const inputs = octalTable.querySelectorAll('input[type="checkbox"]');
+          for(let i = 0; i < inputs.length; i++) inputs[i].checked = false;
+        }
+
+        function showHideOctalMessage(octalTable, octal) {
+          if(octal === 777) {
+            octalTable.closest('.wa-octal-table-wrapper').querySelector('.dangerous.balanced.message').removeAttribute('hidden');
+          } else {
+            octalTable.closest('.wa-octal-table-wrapper').querySelector('.dangerous.balanced.message').setAttribute('hidden', 'true');
+          }
+        }
+
+        function handleOctalTargetChange(octalTable, event) {
+          const octal = parseInt(event.target.value);
+
+          showHideOctalMessage(octalTable, octal);
+
+          const hundredths = Math.floor(octal / 100) * 100;
+          const tenths = (Math.floor(octal / 10) * 10) - hundredths;
+          const digit = octal - hundredths - tenths;
+          //console.log(hundredths, tenths, digit);
+
+
+
+          const hundredthCells = octalTable.querySelectorAll('tbody > tr:first-of-type > td:not(:first-child)'),
+          tenthsCells = octalTable.querySelectorAll('tbody > tr:nth-of-type(2) > td:not(:first-child)'),
+          digitCells = octalTable.querySelectorAll('tbody > tr:nth-of-type(3) > td:not(:first-child)');
+
+          clearInputChecked(octalTable);
+          checkCellRow(hundredths, hundredthCells);
+          checkCellRow(tenths, tenthsCells);
+          checkCellRow(digit, digitCells);
+
+          function checkCellRow(t, cells) {
+            for(let i = 0; i < cells.length; i++) {
+              const cell = cells[i];
+              const int = parseInt(cell.querySelector('input').dataset.octal);
+              console.log(t, int);
+              if(int <= t) {
+                cell.querySelector('input').checked = true;
+                t -= int;
+              }
+            }
+          }
+
+        }
+
+        function updateOctalTable(octalTable, event) {
+          const inputs = octalTable.querySelectorAll('input[type="checkbox"]');
+          const octal = [...inputs].map((input) => (
+            (input.checked) ? parseInt(input.getAttribute('data-octal')) : 0
+          )).reduce((a, b) => (a + b));
+          document.getElementById(octalTable.dataset.octalTarget).value = octal;
+
+          showHideOctalMessage(octalTable, octal);
+
+        }
+
 
         function scrollTo(to) {
             window.scrollBy({

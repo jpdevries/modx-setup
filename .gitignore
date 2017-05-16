@@ -8,3 +8,5 @@ bower_components
 _build/templates/default/scss/bourbon
 _build/templates/default/scss/neat
 _build/templates/default/scss/html5-boilerplate
+
+lib/
