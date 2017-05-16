@@ -117,6 +117,17 @@ details {
   > fieldset {
     margin-top: .5em;
   }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.flexible {
+  @include grid-media($gt-mobile) {
+    fieldset {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .dangerous {
@@ -486,16 +497,26 @@ dd {
   &:first-of-type { // #janky i think there is another way to do this
     margin-bottom: 1rem;
   }
+  &:only-child {
+    margin-bottom: 0;
+  }
   fieldset & {
     margin-bottom: .5rem;
     &:first-of-type { // #janky i think there is another way to do this
       margin-bottom: .5rem;
+    }
+    &:only-child, &:last-of-type {
+      margin-bottom: 0;
     }
   }
 }
 
 fieldset {
   margin-bottom: 1rem;
+  padding: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .emoji {

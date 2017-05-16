@@ -443,6 +443,13 @@ section:not(#welcome) > * {
 details > fieldset {
   margin-top: .5em; }
 
+details:last-child {
+  margin-bottom: 0; }
+
+@media only screen and (min-width: 40.0625em) {
+  .flexible fieldset {
+    margin-bottom: 0; } }
+
 .dangerous {
   background: rgba(255, 0, 0, 0.2);
   border: 1px solid rgba(255, 0, 0, 0.4);
@@ -695,13 +702,20 @@ dd {
     margin-bottom: 0; }
   .field:first-of-type {
     margin-bottom: 1rem; }
+  .field:only-child {
+    margin-bottom: 0; }
   fieldset .field {
     margin-bottom: .5rem; }
     fieldset .field:first-of-type {
       margin-bottom: .5rem; }
+    fieldset .field:only-child, fieldset .field:last-of-type {
+      margin-bottom: 0; }
 
 fieldset {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  padding: 1rem; }
+  fieldset:last-child {
+    margin-bottom: 0; }
 
 .emoji {
   font-family: initial; }

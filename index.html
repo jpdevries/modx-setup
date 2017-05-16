@@ -63,7 +63,7 @@
         <a href="#admin-user">Admin User</a>
       </li>
       <li>
-        <a href="#context-installation">Context Installation</a>
+        <a href="#context-installation">Context &amp; Connectors</a>
       </li>
       <li>
         <a href="#installation-status">Installation Status</a>
@@ -398,7 +398,8 @@
 
 
             <div class="balanced">
-              <button class="balanced subtle primary">Test database server connection and view&nbsp;collations.</button>
+              <p hidden id="test-database-description">Tests database server connection and view&nbsp;collations</p>
+              <button aria-describedby="test-database-description" class="balanced subtle primary">Test database connection</button>
             </div>
             <hr>
             <div class="field">
@@ -677,7 +678,7 @@
 
             <div>
               <details>
-                <summary>FAQs</summary>
+                <summary class="balanced">FAQs</summary>
                 <div>
                   <dl>
                     <dt>What is a database?</dt>
@@ -732,7 +733,7 @@
             </div>
             <div class="field">
               <details>
-                <summary>Optional fields</summary>
+                <summary class="balanced">Optional fields</summary>
                 <div>
                   <div class="field">
                       <label for="given_name">Given Name:</label>
@@ -768,31 +769,39 @@
     </section>
     <section id="context-installation">
         <div>
-            <h2><span class="emoji">🔀</span><br>Context Installation</h2>
+            <h2><span class="emoji">🔀</span><br>Context &amp; Connectors</h2>
             <p>Here you specify where MODX is or should be located, the relative URL your MODX install will be hosted at, and where your connectors will be&nbsp;located.</p>
-            <div class="field">
-                <label for="context_path">Absolute Filesystem path to MODX:</label>
-                <input aria-label="Use custom context path" type="checkbox" name="do_context_path" id="do_context_path">&ensp;
-                <input type="text" name="context_path" id="context_path" placeholder="/" value="/">
-            </div>
-            <div class="field">
-                <label for="url_web_context">URL for web context:</label>
-                <input aria-label="Use custom URL for web context" type="checkbox" name="do_web_context_path" id="do_web_context_path">&ensp;
-                <input type="text" name="url_web_context" id="url_web_context" value="/" placeholder="/">
-            </div>
-            <div class="field">
-                <label for="url_web_context">Filesystem path for connectors:</label>
-                <input aria-label="Use custom filesystem path for connectors" type="checkbox" name="do_custom_filesystem_connectors_path" id="do_custom_filesystem_connectors_path">&ensp;
-                <input type="text" name="url_web_context" id="url_web_context" placeholder="/modx/connectors">
-            </div>
-            <div class="field">
-                <label for="url_web_context">URL for connectors:</label>
-                <input aria-label="Use custom URL for connectors" type="checkbox" name="do_custom_connectors_url" id="do_custom_connectors_url">&ensp;
-                <input type="text" name="url_web_context" id="url_web_context" placeholder="/connectors">
+            <div class="flexible">
+              <fieldset>
+                <legend>Context</legend>
+                <div class="field">
+                    <label for="context_path">Absolute Filesystem path to MODX:</label>
+                    <input aria-label="Use custom context path" type="checkbox" name="do_context_path" id="do_context_path">&ensp;
+                    <input type="text" name="context_path" id="context_path" placeholder="/" value="/">
+                </div>
+                <div class="field">
+                    <label for="url_web_context">URL for web context:</label>
+                    <input aria-label="Use custom URL for web context" type="checkbox" name="do_web_context_path" id="do_web_context_path">&ensp;
+                    <input type="text" name="url_web_context" id="url_web_context" value="/" placeholder="/">
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Connectors</legend>
+                <div class="field">
+                    <label for="url_web_context">Filesystem path for connectors:</label>
+                    <input aria-label="Use custom filesystem path for connectors" type="checkbox" name="do_custom_filesystem_connectors_path" id="do_custom_filesystem_connectors_path">&ensp;
+                    <input type="text" name="url_web_context" id="url_web_context" placeholder="/modx/connectors">
+                </div>
+                <div class="field">
+                    <label for="url_web_context">URL for connectors:</label>
+                    <input aria-label="Use custom URL for connectors" type="checkbox" name="do_custom_connectors_url" id="do_custom_connectors_url">&ensp;
+                    <input type="text" name="url_web_context" id="url_web_context" placeholder="/connectors">
+                </div>
+              </fieldset>
             </div>
             <div>
               <details>
-                <summary>FAQs</summary>
+                <summary class="balanced">FAQs</summary>
                 <div>
                   <dl>
                     <dt>What are connectors?</dt>
@@ -880,7 +889,7 @@
                     </fieldset>
                   </details>
                   <details>
-                    <summary>What I want</summary>
+                    <summary>What I want</summary><!-- (what I really really want) -->
                     <fieldset id="i-would-like-to">
                       <legend>I'd like to:</legend>
                       <label class="field" for="i-want-it-all"><input type="checkbox" name="i-want-it-all" id="i-want-it-all">&ensp;Have it all</label>
@@ -906,7 +915,7 @@
                       <fieldset class="commerce">
                         <legend>Commerce</legend>
                         <label class="field" for="i-like-authorize"><input disabled type="checkbox" data-dirty="true" name="i-like-authorize" id="i-like-authorize">&ensp;Accept payments using Authorize.NET</label>
-                        <label class="field" for="i-like-paypal"><input disabled type="checkbox" data-dirty="true" name="i-like-paypal" id="i-like-paypal">&ensp;Accept payments using PayPal</label>
+                        <label class="field" for="i-like-paypal"><input disabled class="default" type="checkbox" data-dirty="true" name="i-like-paypal" id="i-like-paypal">&ensp;Accept payments using PayPal</label>
                         <label class="field" for="i-like-mollie"><input disabled type="checkbox" data-dirty="true" name="i-like-mollie" id="i-like-mollie">&ensp;Accept payments using Mollie</label>
                         <label class="field" for="i-like-stripe"><input disabled type="checkbox" data-dirty="true" name="i-like-stripe" id="i-like-stripe">&ensp;Accept payments using Stripe</label>
                       </fieldset>
@@ -1084,6 +1093,9 @@
                               </label>
                               <label for="pkg-scheduler" class="field">
                                 <input type="checkbox" name="pkg-scheduler" id="pkg-scheduler">&ensp;Scheduler&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Scheduler</span></small></a>
+                              </label>
+                              <label for="pkg-boilerX" class="field">
+                                <input type="checkbox" name="pkg-boilerX" id="pkg-boilerX">&ensp;HTML5 Boilerplate&ensp;<a href="#"><small>more info<span class="visually-hidden"> about HTML5 Boilerplate</span></small></a>
                               </label>
                             </fieldset>
                           </details>
@@ -1363,7 +1375,7 @@
         });
 
         document.getElementById('i-like-commerce').addEventListener('change', (event) => {
-          const inputs = document.querySelectorAll('fieldset.commerce input[type="checkbox"]');
+          const inputs = document.querySelectorAll('fieldset.commerce input.default');
           if(event.target.checked) {
 
             for(let i = 0; i < inputs.length; i++) {
