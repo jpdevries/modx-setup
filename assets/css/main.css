@@ -410,9 +410,6 @@ button, a.button {
   button.subtle, a.subtle.button {
     font-size: .875em; }
 
-.flexible {
-  display: flex; }
-
 button {
   color: white; }
 
@@ -449,6 +446,9 @@ details:last-child {
 @media only screen and (min-width: 40.0625em) {
   .flexible fieldset {
     margin-bottom: 0; } }
+
+#test-database-connection {
+  margin-top: 1rem; }
 
 .dangerous {
   background: rgba(255, 0, 0, 0.2);
@@ -495,8 +495,10 @@ section {
 body {
   margin: 0 auto; }
 
-.flexible {
-  justify-content: space-around; }
+@media only screen and (min-width: 40.0625em) {
+  .flexible {
+    display: flex;
+    justify-content: space-around; } }
 
 #welcome h1 {
   margin-top: 0; }
@@ -526,7 +528,7 @@ a.button {
   }*/ }
 
 section {
-  min-height: 100vh; }
+  min-height: calc(100vh - 1.625em); }
   section:not(#welcome):nth-of-type(odd) {
     background: #f0f0f0;
     border: 1px solid #e6e6e6; }

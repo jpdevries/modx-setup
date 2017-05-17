@@ -351,7 +351,8 @@
     <section id="connection-information">
         <div>
             <h2><span class="emoji">🗄</span><br>Connection Information</h2>
-            <p>MODX needs to connect to a database to get&nbsp;started.</p>
+            <!--p>MODX needs to connect to a database to get&nbsp;started.</p-->
+            <p class="balanced">MODX has needs. Match it up with a database to get&nbsp;started.</p>
             <!--p>We all need help from time to time. <a href="#">Find a certified MODX developer.</a></p-->
             <!--label for="database_type">Database Type</label>
             <select name="database_type" id="database_type">
@@ -369,37 +370,39 @@
                   <input type="radio" id="sqlsrv" name="db_type"> sqlsrv</label>
                 </div>
             </fieldset>
-            <fieldset>
-              <legend>Connection Information</legend>
-              <div class="field">
-                  <label for="db_host">Database Host</label>
-                  <input type="text" name="db_host" placeholder="localhost">
-              </div>
-              <div class="field">
-                  <label for="db_name">Database Name</label>
-                  <input type="text" name="db_name" placeholder="modx">
-              </div>
-              <div class="field">
-                  <label for="db_name">Table Prefix</label>
-                  <input type="text" name="table_prefix" placeholder="modx_" value="modx_">
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>Credentials</legend>
-              <div class="field">
-                  <label for="db_login">Database Login Name</label>
-                  <input type="text" name="db_login" placeholder="root">
-              </div>
-              <div class="field">
-                  <label for="db_password">Database Password</label>
-                  <input type="text" name="db_password">
-              </div>
-            </fieldset>
+            <div class="flexible">
+              <fieldset>
+                <legend>Connection Information</legend>
+                <div class="field">
+                    <label for="db_host">Database Host</label>
+                    <input type="text" name="db_host" placeholder="localhost">
+                </div>
+                <div class="field">
+                    <label for="db_name">Database Name</label>
+                    <input type="text" name="db_name" placeholder="modx">
+                </div>
+                <div class="field">
+                    <label for="db_name">Table Prefix</label>
+                    <input type="text" name="table_prefix" placeholder="modx_" value="modx_">
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Credentials</legend>
+                <div class="field">
+                    <label for="db_login">Database Login Name</label>
+                    <input type="text" name="db_login" placeholder="root">
+                </div>
+                <div class="field">
+                    <label for="db_password">Database Password</label>
+                    <input type="text" name="db_password">
+                </div>
+              </fieldset>
+            </div>
 
 
             <div class="balanced">
               <p hidden id="test-database-description">Tests database server connection and view&nbsp;collations</p>
-              <button aria-describedby="test-database-description" class="balanced subtle primary">Test database connection</button>
+              <button id="test-database-connection" aria-describedby="test-database-description" class="balanced subtle primary">Test database connection</button>
             </div>
             <hr>
             <div class="field">
@@ -857,7 +860,7 @@
               Setup Complete
               <small>Welcome to the MODX Community</small>
             </h2>
-            <p>🎉&ensp;Congratulations! Not only have you successfully installed some nifty software &mdash; you've joined a world wide community of web professionals who enjoy authoring the web&nbsp;freely. <a href="https://twitter.com/intent/tweet?text=I%20just%20installed%20the%20MODX%20Content%20Management%20System!%20%23MODX" target="_twitter-installed">Tweet this</a>.</p>
+            <p>🎉&ensp;Congratulations! Not only have you successfully installed some nifty software &mdash; you've joined a world wide community who enjoys authoring the web&nbsp;freely. <a href="https://twitter.com/intent/tweet?text=I%20just%20installed%20the%20MODX%20Content%20Management%20System!%20%23MODX" target="_twitter-installed">Tweet this</a>.</p>
             <p>Now that MODX is installed you may configure it further or skip straight to <a href="#">your new&nbsp;dashboard</a>.</p>
             <div id="packages-to-install">
               <div>
@@ -999,10 +1002,10 @@
                                 <input type="checkbox" name="pkg-formalicious" id="pkg-formalicious">&ensp;Formalicious by Sterc&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Formalicious by Sterc</span></small></a>
                               </label>
                               <label for="pkg-wayfinder" class="field">
-                                <input type="checkbox" name="pkg-wayfinder" id="pkg-wayfinder">&ensp;Wayfinder&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Wayfinder</span></small></a>
+                                <input type="checkbox" name="pkg-wayfinder" id="pkg-wayfinder" data-pkg-exempt="pkg-pdotools">&ensp;Wayfinder&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Wayfinder</span></small></a>
                               </label>
                               <label for="pkg-breadcrumbs" class="field">
-                                <input type="checkbox" name="pkg-breadcrumbs" id="pkg-breadcrumbs">&ensp;Breadcrumbs&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Breadcrumbs</span></small></a>
+                                <input type="checkbox" name="pkg-breadcrumbs" id="pkg-breadcrumbs" data-pkg-exempt="pkg-pdotools">&ensp;Breadcrumbs&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Breadcrumbs</span></small></a>
                               </label>
                               <label for="pkg-simplesearch" class="field">
                                 <input type="checkbox" name="pkg-simplesearch" id="pkg-simplesearch">&ensp;SimpleSearch&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Breadcrumbs</span></small></a>
@@ -1035,7 +1038,7 @@
                                 <input type="checkbox" name="pkg-simpleab" id="pkg-simpleab">&ensp;SimpleAB by modmore&ensp;<a href="#"><small>more info<span class="visually-hidden"> about SimpleAB by modmore</span></small></a>
                               </label>
                               <label for="pkg-googlesitemap" class="field">
-                                <input type="checkbox" name="pkg-googlesitemap" id="pkg-googlesitemap">&ensp;GoogleSiteMap&ensp;<a href="#"><small>more info<span class="visually-hidden"> about GoogleSiteMap</span></small></a>
+                                <input type="checkbox" name="pkg-googlesitemap" id="pkg-googlesitemap" data-pkg-exempt="pkg-pdotools">&ensp;GoogleSiteMap&ensp;<a href="#"><small>more info<span class="visually-hidden"> about GoogleSiteMap</span></small></a>
                               </label>
                             </fieldset>
                           </details>
@@ -1175,13 +1178,15 @@
 
         (() => {
           const primaryBtns = document.querySelectorAll('section footer .primary');
+          const breadcrumb = document.getElementById('breadcrumb'),
+          breadcrumbRect = breadcrumb.getBoundingClientRect();
           for(let i = 0; i < primaryBtns.length; i++) {
             const primaryBtn = primaryBtns[i];
             primaryBtn.addEventListener('click', (event) => {
               event.preventDefault();
               console.log(event.target.closest('section'));
               try {
-                scrollTo(event.target.closest('section').nextElementSibling.getBoundingClientRect().top - 0);
+                scrollTo(event.target.closest('section').nextElementSibling.getBoundingClientRect().top - breadcrumbRect.height);
               } catch (e) {
 
               }
@@ -1193,13 +1198,21 @@
         document.getElementById('continue').addEventListener('click', (event) => {
             console.log('continue');
             event.preventDefault();
-            scrollTo(document.getElementById('installation-options').getBoundingClientRect().top - 0);
+
+            const breadcrumb = document.getElementById('breadcrumb'),
+            breadcrumbRect = breadcrumb.getBoundingClientRect();
+
+            scrollTo(document.getElementById('installation-options').getBoundingClientRect().top - breadcrumbRect.height);
         })
         document.querySelector('#a11y-prefs-btn a').addEventListener('click', (event) => {
             event.preventDefault();
             window.location.hash = 'a11y-prefs';
             document.getElementById('a11y-prefs').removeAttribute('hidden');
-            scrollTo(document.getElementById('a11y-prefs').getBoundingClientRect().top - 0);
+
+            const breadcrumb = document.getElementById('breadcrumb'),
+            breadcrumbRect = breadcrumb.getBoundingClientRect();
+
+            scrollTo(document.getElementById('a11y-prefs').getBoundingClientRect().top - breadcrumbRect.height);
         });
 
         document.getElementById('hit-areas').addEventListener('change', (event) => {
@@ -1312,7 +1325,6 @@
             for(let i = 0; i < inputs.length; i++) {
               const input = inputs[i];
               if(input.dataset.dirty !== 'false') {
-                //console.log('holy fuck', input);
                 console.log('checking!!! ', dependent);
                 if(!shouldExempt(input)) {
                   input.checked = true;
@@ -1327,6 +1339,16 @@
             return (element.dataset.pkgExempt && document.getElementById(element.dataset.pkgExempt).checked)
           } catch (e) {
             return false
+          }
+        }
+
+        function exemptInputs(input) {
+          console.log('exemptInputs', input.getAttribute('id'));
+          const inputs = document.getElementById('packages-to-install').querySelectorAll(`input[data-pkg-exempt*="${input.getAttribute('id')}"]`);
+          console.log(inputs);
+          for(let i = 0; i < inputs.length; i++) {
+            const input = inputs[i];
+            input.checked = false;
           }
         }
 
@@ -1352,9 +1374,8 @@
                   console.log(e);
                 }
               });
-
-
             }
+            exemptInputs(event.target);
           }
         });
 
@@ -1367,10 +1388,10 @@
               input.checked = true;
             }
 
-            //if(!document.getElementById('pkg-ace').checked && !document.getElementById('pkg-codemirror').checked) document.getElementById('pkg-ace').checked = true;
-            //if(!document.getElementById('pkg-getresources').checked && !document.getElementById('pkg-pdotools').checked) document.getElementById('pkg-getresources').checked = true;
-            //if(!document.getElementById('i-like-redactor').checked && !document.getElementById('i-like-tinymce').checked) document.getElementById('i-like-redactor').checked = true;
-            //if(!document.getElementById('pkg-redactor').checked && !document.getElementById('pkg-tinymce').checked) document.getElementById('pkg-redactor').checked = true;
+            if(!document.getElementById('pkg-ace').checked && !document.getElementById('pkg-codemirror').checked) document.getElementById('pkg-ace').checked = true;
+            if(!document.getElementById('pkg-getresources').checked && !document.getElementById('pkg-pdotools').checked) document.getElementById('pkg-getresources').checked = true;
+            if(!document.getElementById('i-like-redactor').checked && !document.getElementById('i-like-tinymce').checked) document.getElementById('i-like-redactor').checked = true;
+            if(!document.getElementById('pkg-redactor').checked && !document.getElementById('pkg-tinymce').checked) document.getElementById('pkg-redactor').checked = true;
           }
         });
 

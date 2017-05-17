@@ -13,6 +13,8 @@ $gt-mobile: (
   media: 40.0625em,
 );
 
+$fullHeight: calc(100vh - 1.625em);
+
 * {
   box-sizing: border-box;
 }
@@ -130,6 +132,10 @@ details {
   }
 }
 
+#test-database-connection {
+  margin-top: 1rem;
+}
+
 .dangerous {
   background: rgba(red, 0.2);
   border:1px solid rgba(red, 0.4);
@@ -211,8 +217,10 @@ body {
 }
 
 .flexible {
-  @extend %flexible;
-  justify-content: space-around;
+  @include grid-media($gt-mobile) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 #welcome {
@@ -250,7 +258,7 @@ a.button {
 }
 
 section {
-  min-height: 100vh;
+  min-height: $fullHeight;
   &:not(#welcome) {
     &:nth-of-type(odd) {
       background: rgb(240, 240, 240);
@@ -530,7 +538,7 @@ fieldset {
 }
 
 section#welcome {
-  //height: 100vh;
+  //height: $fullHeight;
   position: relative;
   text-align: center;
   background: var(--mainnav-bg);
