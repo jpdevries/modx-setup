@@ -437,6 +437,12 @@ section:not(#welcome) > * {
   #install-these-packages a:focus {
     color: #0070dd; }
 
+.mx-setup-upgrade section#connection-information, .mx-setup-upgrade section#admin-user, .mx-setup-upgrade section#context-installation {
+  display: none; }
+
+.mx-setup-upgrade #breadcrumb li[data-crumb="admin-user"], .mx-setup-upgrade #breadcrumb li[data-crumb="connection-information"], .mx-setup-upgrade #breadcrumb li[data-crumb="context-installation"] {
+  display: none; }
+
 details > fieldset {
   margin-top: .5em; }
 
@@ -584,6 +590,21 @@ a small {
 a:hover small, a:active small, a:focus small {
   color: currentColor; }
 
+p a.subtle {
+  color: currentColor; }
+  p a.subtle:focus {
+    color: #118AFF; }
+
+#a11y-preferences-fieldset {
+  display: inline-block;
+  margin-top: 1rem;
+  text-align: left; }
+  #a11y-preferences-fieldset legend {
+    text-align: center; }
+
+[data-mx-area="connection-charset"] label {
+  margin-bottom: 1rem; }
+
 #breadcrumb {
   position: sticky;
   top: 0;
@@ -634,7 +655,6 @@ a:hover small, a:active small, a:focus small {
     position: absolute;
     top: 0;
     right: 0;
-    width: 100em;
     bottom: 0; }
 
 #breadcrumb a:hover {
