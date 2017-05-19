@@ -105,6 +105,12 @@ function desires() {
 
   switch (action.type) {
     case _actions2.default.FETCH_DESIRES_SUCCESS:
+      console.log('actions.FETCH_DESIRES_SUCCESS', _actions2.default.FETCH_DESIRES_SUCCESS);
+      console.log(action.desires);
+      return Object.keys(action.desires).map(function (desire) {
+        return Object.assign({ key: desire }, action.desires[desire], {});
+      });
+
       return action.desires;
       break;
   }
@@ -170,7 +176,14 @@ function extras() {
 
   switch (action.type) {
     case _actions2.default.FETCH_EXTRAS_SUCCESS:
-      return Object.assign({}, state, _defineProperty({}, action.extras.provider, action.extras.dependencies));
+
+      var _extras = Object.keys(action.extras.extras).map(function (key) {
+        return Object.assign({ "key": key }, action.extras.extras[key], {});
+      });
+
+      console.log(_extras);
+
+      return Object.assign({}, state, _defineProperty({}, action.extras.provider, _extras));
       break;
 
     case _actions2.default.FETCH_CATEGORIES_ERROR:
@@ -323,7 +336,7 @@ exports.fetchPresetsSuccess = fetchPresetsSuccess;
 
 var FETCH_PRESETS_ERROR = 'fetch_presets_error';
 var fetchPresetsError = function fetchPresetsError(error) {
-  //console.log('DELETE_MEDIA_ITEMS_SUCCESS', contents);
+  console.log('fetchPresetsError', error);
   return {
     type: FETCH_PRESETS_ERROR,
     error: error
@@ -1298,14 +1311,15 @@ getJSON('/api/extras/desires').then((json) => {
 // Its API is { subscribe, dispatch, getState }.
 var store = __webpack_require__(10);
 
-store.dispatch(_actions2.default.fetchDesires());
-store.dispatch(_actions2.default.fetchPresets());
-
-store.dispatch(_actions2.default.fetchCategories());
-
-store.dispatch(_actions2.default.fetchProviders()).then(function (providers) {
-  store.dispatch(_actions2.default.fetchExtras('modmore'));
-  store.dispatch(_actions2.default.fetchExemptions('modmore'));
+// fetch the providers (ex: ["modx.com", "modmore"])
+store.dispatch(_actions2.default.fetchProviders()).then(function (action) {
+  Promise.all([// then get the presets, desires and categories
+  store.dispatch(_actions2.default.fetchPresets()), store.dispatch(_actions2.default.fetchDesires()), store.dispatch(_actions2.default.fetchCategories())]).then(function () {
+    action.providers.forEach(function (provider) {
+      // then for each provider
+      store.dispatch(_actions2.default.fetchExtras(provider)); // get the Extras
+    });
+  });
 });
 
 // You can use subscribe() to update the UI in response to state changes.
@@ -1313,7 +1327,29 @@ store.dispatch(_actions2.default.fetchProviders()).then(function (providers) {
 // However it can also be handy to persist the current state in the localStorage.
 
 store.subscribe(function () {
-  return console.log(store.getState());
+  var state = store.getState();
+  console.log(state);
+
+  var numExtras = 0;
+  Object.keys(state.extras).forEach(function (provider) {
+    console.log(state.extras[provider]);
+    numExtras += state.extras[provider].length;
+  });
+
+  if (!numExtras) {
+    console.log('returning');
+    return;
+  }
+
+  console.log('here we fucking go', state.extras);
+
+  var presets = state.presets;
+  presets.forEach(function (preset) {
+    return console.log(preset);
+  });
+
+  var desires = state.desires;
+  console.log(desires, desires.length);
 });
 
 /***/ }),

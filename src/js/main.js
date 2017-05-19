@@ -47,14 +47,18 @@ getJSON('/api/extras/desires').then((json) => {
 // Its API is { subscribe, dispatch, getState }.
 const store = require('./model/store');
 
-store.dispatch(actions.fetchDesires());
-store.dispatch(actions.fetchPresets());
 
-store.dispatch(actions.fetchCategories());
-
-store.dispatch(actions.fetchProviders()).then((providers) => {
-  store.dispatch(actions.fetchExtras('modmore'));
-  store.dispatch(actions.fetchExemptions('modmore'));
+// fetch the providers (ex: ["modx.com", "modmore"])
+store.dispatch(actions.fetchProviders()).then((action) => {
+  Promise.all([ // then get the presets, desires and categories
+    store.dispatch(actions.fetchPresets()),
+    store.dispatch(actions.fetchDesires()),
+    store.dispatch(actions.fetchCategories())
+  ]).then(() => {
+    action.providers.forEach((provider) => { // then for each provider
+      store.dispatch(actions.fetchExtras(provider)); // get the Extras
+    });
+  })
 });
 
 
@@ -62,6 +66,30 @@ store.dispatch(actions.fetchProviders()).then((providers) => {
 // Normally you'd use a view binding library (e.g. React Redux) rather than subscribe() directly.
 // However it can also be handy to persist the current state in the localStorage.
 
-store.subscribe(() =>
-  console.log(store.getState())
-)
+store.subscribe(() => {
+  const state = store.getState();
+  console.log(state);
+
+  let numExtras = 0;
+  Object.keys(state.extras).forEach((provider) => {
+    console.log(state.extras[provider]);
+    numExtras += state.extras[provider].length;
+  });
+
+  if(!numExtras) {
+    console.log('returning');
+    return;
+  }
+
+  console.log('here we fucking go', state.extras);
+
+  const presets = state.presets;
+  presets.forEach((preset) => (
+    console.log(preset)
+  ))
+
+
+  const desires = state.desires;
+  console.log(desires, desires.length);
+
+});

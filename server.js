@@ -82,8 +82,7 @@ app.get('/api/categories', (req, res) => {
     [
       {
         "key": "editing",
-        "title": "Editing Packages",
-        "extras": ["redactor", "blockdown"]
+        "title": "Editing Packages"
       }
     ]
   );
@@ -93,31 +92,112 @@ app.get('/api/:provider/extras', (req, res) => {
   res.json(
     {
       "provider": req.params.provider,
-      "dependencies": {
+      "extras": {
         "getresources": {
           "version": "*",
-          "href": "http://google.com"
+          "href": "http://google.com",
+          "category": "editing"
         },
-        "collections": "*",
-        "blockdown": "*",
-        "formit": "*",
-        "formalicious": "*",
-        "content-blocks": "*",
-        "redactor": "*",
-        "getpage": "*",
-        "seo-tab": "*",
-        "seo-pro": "*",
-        "google-analytics-dashboard-widget": "*",
-        "wayfinder": "*",
-        "breadcrumbs": "*",
-        "googlesitemap": "*",
-        "simplesearch": "*",
-        "twitterx": "*",
-        "batcher": "*",
-        "taglister": "*",
-        "archivist": "*",
-        "quip": "*",
-        "tagger": "*"
+        "collections": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "blockdown": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "formit": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "formalicious": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "content-blocks": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "redactor": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "getpage": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "seo-tab": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "seo-pro": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "google-analytics-dashboard-widget": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "wayfinder": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "breadcrumbs": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "googlesitemap": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "simplesearch": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "twitterx": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "batcher": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "taglister": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "archivist": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "quip": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        },
+        "tagger": {
+          "version": "*",
+          "href": "http://google.com",
+          "category": "editing"
+        }
       }
     }
   );
@@ -140,15 +220,12 @@ app.get('/api/:provider/extras/exemptions', (req, res) => {
 
 app.get('/api/desires', (req, res) => {
   res.json(
-    [
       {
         "collections": {
             "title": "Manage content as collections",
-            "presetDependencies": ["blog"],
-            "dependencies": ["collections"]
+            "dependencies": ["blog","collections"] /* supports presets and extras alike. blog is a preset, preset is an extra */
         }
       }
-    ]
   );
 });
 

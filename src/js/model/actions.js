@@ -105,7 +105,7 @@ exports.fetchPresetsSuccess = fetchPresetsSuccess;
 
 const FETCH_PRESETS_ERROR = 'fetch_presets_error';
 const fetchPresetsError = function(error) {
-  //console.log('DELETE_MEDIA_ITEMS_SUCCESS', contents);
+  console.log('fetchPresetsError', error);
   return {
     type: FETCH_PRESETS_ERROR,
     error

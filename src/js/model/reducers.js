@@ -9,6 +9,12 @@ const initialDesireState = [
 function desires(state = initialDesireState, action) {
   switch (action.type) {
     case actions.FETCH_DESIRES_SUCCESS:
+    console.log('actions.FETCH_DESIRES_SUCCESS', actions.FETCH_DESIRES_SUCCESS);
+    console.log(action.desires);
+    return Object.keys(action.desires).map((desire) => (
+      Object.assign({key: desire}, action.desires[desire], {})
+    ))
+
     return action.desires;
     break;
   }
@@ -70,8 +76,15 @@ const initialExtrasState = [
 function extras(state = initialExtrasState, action) {
   switch (action.type) {
     case actions.FETCH_EXTRAS_SUCCESS:
+
+    const extras = Object.keys(action.extras.extras).map((key) => (
+      Object.assign({"key": key}, action.extras.extras[key], {})
+    ));
+
+    console.log(extras);
+
     return Object.assign({}, state, {
-      [action.extras.provider]: action.extras.dependencies
+      [action.extras.provider]: extras
     });
     break;
 
