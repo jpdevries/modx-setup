@@ -5,8 +5,8 @@ node_modules
 bower_components
 .sass-cache
 
-_build/templates/default/scss/bourbon
-_build/templates/default/scss/neat
-_build/templates/default/scss/html5-boilerplate
+scss/bourbon
+scss/neat
+scss/html5-boilerplate
 
 lib/

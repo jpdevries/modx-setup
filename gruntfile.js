@@ -1,12 +1,13 @@
-//var Visualizer = require('webpack-visualizer-plugin');
+var Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = function(grunt) {
   const pkg = grunt.file.readJSON('package.json');
+  const webpackConfig = require('./webpack.config');
   grunt.initConfig({
     pkg: pkg,
     dirs:{
       static:'./static/',
-      theme:'../../../',
+      theme:'./',
       lib:'./lib/',
       assets:'./assets/',
       js:'./js/',
@@ -21,6 +22,13 @@ module.exports = function(grunt) {
                 layout: 'byComponent'
             }
         }
+    },
+    webpack: {
+      options: {
+        stats: !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
+      },
+      prod: webpackConfig,
+      dev: Object.assign({ watch: true }, webpackConfig)
     },
     modernizr:{
       dist:{
@@ -226,14 +234,9 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
-      'eureka-browser-umd': {
+      'modx-setup': {
         files: {
-          '<%= dirs.theme %><%= dirs.assets %><%= dirs.js %>eureka-browser.<%= pkg.version %>.min.js': ['<%= dirs.theme %><%= dirs.assets %><%= dirs.js %>eureka-browser.<%= pkg.version %>.js']
-        }
-      },
-      'eureka-browser-umd-bundle': {
-        files: {
-          '<%= dirs.theme %><%= dirs.assets %><%= dirs.js %>eureka-browser.bundle.<%= pkg.version %>.min.js': ['<%= dirs.theme %><%= dirs.assets %><%= dirs.js %>eureka-browser.bundle.<%= pkg.version %>.js']
+          '<%= dirs.theme %><%= dirs.assets %><%= dirs.js %>modx-setup.<%= pkg.version %>.min.js': ['<%= dirs.theme %><%= dirs.assets %><%= dirs.js %>modx-setup.<%= pkg.version %>.js']
         }
       }
     },
@@ -319,7 +322,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-string-replace');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  //grunt.loadNpmTasks('grunt-webpack');
+  grunt.loadNpmTasks('grunt-webpack');
   grunt.loadNpmTasks('grunt-svgo');
   grunt.loadNpmTasks('grunt-svgstore');
 
@@ -327,5 +330,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['growl:watch', 'watch']);
   //grunt.registerTask('build',['bower','copy:bower','modernizr','sass','copy:css','postcss','cssmin','copy:css','webpack','uglify','clean:buildimg','svgstore','svgo','copy:img','growl:build']);
+  grunt.registerTask('build',['sass','cssmin','webpack','growl:sass']);
   grunt.registerTask('buildcss',['sass','cssmin','growl:sass']);
 };
