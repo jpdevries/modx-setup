@@ -176,14 +176,15 @@ function extras() {
 
   switch (action.type) {
     case _actions2.default.FETCH_EXTRAS_SUCCESS:
+      console.log(action, action.provider);
 
-      var _extras = Object.keys(action.extras.extras).map(function (key) {
-        return Object.assign({ "key": key }, action.extras.extras[key], {});
+      var _extras = Object.keys(action.extras).map(function (key) {
+        return Object.assign({ "key": key, "provider": action.provider }, action.extras[key], {});
       });
 
       console.log(_extras);
 
-      return Object.assign({}, state, _defineProperty({}, action.extras.provider, _extras));
+      return Object.assign({}, state, _defineProperty({}, action.provider, _extras));
       break;
 
     case _actions2.default.FETCH_CATEGORIES_ERROR:
@@ -487,11 +488,12 @@ var fetchCategories = function fetchCategories() {
 exports.fetchCategories = fetchCategories;
 
 var FETCH_EXTRAS_SUCCESS = 'fetch_extras_success';
-var fetchExtrasSuccess = function fetchExtrasSuccess(extras) {
+var fetchExtrasSuccess = function fetchExtrasSuccess(extras, provider) {
   console.log('fetchExtrasSuccess', extras);
   return {
     type: FETCH_EXTRAS_SUCCESS,
-    extras: extras
+    extras: extras,
+    provider: provider
   };
 };
 
@@ -533,7 +535,7 @@ var fetchExtras = function fetchExtras(provider) {
     }).then(function (response) {
       return response.json();
     }).then(function (extras) {
-      return dispatch(fetchExtrasSuccess(extras));
+      return dispatch(fetchExtrasSuccess(extras.extras, provider));
     }).catch(function (error) {
       return dispatch(fetchExtrasError(error));
     });
@@ -1350,6 +1352,26 @@ store.subscribe(function () {
 
   var desires = state.desires;
   console.log(desires, desires.length);
+
+  var categories = state.categories;
+  categories.forEach(function (category) {
+    console.log(category);
+    var key = category.key,
+        title = category.title;
+
+    getExtrasByCategory(category.key);
+  });
+
+  function getExtrasByCategory(category) {
+    Object.keys(state.extras).forEach(function (provider) {
+      var filtered = state.extras[provider].filter(function (extra) {
+        console.log(extra.category, category);
+        return extra.category == category;
+      });
+      console.log('filtered', filtered);
+      return filtered;
+    });
+  }
 });
 
 /***/ }),

@@ -91,5 +91,23 @@ store.subscribe(() => {
 
   const desires = state.desires;
   console.log(desires, desires.length);
+  
+  const categories = state.categories;
+  categories.forEach((category) => {
+    console.log(category);
+    const { key, title } = category;
+    getExtrasByCategory(category.key);
+  });
+  
+  function getExtrasByCategory(category) {
+    Object.keys(state.extras).forEach((provider) => {
+      const filtered = state.extras[provider].filter((extra) => {
+        console.log(extra.category, category);
+        return extra.category == category
+      });
+      console.log('filtered', filtered);
+      return filtered;
+    });
+  }
 
 });

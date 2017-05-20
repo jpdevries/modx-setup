@@ -94,107 +94,173 @@ app.get('/api/:provider/extras', (req, res) => {
       "provider": req.params.provider,
       "extras": {
         "getresources": {
-          "version": "*",
+          "name": "getResources",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "collections": {
-          "version": "*",
+          "name": "Collections",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "blockdown": {
-          "version": "*",
+          "name": "BlockDown",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "formit": {
-          "version": "*",
+          "name": "FormIt",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "formalicious": {
-          "version": "*",
+          "name": "Formalicious by Sterc",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
-          "category": "editing"
+          "category": "editing",
+          "premium": true
         },
         "content-blocks": {
-          "version": "*",
+          "name": "ContentBlocks by modmore",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
-          "category": "editing"
+          "category": "editing",
+          "premium": true
         },
         "redactor": {
-          "version": "*",
+          "name": "Redactor by modmore",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
-          "category": "editing"
+          "category": "editing",
+          "premium": true
         },
         "getpage": {
-          "version": "*",
+          "name": "getPage",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "seo-tab": {
-          "version": "*",
+          "name": "SEOTab",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "seo-pro": {
-          "version": "*",
+          "name": "SEOPro",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "google-analytics-dashboard-widget": {
-          "version": "*",
+          "name": "Google Analytics Dashboard Widget",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "wayfinder": {
-          "version": "*",
+          "name": "Wayfinder",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "breadcrumbs": {
-          "version": "*",
+          "name": "Breadcrumbs",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "googlesitemap": {
-          "version": "*",
+          "name": "Tagger",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "simplesearch": {
-          "version": "*",
+          "name": "SimpleSearch",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "twitterx": {
-          "version": "*",
+          "name": "TwitterX",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "batcher": {
-          "version": "*",
+          "name": "Batcher",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "taglister": {
-          "version": "*",
+          "name": "TagLister",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "archivist": {
-          "version": "*",
+          "name": "Archivist",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "quip": {
-          "version": "*",
+          "name": "Quip",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         },
         "tagger": {
-          "version": "*",
+          "name": "Tagger",
+          "version": "1.0.0",
+          "release": "pl",
+          "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
           "href": "http://google.com",
           "category": "editing"
         }

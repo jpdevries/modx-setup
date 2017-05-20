@@ -339,11 +339,12 @@ exports.fetchCategories = fetchCategories;
 
 
 const FETCH_EXTRAS_SUCCESS = 'fetch_extras_success';
-const fetchExtrasSuccess = function(extras) {
+const fetchExtrasSuccess = function(extras, provider) {
   console.log('fetchExtrasSuccess', extras);
   return {
     type: FETCH_EXTRAS_SUCCESS,
-    extras
+    extras,
+    provider
   }
 }
 
@@ -390,7 +391,7 @@ const fetchExtras = (provider) => {
       response.json()
     )).then((extras) => (
       dispatch(
-        fetchExtrasSuccess(extras)
+        fetchExtrasSuccess(extras.extras, provider)
       )
     )).catch((error) => (
       dispatch(

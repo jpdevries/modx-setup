@@ -76,15 +76,16 @@ const initialExtrasState = [
 function extras(state = initialExtrasState, action) {
   switch (action.type) {
     case actions.FETCH_EXTRAS_SUCCESS:
+    console.log(action, action.provider);
 
-    const extras = Object.keys(action.extras.extras).map((key) => (
-      Object.assign({"key": key}, action.extras.extras[key], {})
+    const extras = Object.keys(action.extras).map((key) => (
+      Object.assign({"key": key, "provider": action.provider}, action.extras[key], {})
     ));
 
     console.log(extras);
 
     return Object.assign({}, state, {
-      [action.extras.provider]: extras
+      [action.provider]: extras
     });
     break;
 
