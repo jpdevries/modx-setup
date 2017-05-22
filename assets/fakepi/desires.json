@@ -1,0 +1,130 @@
+{
+   "it-all":{
+      "title":"Have it all",
+      "dependencies":[
+         "*"
+      ]
+   },
+   "versionx":{
+      "title":"Create versioned backups of my content",
+      "dependencies":[
+         "versionx"
+      ]
+   },
+   "formit":{
+      "title":"Create my own Forms without coding",
+      "dependencies":[
+         "formit"
+      ]
+   },
+   "content-blocks":{
+      "title":"Manage content with layouts and fields",
+      "dependencies":[
+         "content-blocks"
+      ]
+   },
+   "redactor":{
+      "title":"Use a premium Rich Text Editor",
+      "name": "rte",
+      "type": "radio",
+      "default": true,
+      "dependencies":[
+         "redactor"
+      ]
+   },
+   "tinymce":{
+      "title":"Use a free Rich Text Editor",
+      "name": "rte",
+      "type": "radio",
+      "dependencies":[
+         "tinymce"
+      ]
+   },
+   "ace":{
+      "title":"Use a syntax highlighter when viewing code",
+      "dependencies":[
+         "ace"
+      ]
+   },
+   "more-gallery":{
+      "title":"Use a premium photo gallery Extra",
+      "dependencies":[
+         "more-gallery"
+      ]
+   },
+   "media-sources":{
+      "title":"Manage media by connecting to remote sources",
+      "dependencies":[
+         "media-sources",
+         "eureka"
+      ]
+   },
+   "media-manager":{
+      "title":"Manage media with tags and crops",
+      "dependencies":[
+         "media-sources",
+         "media-manager"
+      ]
+   },
+   "googlesitemap":{
+      "title":"Optimize my content for search engines",
+      "dependencies":[
+         "googlesitemap"
+      ]
+   },
+   "google-maps-tv":{
+      "title":"Embed Google Maps in my content",
+      "dependencies":[
+         "google-maps-tv"
+      ]
+   },
+   "simple-ab":{
+      "title":"Perform A/B testing",
+      "dependencies":[
+         "simple-ab"
+      ]
+   },
+   "client-config":{
+      "title":"Use a user-friendly interface for making site wide changes",
+      "dependencies":[
+         "client-config"
+      ]
+   },
+   "quickstart-buttons":{
+      "title":"Create quick start shortcuts on my dashboard",
+      "dependencies":[
+         "quickstart-buttons"
+      ]
+   },
+   "markdown":{
+      "title":"Author Content Using MarkDown",
+      "dependencies":[
+         "blockdown"
+      ]
+   },
+   "hybridauth":{
+      "title":"Allow authorization through social networks and other services",
+      "dependencies":[
+         "hybridauth"
+      ]
+   },
+   "babel":{
+      "title":"I'll be managing Multi–lingual content",
+      "dependencies":[
+         "babel"
+      ]
+   },
+   "commerce":{
+      "title":"Accept Payments",
+      "dependencies":[
+         "commerce"
+      ]
+   },
+   "collections":{
+      "title":"Manage content as collections",
+      "dependencies":[
+         "want-blog",
+         "collections"
+      ]
+   }
+}

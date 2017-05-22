@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "lazyload-script": "^1.0.0",
+    "mousetrap": "^1.6.1",
     "redux-thunk": "^2.2.0"
   }
 }

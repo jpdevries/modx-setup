@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="modmore-linear-gradient" x1="228.43" y1="456.86" x2="228.43" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#17426c" />
+      <stop offset="0.3" stop-color="#1f4a76" />
+      <stop offset="1" stop-color="#305989" /> </linearGradient>
+    <linearGradient id="modx-color-linear-gradient" x1="450.92" y1="558.75" x2="276.39" y2="445.06" gradientTransform="translate(0 -412)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#80c2e5" />
+      <stop offset="1" stop-color="#3480c1" /> </linearGradient>
+    <linearGradient id="modx-color-linear-gradient-2" x1="481.56" y1="821.17" x2="351.12" y2="735.01" gradientTransform="translate(0 -412)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f28548" />
+      <stop offset="0.18" stop-color="#f08046" />
+      <stop offset="0.41" stop-color="#ee7242" />
+      <stop offset="0.65" stop-color="#e95a3a" />
+      <stop offset="0.91" stop-color="#e33a2e" />
+      <stop offset="1" stop-color="#e02b29" /> </linearGradient>
+    <linearGradient id="modx-color-linear-gradient-3" x1="51.64" y1="637.12" x2="301.25" y2="481.15" gradientTransform="translate(0 -412)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#43aa49" />
+      <stop offset="1" stop-color="#acd155" /> </linearGradient>
+    <linearGradient id="modx-color-linear-gradient-4" x1="106.12" y1="916.29" x2="309.02" y2="591.6" xlink:href="#modx-color-linear-gradient-3" /> </defs>
+  <symbol viewBox="0 0 456.86 456.86" id="icon-modmore">
+    <title>modmore</title>
+    <circle cx="228.43" cy="228.43" r="228.43" fill="url(#modmore-linear-gradient)" />
+    <g>
+      <g>
+        <path d="M122.71,256c15.18,3.3,31.34,13.53,31.34,35.31v38.27c0,10.57,0,21.78,15.84,21.78h7.25V389.3h-9.89c-36.29,0-52.13-22.76-52.13-52.45V293.29c0-15.18-16.49-18.16-16.49-18.16V236.86s16.49-3,16.49-18.15V175.17c0-29.7,15.84-52.46,52.13-52.46h9.89v37.94h-7.25c-15.84,0-15.84,11.22-15.84,21.78v38.27C154.05,242.47,137.89,252.7,122.71,256Z"
+        transform="translate(-27.57 -27.57)" fill="#fff" />
+        <path d="M357.94,182.42c0-10.56,0-21.78-15.84-21.78h-7.25V122.7h9.89c36.29,0,52.13,22.77,52.13,52.46v43.55c0,15.18,16.5,18.15,16.5,18.15v38.27s-16.5,3-16.5,18.16v43.56c0,29.69-15.84,52.45-52.13,52.45h-9.89V351.35h7.25c15.84,0,15.84-11.21,15.84-21.78V291.3c0-21.77,16.16-32,31.35-35.31-15.19-3.3-31.35-13.52-31.35-35.3Z"
+        transform="translate(-27.57 -27.57)" fill="#fff" /> </g>
+      <path d="M274.64,237.69h41.24v37H274.64v41.24h-37V274.64H196.11v-37h41.57V196.11h37Z" transform="translate(-27.57 -27.57)" fill="#fff" /> </g>
+  </symbol>
+  <symbol viewBox="0 0 512 512" id="icon-modx-color">
+    <title>modx-color</title>
+    <g>
+      <polyline points="490.87 59.37 255.47 59.37 222.92 111.64 392.95 215.91 490.87 59.37" fill="url(#modx-color-linear-gradient)" />
+      <polygon points="222.92 111.64 239.59 84.78 392.95 215.91 222.92 111.64" opacity="0.15" />
+      <polygon points="444.69 499.74 444.69 264.34 394.01 232.71 287.23 401.29 444.69 499.74" fill="url(#modx-color-linear-gradient-2)" />
+      <polygon points="287.23 401.29 313.56 417.83 394.01 232.71 287.23 401.29" opacity="0.15" />
+      <polygon points="65.72 12.26 65.72 247.66 120.11 279.42 392.95 215.91 65.72 12.26" fill="url(#modx-color-linear-gradient-3)" />
+      <polygon points="119.05 297.29 21.13 451.18 256.53 451.18 394.01 232.71 119.05 297.29" fill="url(#modx-color-linear-gradient-4)" /> </g>
+  </symbol>
+</svg>

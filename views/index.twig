@@ -1,10 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>Setup MODX</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body class="">
+<body class="no-packages-loaded">
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -41,7 +41,7 @@
                         <a href="a11y-prefs" class="subtle" title="Accessibility Preferences">♿️<span hidden class="visually-hidden"> Accessibility Preferences</span></a>
                     </p>
                     <div>
-                        <a id="continue" href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+                        <a id="continue" href="#installation-options" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
                     </div>
                 </div>
             </section>
@@ -77,8 +77,8 @@
         <section hidden id="a11y-prefs">
             <div>
                 <h2>♿️<br>Accessibility Preferences</h2>
-                <p>At MODX <a href="#"  class="subtle">our goal is to provide creative freedom to everyone</a>. Here you can <a href="#" class="subtle">manage your accessibility preferences</a> and <a href="#" class="subtle">adjust MODX to your&nbsp;needs</a>.</p>
-                <p>As always, feel free to <a href="https://forums.modx.com/board?board=281" target="_modx-forum-a11y" class="subtle">discuss accessibility with the MODX&nbsp;Community</a>.</p>
+                <p class="balanced">At MODX <a href="#"  class="subtle">our goal is to provide creative freedom to everyone</a>. Here you can <a href="#" class="subtle">manage your accessibility preferences</a> and <a href="#" class="subtle">adjust MODX to your&nbsp;needs</a>.</p>
+                <p class="balanced">As always, feel free to <a href="https://forums.modx.com/board?board=281" target="_modx-forum-a11y" class="subtle">discuss accessibility with the MODX&nbsp;Community</a>.</p>
                 <div class="a11y-preference-modules">
                     <div class="font-size widget">
                         <div class="neat container">
@@ -86,16 +86,13 @@
                             <noscript id="fontsize__noscript">Please Enable JavaScript in a modern browser to use manage legibility preferences</noscript>
                             <fieldset>
                                 <legend id="fontsize__legend"><span a11y-hidden="">Choose a </span>Font Size</legend>
-                                <div>
-
+                                <div class="field">
                                     <label for="fontsize__regular"><input type="radio" id="fontsize__regular" name="fontsize" checked="">&nbsp;Regular</label>
                                 </div>
-                                <div>
-
+                                <div class="field">
                                     <label for="fontsize__large"><input type="radio" id="fontsize__large" name="fontsize" value="large">&nbsp;Large</label>
                                 </div>
-                                <div>
-
+                                <div class="field">
                                     <label for="fontsize__xl"><input type="radio" id="fontsize__xl" name="fontsize" value="xl">&nbsp;Extra–Large</label>
                                 </div>
                             </fieldset>
@@ -108,32 +105,25 @@
                 <noscript id="typeface__noscript">Please Enable JavaScript in a modern browser to chose a typeface</noscript>
                 <fieldset>
                     <legend id="typeface__legend"><span a11y-hidden="">Choose a </span>Typeface</legend>
-                    <div>
-
+                    <div class="field">
                         <label for="typeface__system"><input type="radio" id="typeface__system" name="typeface" checked="">&nbsp;System</label>
                     </div>
-                    <div>
-
+                    <div class="field">
                         <label for="typeface__opendyslexic"><input type="radio" id="typeface__opendyslexic" name="typeface" value="opendyslexic">&nbsp;OpenDyslexic</label>
                     </div>
-                    <div>
-
+                    <div class="field">
                         <label for="typeface__opensans"><input type="radio" id="typeface__opensans" name="typeface" value="opensans">&nbsp;Open Sans</label>
                     </div>
-                    <div>
-
+                    <div class="field">
                         <label for="typeface__raleway"><input type="radio" id="typeface__raleway" name="typeface" value="raleway">&nbsp;Raleway</label>
                     </div>
-                    <div>
-
+                    <div class="field">
                         <label for="typeface__ubuntu"><input type="radio" id="typeface__ubuntu" name="typeface" value="ubuntu">&nbsp;Ubuntu</label>
                     </div>
-                    <div>
-
+                    <div class="field">
                         <label for="typeface__fira"><input type="radio" id="typeface__fira" name="typeface" value="fira">&nbsp;Fira</label>
                     </div>
-                    <div>
-
+                    <div class="field">
                         <label for="typeface__anonpro"><input type="radio" id="typeface__anonpro" name="typeface" value="anonpro">&nbsp;Anonymous Pro</label>
                     </div>
                 </fieldset>
@@ -147,17 +137,16 @@
                 <noscript id="contrast__noscript">Please Enable JavaScript in a modern browser to manage contrast preferences</noscript>
                 <fieldset>
                     <legend id="contrast__legend">Contrast Preference<span aria-hidden="true">s</span></legend>
-                    <div>
+                    <div class="field">
                         <label for="contrast__normal"><input type="radio" id="contrast__normal" name="contrast" checked="">&nbsp;Normal</label>
                     </div>
-                    <div>
+                    <div class="field">
                         <label for="contrast__highcontrast"><input type="radio" id="contrast__highcontrast" name="contrast" value="highcontrast">&nbsp;Black on White</label>
                     </div>
-                    <div>
+                    <div class="field">
                         <label for="contrast__highcontrast_white-on-black"><input type="radio" id="contrast__highcontrast_white-on-black" name="contrast" value="contrast__highcontrast_white-on-black">&nbsp;White on Black</label>
                     </div>
-                    <div>
-
+                    <div class="field">
                         <label for="contrast__auto"><input type="radio" id="contrast__auto" name="contrast" value="auto">&nbsp;Auto<span a11y-hidden="">matic</span></label>
                     </div>
                 </fieldset>
@@ -169,12 +158,12 @@
             <h2>Motor</h2>
             <form>
                 <noscript id="reducemotion__noscript">Please Enable JavaScript in a modern browser manage animation preferences</noscript>
-                <div>
+                <div class="field">
                     <label for="drag-n-drop">
                       <input type="checkbox" id="drag-n-drop" name="reducemotion" value="yes">&nbsp;Disable Drag 'N Drop
                     </label>
                 </div>
-                <div>
+                <div class="field">
                     <label for="hit-areas">
                       <input type="checkbox" id="hit-areas" name="hit-areas" value="yes">&nbsp;Increase Hit Areas
                     </label>
@@ -187,8 +176,7 @@
             <h2>Animation</h2>
             <form>
                 <noscript id="reducemotion__noscript">Please Enable JavaScript in a modern browser manage animation preferences</noscript>
-                <div>
-
+                <div class="field">
                     <label for="reducemotion"><input type="checkbox" id="reducemotion" name="reducemotion" value="yes">&nbsp;Reduce Motion</label>
                 </div>
             </form>
@@ -199,8 +187,7 @@
             <h2>Visibility</h2>
             <form>
                 <noscript id="visibility__noscript">Please Enable JavaScript in a modern browser to manage visibility preferences</noscript>
-                <div>
-
+                <div class="field">
                     <label for="visibility__focus"><input type="checkbox" id="visibility__focus" name="focus" value="yes">&nbsp;Exaggerate Focused Cells</label>
                 </div>
         </div>
@@ -208,7 +195,7 @@
     </div>
 
     <div class="balanced">
-      <details open>
+      <details>
         <summary>More Options</summary>
         <div>
           <fieldset id="a11y-preferences-fieldset">
@@ -225,8 +212,8 @@
     <footer>
       <div class="button-bar">
         <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
-        <button type="reset">Reset<span class="visually-hidden"> to Default Options</span></button>
-        <a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+        <button type="reset" class="button">Reset<span class="visually-hidden"> to Default Options</span></button>
+        <a href="#installation-options" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
       </div>
     </footer>
 
@@ -257,7 +244,7 @@
             <details>
                 <summary>More Options</summary>
                 <div>
-                  <p class="balanced">You probably shouldn't mess with this stuff unless you really know what you are&nbsp;doing.</p>
+                  <p class="subtle balanced oblique">You probably shouldn't mess with this stuff unless you really know what you are&nbsp;doing.</p>
                     <fieldset>
                       <legend>Permissions</legend>
                       <div class="flexible">
@@ -355,7 +342,7 @@
             <footer>
               <div class="button-bar">
                 <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
-                <a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#connection-information" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
               </div>
             </footer>
         </div>
@@ -710,7 +697,7 @@
                     <dt>What is a database prefix?</dt>
                     <dd>Blah blah</dd>
                     <dt>Can I use MODX without manually creating a database?</dt>
-                    <dd>Yes. <a href="https://modxcloud.com" target="_modxcloud">MODX Cloud</a>. You are also free to <a href="https://demo.modmore.com" target="_modmoredemo">try the modmore demo</a> at&nbsp;anytime.</dd>
+                    <dd>Yes. <a href="https://modxcloud.com" target="_modxcloud">Cloud hosting is available</a>. You are also free to <a href="https://demo.modmore.com" target="_modmoredemo">try the modmore demo</a> at&nbsp;anytime.</dd>
                   </dl>
                 </div>
               </details>
@@ -719,7 +706,8 @@
             <footer>
               <div class="button-bar">
                 <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
-                <button disabled type="submit" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></button>
+                <a href="#admin-user" class="primary button">Continue<span class="visually-hidden"> to Admin User</span></a>
+                <!--button disabled type="submit" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></button-->
               </div>
             </footer>
         </div>
@@ -782,7 +770,7 @@
             <footer>
               <div class="button-bar">
                 <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
-                <a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#context-installation" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
               </div>
             </footer>
         </div>
@@ -795,14 +783,14 @@
               <fieldset>
                 <legend>Context</legend>
                 <div class="field">
-                    <label for="context_path">Absolute Filesystem path to MODX:</label>
-                    <input aria-label="Use custom context path" type="checkbox" name="do_context_path" id="do_context_path">&ensp;
-                    <input type="text" name="context_path" id="context_path" placeholder="/" value="/">
+                    <label for="absolute_file_path">Absolute Filesystem path to MODX:</label>
+                    <input aria-label="Use custom context path" type="checkbox" name="do_absolute_file_path" id="do_absolute_file_path" data-message="filesystem-path">&ensp;
+                    <input type="text" data-check="do_absolute_file_path" name="context_path" id="absolute_file_path" placeholder="/" value="/">
                 </div>
                 <div class="field">
                     <label for="url_web_context">URL for web context:</label>
-                    <input aria-label="Use custom URL for web context" type="checkbox" name="do_web_context_path" id="do_web_context_path">&ensp;
-                    <input type="text" name="url_web_context" id="url_web_context" value="/" placeholder="/">
+                    <input aria-label="Use custom URL for web context" type="checkbox" name="do_web_context_path" id="do_web_context_path" data-message="web-context-url">&ensp;
+                    <input type="text" data-check="do_web_context_path" data-preface="{{ protocol }}://{{ host }}" name="url_web_context" id="url_web_context" value="/" placeholder="/">
                 </div>
               </fieldset>
               <fieldset>
@@ -810,24 +798,32 @@
                 <div class="field">
                     <label for="url_web_context">Filesystem path for connectors:</label>
                     <input aria-label="Use custom filesystem path for connectors" type="checkbox" name="do_custom_filesystem_connectors_path" id="do_custom_filesystem_connectors_path">&ensp;
-                    <input type="text" name="url_web_context" id="url_web_context" placeholder="/modx/connectors">
+                    <input data-check="do_custom_filesystem_connectors_path" type="text" name="filesystem_path" id="filesystem_path" placeholder="/modx/connectors">
                 </div>
                 <div class="field">
                     <label for="url_web_context">URL for connectors:</label>
                     <input aria-label="Use custom URL for connectors" type="checkbox" name="do_custom_connectors_url" id="do_custom_connectors_url">&ensp;
-                    <input type="text" name="url_web_context" id="url_web_context" placeholder="/connectors">
+                    <input data-check="do_custom_connectors_url" type="text" name="connectors_url" id="connectors_url" placeholder="/connectors">
                 </div>
               </fieldset>
             </div>
             <div>
-              <details>
+              <p class="subtle balanced oblique">
+                Your web context will be hosted at <code id="web-context-url" mx-bind="url_web_context" data-original="https://{{ host }}">https://{{ host }}</code> and located at <code id="filesystem-path" mx-bind="absolute_file_path" data-original="/modx">/modx</code> on your server.<br>
+                Connectors will be hosted at <code id="connectors-url" mx-bind="connectors_url" data-original="/connectors">/connectors</code> and located at <code id="connectors-path" mx-bind="filesystem_path" data-original="/modx/connectors">/modx/connectors</code> on your&nbsp;server
+              </p>
+            </div>
+            <div>
+              <details class="balanced">
                 <summary class="balanced">FAQs</summary>
-                <div>
+                <div style="max-width:28em;margin-left:auto;margin-right:auto">
                   <dl>
-                    <dt>What are connectors?</dt>
-                    <dd>Stuff and Stuff</dd>
                     <dt>What is a web context?</dt>
-                    <dd>Your thingy</dd>
+                    <dd>A web context is usually a web site. But it can be anything. <a href="#">Learn more <span class="visually-hidden">about MODX contexts</span></a></dd>
+                    <dt>What are connectors?</dt>
+                    <dd>Connectors are hook up the MODX interface to your dyanmic database</dd>
+                    <dt>Why would I change the connectors path or URL?</dt>
+                    <dd>Using a non&ndash;default connectors path makes your site less detectable as being created with MODX</dd>
                   </dl>
                 </div>
               </details>
@@ -835,7 +831,7 @@
             <footer>
               <div class="button-bar">
                 <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
-                <a href="#" class="primary button">Skip<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#installation-status" class="primary button">Skip<span class="visually-hidden"> to Installation Options</span></a>
                 <!--a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a-->
               </div>
             </footer>
@@ -865,7 +861,7 @@
             <footer>
               <div class="button-bar">
                 <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
-                <a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#setup-complete" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
               </div>
             </footer>
         </div>
@@ -878,14 +874,18 @@
               <small>Welcome to the MODX Community</small>
             </h2>
             <p>🎉&ensp;Congratulations! Not only have you successfully installed some nifty software &mdash; you've joined a world wide community who enjoys authoring the web&nbsp;freely. <a href="https://twitter.com/intent/tweet?text=I%20just%20installed%20the%20MODX%20Content%20Management%20System!%20%23MODX" target="_twitter-installed">Tweet this</a>.</p>
-            <p>Now that MODX is installed you may configure it further or skip straight to <a href="#">your new&nbsp;dashboard</a>.</p>
+            <p>Now that MODX is installed you may <span class="if-packages-loaded">configure it further or </span>skip straight to <a href="#">your new&nbsp;dashboard</a>.</p>
+
             <div id="packages-to-install">
               <div>
-                  <details open>
+                  <details id="what-ill-be-managing" open>
                     <summary>What I'll be managing</summary>
                     <fieldset id="i-want-to-create-a">
                         <legend>I want to create a:</legend>
-                        <div class="field">
+                        <div id="what-ill-be-managing-fields">
+
+                        </div>
+                        <!--div class="field">
                             <label for="want-blog"><input type="radio" id="want-blog" name="i-want" data-dependent="pkg-getresources pkg-collections pkg-blockdown pkg-formit pkg-formalicious pkg-content-blocks pkg-redactor pkg-getpage pkg-seo-tab pkg-seo-pro pkg-google-analytics-dashboard-widget pkg-wayfinder pkg-breadcrumbs pkg-googlesitemap pkg-simplesearch pkg-twitterx pkg-batcher pkg-taglister pkg-archivist pkg-quip pkg-tagger">&nbsp;Blog</label>
                         </div>
                         <div class="field">
@@ -905,14 +905,17 @@
                         </div>
                         <div class="field">
                             <label for="want-api"><input type="radio" id="want-api" name="i-want"  data-dependent="pkg-getcache pkg-statcache pkg-contextrouter pkg-ace pkg-scheduler">&nbsp;Back End API</label>
-                        </div>
+                        </div-->
                     </fieldset>
                   </details>
                   <details>
                     <summary>What I want</summary><!-- (what I really really want) -->
                     <fieldset id="i-would-like-to">
                       <legend>I'd like to:</legend>
-                      <label class="field" for="i-want-it-all"><input type="checkbox" name="i-want-it-all" id="i-want-it-all">&ensp;Have it all</label>
+                      <div id="i-would-like-to-desires">
+
+                      </div>
+                      <!--label class="field" for="i-want-it-all"><input type="checkbox" name="i-want-it-all" id="i-want-it-all">&ensp;Have it all</label>
                       <label class="field" for="i-like-versionx"><input type="checkbox" name="i-like-versionx" id="i-like-versionx" data-dependent="pkg-versionx">&ensp;Create versioned backups of my content</label>
                       <label class="field" for="i-like-formit"><input type="checkbox" name="i-like-formit" id="i-like-formit"  data-dependent="pkg-formit">&ensp;Create my own Forms without coding</label>
                       <label class="field" for="i-like-collections"><input type="checkbox" name="i-like-collections" id="i-like-collections" data-dependent="want-blog pkg-collections">&ensp;Manage content as collections</label>
@@ -938,12 +941,27 @@
                         <label class="field" for="i-like-paypal"><input disabled class="default" type="checkbox" data-dirty="true" name="i-like-paypal" id="i-like-paypal">&ensp;Accept payments using PayPal</label>
                         <label class="field" for="i-like-mollie"><input disabled type="checkbox" data-dirty="true" name="i-like-mollie" id="i-like-mollie">&ensp;Accept payments using Mollie</label>
                         <label class="field" for="i-like-stripe"><input disabled type="checkbox" data-dirty="true" name="i-like-stripe" id="i-like-stripe">&ensp;Accept payments using Stripe</label>
-                      </fieldset>
+                      </fieldset-->
                     </fieldset>
                   </details>
                   <details>
                     <summary>Packages to Install</summary>
+                    <p id="premium-extras-trial" class="subtle balanced oblique">Premium Extras are installed hassle&ndash;free as 14 day trials. Try now buy&nbsp;later.</p>
                     <div>
+                      <p>The MODX Community has many great extras ranging from free to premium. Here you can specify which packages you'd like to start with.</p>
+                      <label for="show-package-descriptions">
+                        <input type="checkbox" id="show-package-descriptions" name="show-package-descriptions">&ensp;Show Package Descriptions&ensp;<small class="caps">(alt+d)</small>
+                      </label>
+                      <div id="foo"></div>
+                    </div>
+
+                    <div>
+                      <label for="show-package-descriptions-bottom">
+                        <input type="checkbox" id="show-package-descriptions-bottom" name="show-package-descriptions">&ensp;Show Package Descriptions&ensp;<small class="caps">(alt+d)</small>
+                      </label>
+                    </div>
+
+                    <!--div hidden>
                       <p>The MODX Community has many great extras ranging from free to premium. Here you can specify which packages you'd like to start with.</p>
                       <fieldset id="install-these-packages">
                         <legend>Install these MODX Packages</legend>
@@ -1133,53 +1151,20 @@
                           </details>
                         </div>
                       </fieldset>
-                    </div>
+
+
+
+                    </div-->
+
+
+
                   </details>
+
+
+                  <hr>
             </div>
-                <details>
-                  <summary>Choose a Theme</summary>
-                  <div>
-                    <p>With MODX you can start from scratch or with your favorite theme. WIP.</p>
-                  </div>
-                </details>
-                <details>
-                  <summary>Inject Teleport Snapshots</summary>
-                  <div>
-                    <p>MODX Teleport allows you to do cool stuff. Inject one or more snapshots.</p>
-                    <div class="balanced">
-                      <button class="subtle balanced">Add Teleport Snapshot</button>
-                    </div>
-                  </div>
-                </details>
-                <hr>
+
                 <!--details>
-                  <summary>Enhance MODX with Premium Extras</summary>
-                  <div>
-                    <ul>
-                      <li>
-                        <a href="https://modmore.com" target="_modmore">modmore</a>
-                      </li>
-                      <li>
-                        <a href="#" target="_modstore">modstore</a>
-                      </li>
-                    </ul>
-                  </div>
-                </details-->
-                <details>
-                    <summary>Explore the MODX Community</summary>
-                    <div>
-                        <ul>
-                            <li><a href="#">MODX Forums</a></li>
-                            <li><a href="#">MODX Slack Channel</a></li>
-                            <li><a href="#">Follow MODX on Twitter</a></li>
-                            <li><a href="#">Follow MODX on GitHub</a></li>
-                            <li><a href="#">MODX on LinkedIn</a></li>
-                            <li><a href="#">MODX Facebook Page</a></li>
-                            <li><a href="#">Find a MODX Meetup near you</a></li>
-                        </ul>
-                    </div>
-                </details>
-                <details>
                     <summary>Sponsored Messages</summary>
                     <div>
                         <ul>
@@ -1189,8 +1174,110 @@
 
                         </ul>
                     </div>
-                </details>
+                </details-->
+
             </div>
+
+
+            <details>
+              <summary>Choose a Theme</summary>
+              <div>
+                <p>With MODX you can start from scratch or with your favorite theme. WIP.</p>
+              </div>
+            </details>
+            <details id="inject-teleport-snapshots">
+              <summary>Inject Teleport Snapshots</summary>
+              <div>
+                <p class="balanced"><a href="#">MODX Teleport allows you to do cool stuff</a>. Inject one or more snapshots&nbsp;below.</p>
+                <div class="balanced">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Transport package</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>complete.package.zip</code></td>
+                        <td>
+                          <button type="button" class="very subtle dangerous">Remove <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                  <table class="action-row">
+                    <thead>
+                      <tr>
+                        <th class="name">Transport package</th>
+                        <th class="visually-hidden">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr tabindex="0">
+                        <td class="name"><code>complete.package.zip</code></td>
+                        <td class="actions">
+                          <button type="button" class="very subtle dangerous" name="remove">Remove <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                          <button type="button" class="very subtle" name="move-up">Move up <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                          <button type="button" class="very subtle" name="move-down">Move down <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                        </td>
+                      </tr>
+                      <tr tabindex="0">
+                        <td class="name"><code>users.package.zip</code></td>
+                        <td class="actions">
+                          <button type="button" class="very subtle dangerous" name="remove">Remove <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                          <button type="button" class="very subtle" name="move-up">Move up <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                          <button type="button" class="very subtle" name="move-down">Move down <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                        </td>
+                      </tr>
+                      <tr tabindex="0">
+                        <td class="name"><code>develop.package.zip</code></td>
+                        <td class="actions">
+                          <button type="button" class="very subtle dangerous" name="remove">Remove <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                          <button type="button" class="very subtle" name="move-up">Move up <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                          <button type="button" class="very subtle" name="move-down">Move down <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <button class="subtle balanced">Upload Teleport Snapshot</button>
+                  <!--button class="subtle balanced">Add Teleport Snapshot by URL</button-->
+                </div>
+              </div>
+            </details>
+            <hr>
+            <!--details>
+              <summary>Enhance MODX with Premium Extras</summary>
+              <div>
+                <ul>
+                  <li>
+                    <a href="https://modmore.com" target="_modmore">modmore</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_modstore">modstore</a>
+                  </li>
+                </ul>
+              </div>
+            </details-->
+            <details>
+                <summary>Explore the MODX Community</summary>
+                <div>
+                    <ul>
+                        <li><a href="#">MODX Forums</a></li>
+                        <li><a href="#">MODX Slack Channel</a></li>
+                        <li><a href="#">Follow MODX on Twitter</a></li>
+                        <li><a href="#">Follow MODX on GitHub</a></li>
+                        <li><a href="#">MODX on LinkedIn</a></li>
+                        <li><a href="#">MODX Facebook Page</a></li>
+                        <li><a href="#">Find a MODX Meetup near you</a></li>
+                    </ul>
+                </div>
+            </details>
+            <p aria-hidden id="youve-chosen-premium" class="subtle balanced oblique">You've chosen to install <span class="num-extras"></span><span class="premium-packages">premium packages</span> as 14 day hassle&ndash;free&nbsp;trial<br>No payment is due at this time</p>
+
             <footer>
               <div class="button-bar">
                 <a href="#" class="primary button">Login to MODX<span class="visually-hidden"> to Installation Options</span></a>
@@ -1201,286 +1288,13 @@
       </div>
 
 
-      <div id="foo">
 
-      </div>
 
 
     </main>
 
     <script>
-      document.addEventListener('DOMContentLoaded', (event) => {
 
-        (() => {
-          document.getElementById('i-want-to-create-a').addEventListener('change', (event) => {
-            const inputs = document.querySelectorAll('#i-would-like-to input, #install-these-packages input');
-            for(let i = 0; i < inputs.length; i++) {
-              const input = inputs[i];
-              if(input.dataset.dirty !== 'false') input.checked = false;
-              //input.checked = false;
-            }
-          });
-        })();
-
-        (() => {
-          const primaryBtns = document.querySelectorAll('section footer .primary');
-          const breadcrumb = document.getElementById('breadcrumb'),
-          breadcrumbRect = breadcrumb.getBoundingClientRect();
-          for(let i = 0; i < primaryBtns.length; i++) {
-            const primaryBtn = primaryBtns[i];
-            primaryBtn.addEventListener('click', (event) => {
-
-              console.log(event.target.closest('section'));
-              try {
-                scrollTo(event.target.closest('section').nextElementSibling.getBoundingClientRect().top - breadcrumbRect.height);
-              } catch (e) {
-                return;
-              }
-              event.preventDefault();
-            });
-          }
-        })();
-
-        listenDirty();
-        document.getElementById('continue').addEventListener('click', (event) => {
-            console.log('continue');
-
-
-            const breadcrumb = document.getElementById('breadcrumb'),
-            breadcrumbRect = breadcrumb.getBoundingClientRect();
-
-            try {
-              scrollTo(document.getElementById('installation-options').getBoundingClientRect().top - breadcrumbRect.height);
-            } catch (e) {
-              return;
-            }
-            event.preventDefault();
-        })
-        document.querySelector('#a11y-prefs-btn a').addEventListener('click', (event) => {
-
-            window.location.hash = 'a11y-prefs';
-            document.getElementById('a11y-prefs').removeAttribute('hidden');
-
-            const breadcrumb = document.getElementById('breadcrumb'),
-            breadcrumbRect = breadcrumb.getBoundingClientRect();
-
-            try {
-              scrollTo(document.getElementById('a11y-prefs').getBoundingClientRect().top - breadcrumbRect.height);
-            } catch (e) {
-              return;
-            } finally {
-              event.preventDefault();
-            }
-
-        });
-
-        document.getElementById('hit-areas').addEventListener('change', (event) => {
-          if(event.target.checked) {
-            document.body.classList.add('wa-exaggerate-tap-areas');
-          } else {
-            document.body.classList.remove('wa-exaggerate-tap-areas');
-          }
-        })
-
-        if(window.location.hash === '#a11y-prefs') {
-          setTimeout(() => {
-            document.querySelector('#a11y-prefs-btn a').click();
-          }, 120);
-        }
-
-        const octalTables = document.querySelectorAll('.wa-octal-table');
-        for(let i = 0; i < octalTables.length; i++) {
-          const octalTable = octalTables[i];
-          octalTable.addEventListener('change', (event) => {
-            console.log(event.target);
-            updateOctalTable(octalTable, event);
-          });
-          const octalTarget = document.getElementById(octalTable.dataset.octalTarget);
-          octalTarget.addEventListener('change', (event) => {
-            handleOctalTargetChange(octalTable, event);
-          });
-          octalTarget.addEventListener('input', (event) => {
-            handleOctalTargetChange(octalTable, event);
-          });
-        }
-
-        function clearInputChecked(octalTable) {
-          const inputs = octalTable.querySelectorAll('input[type="checkbox"]');
-          for(let i = 0; i < inputs.length; i++) inputs[i].checked = false;
-        }
-
-
-
-        function listenDirty() {
-          const inputs = document.querySelectorAll('input');
-          for(let i = 0; i < inputs.length; i++) {
-            const input = inputs[i];
-            input.addEventListener('change', (event) => {
-              input.dataset.dirty = 'false';
-            })
-          }
-        }
-
-        function showHideOctalMessage(octalTable, octal) {
-          if(octal === 777) {
-            octalTable.closest('.wa-octal-table-wrapper').querySelector('.dangerous.balanced.message').removeAttribute('hidden');
-          } else {
-            octalTable.closest('.wa-octal-table-wrapper').querySelector('.dangerous.balanced.message').setAttribute('hidden', 'true');
-          }
-        }
-
-        function handleOctalTargetChange(octalTable, event) {
-          const octal = parseInt(event.target.value);
-
-          showHideOctalMessage(octalTable, octal);
-
-          const hundredths = Math.floor(octal / 100) * 100;
-          const tenths = (Math.floor(octal / 10) * 10) - hundredths;
-          const digit = octal - hundredths - tenths;
-          //console.log(hundredths, tenths, digit);
-
-
-
-          const hundredthCells = octalTable.querySelectorAll('tbody > tr:first-of-type > td:not(:first-child)'),
-          tenthsCells = octalTable.querySelectorAll('tbody > tr:nth-of-type(2) > td:not(:first-child)'),
-          digitCells = octalTable.querySelectorAll('tbody > tr:nth-of-type(3) > td:not(:first-child)');
-
-          clearInputChecked(octalTable);
-          checkCellRow(hundredths, hundredthCells);
-          checkCellRow(tenths, tenthsCells);
-          checkCellRow(digit, digitCells);
-
-          function checkCellRow(t, cells) {
-            for(let i = 0; i < cells.length; i++) {
-              const cell = cells[i];
-              const int = parseInt(cell.querySelector('input').dataset.octal);
-              console.log(t, int);
-              if(int <= t) {
-                cell.querySelector('input').checked = true;
-                t -= int;
-              }
-            }
-          }
-
-        }
-
-        function updateOctalTable(octalTable, event) {
-          const inputs = octalTable.querySelectorAll('input[type="checkbox"]');
-          const octal = [...inputs].map((input) => (
-            (input.checked) ? parseInt(input.getAttribute('data-octal')) : 0
-          )).reduce((a, b) => (a + b));
-          document.getElementById(octalTable.dataset.octalTarget).value = octal;
-
-          showHideOctalMessage(octalTable, octal);
-
-        }
-
-        function checkWhatIWantDependent(event, dependent) {
-          console.log(event.target.checked, event.target.dataset);
-          if(event.target.checked) {
-
-            const inputs = document.getElementById('i-would-like-to').querySelectorAll(`input[data-dependent*="${event.target.getAttribute('id')}"]`);
-            console.log(inputs);
-            for(let i = 0; i < inputs.length; i++) {
-              const input = inputs[i];
-              if(input.dataset.dirty !== 'false') {
-                console.log('checking!!! ', dependent);
-                if(!shouldExempt(input)) {
-                  input.checked = true;
-                }
-              }
-            }
-          }
-        }
-
-        function shouldExempt(element) {
-          try {
-            return (element.dataset.pkgExempt && document.getElementById(element.dataset.pkgExempt).checked)
-          } catch (e) {
-            return false
-          }
-        }
-
-        function exemptInputs(input) {
-          console.log('exemptInputs', input.getAttribute('id'));
-          const inputs = document.getElementById('packages-to-install').querySelectorAll(`input[data-pkg-exempt*="${input.getAttribute('id')}"]`);
-          console.log(inputs);
-          for(let i = 0; i < inputs.length; i++) {
-            const input = inputs[i];
-            input.checked = false;
-          }
-        }
-
-        document.getElementById('packages-to-install').addEventListener('change', (event) => {
-          //console.log(event);
-
-          if(event.target.checked) {
-            if(event.target.dataset.dependent) {
-              const dependents = event.target.dataset.dependent.trim().split(' ');
-              dependents.map((dependent) => {
-                checkWhatIWantDependent(event, dependent);
-                try {
-                  const element = document.getElementById(dependent.trim());
-                  //if(element.dataset.dirty !== 'false') element.checked = true;
-                  console.log(element, element.dataset);
-                  if(!shouldExempt(element)) {
-                    console.log('checking', dependent);
-                    element.checked = true;
-                  }
-
-                } catch (e) {
-                  console.log(event.target.dataset.dependent.trim());
-                  console.log(e);
-                }
-              });
-            }
-            exemptInputs(event.target);
-          }
-        });
-
-        document.getElementById('i-want-it-all').addEventListener('change', (event) => {
-          if(event.target.checked) {
-            const inputs = document.querySelectorAll('#packages-to-install input[type="checkbox"]');
-            for(let i = 0; i < inputs.length; i++) {
-              const input = inputs[i];
-              input.disabled = false;
-              input.checked = true;
-            }
-
-            if(!document.getElementById('pkg-ace').checked && !document.getElementById('pkg-codemirror').checked) document.getElementById('pkg-ace').checked = true;
-            if(!document.getElementById('pkg-getresources').checked && !document.getElementById('pkg-pdotools').checked) document.getElementById('pkg-getresources').checked = true;
-            if(!document.getElementById('i-like-redactor').checked && !document.getElementById('i-like-tinymce').checked) document.getElementById('i-like-redactor').checked = true;
-            if(!document.getElementById('pkg-redactor').checked && !document.getElementById('pkg-tinymce').checked) document.getElementById('pkg-redactor').checked = true;
-          }
-        });
-
-        document.getElementById('i-like-commerce').addEventListener('change', (event) => {
-          const inputs = document.querySelectorAll('fieldset.commerce input.default');
-          if(event.target.checked) {
-
-            for(let i = 0; i < inputs.length; i++) {
-              const input = inputs[i];
-              input.disabled = false;
-              if(input.dataset.dirty == 'true') input.checked = true;
-            }
-          } else {
-            for(let i = 0; i < inputs.length; i++) {
-              const input = inputs[i];
-              input.disabled = true;
-              if(input.dataset.dirty == 'true') input.checked = false;
-            }
-          }
-        });
-
-
-        function scrollTo(to) {
-            window.scrollBy({
-                top: to,
-                //left: 0,
-                behavior: 'smooth'
-            });
-        }
-      });
     </script>
 
     <script src="assets/js/modx-setup.js"></script>

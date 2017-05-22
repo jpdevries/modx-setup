@@ -1,0 +1,71 @@
+{
+  "provider": "modmore",
+  "extras": {
+    "blockdown": {
+      "title": "BlockDown",
+      "description": "BlockDown adds a MarkDown input type to ContentBlocks",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "editing"
+    },
+    "formalicious": {
+      "title": "Formalicious by Sterc",
+      "description": "Formalicious is the most powerful and easiest MODX form builder, with built-in multi-step forms, 8 field types, hooks, validation and the ability to use advanced FormIt features",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content",
+      "premium": true,
+      "price": "€59"
+    },
+    "content-blocks": {
+      "title": "ContentBlocks by modmore",
+      "description": "ContentBlocks is a powerful content manager for MODX allowing editors to create modular, multi-column content",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content",
+      "premium": true,
+      "price": "€79"
+    },
+    "redactor": {
+      "title": "Redactor by modmore",
+      "description": "Redactor is a beautiful, user friendly, and configurable rich text editor for MODX with powerful media management",
+      "price": "€29",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "editing",
+      "premium": true,
+      "type": "radio",
+      "default": true,
+      "name": "redactor-tinymce"
+
+    },
+    "more-gallery": {
+      "title": "MoreGallery",
+      "description": "MoreGallery is an intuitive and powerful image gallery complete with video support, tags, cropping and custom fields",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "media",
+      "premium": true,
+      "price": "€25"
+    },
+    "versionx": {
+      "title": "VersionX",
+      "description": "Give yourself peace of mind. Backup your stuff",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content"
+    }
+  }
+}

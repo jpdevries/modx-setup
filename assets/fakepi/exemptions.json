@@ -1,0 +1,9 @@
+{
+  "pdotools": [
+    "getresources",
+    "wayfinder",
+    "breadcrumbs",
+    "googlesitemap",
+    "getpage"
+  ]
+}

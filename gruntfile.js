@@ -229,14 +229,14 @@ module.exports = function(grunt) {
                   }]
         },
         files: {
-          '<%= dirs.build %><%= dirs.assets %><%= dirs.img %>icons.<%= pkg.version %>.min.svg': '<%= dirs.build %><%= dirs.assets %><%= dirs.img %>icons.<%= pkg.version %>.svg'
+          '<%= dirs.build %><%= dirs.assets %><%= dirs.img %>icons.min.svg': '<%= dirs.build %><%= dirs.assets %><%= dirs.img %>icons.svg'
         }
       }
     },
     uglify: {
       'modx-setup': {
         files: {
-          '<%= dirs.theme %><%= dirs.assets %><%= dirs.js %>modx-setup.<%= pkg.version %>.min.js': ['<%= dirs.theme %><%= dirs.assets %><%= dirs.js %>modx-setup.<%= pkg.version %>.js']
+          '<%= dirs.theme %><%= dirs.assets %><%= dirs.js %>modx-setup.<%= pkg.version %>.min.js': ['<%= dirs.theme %><%= dirs.assets %><%= dirs.js %>modx-setup.js']
         }
       }
     },
@@ -281,7 +281,7 @@ module.exports = function(grunt) {
     svgstore: {
       icons: {
         files: {
-          '<%= dirs.build %><%= dirs.assets %><%= dirs.img %>icons.<%= pkg.version %>.svg': ['<%= dirs.theme %><%= dirs.assets %><%= dirs.img %>src/svg/*.svg']
+          '<%= dirs.build %><%= dirs.assets %><%= dirs.img %>icons.svg': ['<%= dirs.theme %><%= dirs.assets %><%= dirs.img %>src/svg/*.svg']
         },
         options: {
           formatting : {

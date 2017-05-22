@@ -1,0 +1,30 @@
+[
+  {
+    "key": "editing",
+    "title": "Editing Packages"
+  },
+  {
+    "key": "utility",
+    "title": "Utility Packages"
+  },
+  {
+    "key": "content",
+    "title": "Content Packages"
+  },
+  {
+    "key": "editing",
+    "title": "Editing Packages"
+  },
+  {
+    "key": "marketing",
+    "title": "Marketing Packages"
+  },
+  {
+    "key": "social",
+    "title": "Social Packages"
+  },
+  {
+    "key": "media",
+    "title": "Media Packages"
+  }
+]

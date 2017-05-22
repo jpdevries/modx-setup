@@ -33,7 +33,8 @@ const fetchDesires = () => {
      console.log(pair[0]+ ', '+ pair[1]);
   }*/
   return (dispatch) => (
-    fetch(`/api/desires`, {
+    //fetch(`/api/desires`, {
+    fetch(`assets/fakepi/desires.json`, {
       method: 'GET',
       headers: Object.assign({}, {
         'Accept': 'application/json',
@@ -122,7 +123,8 @@ const fetchPresets = () => {
      console.log(pair[0]+ ', '+ pair[1]);
   }*/
   return (dispatch) => (
-    fetch(`/api/presets`, {
+    //fetch(`/api/presets`, {
+    fetch(`assets/fakepi/presets.json`, {
       method: 'GET',
       headers: Object.assign({}, {
         'Accept': 'application/json',
@@ -203,7 +205,8 @@ const fetchProviders = () => {
      console.log(pair[0]+ ', '+ pair[1]);
   }*/
   return (dispatch) => (
-    fetch(`/api/providers`, {
+    //fetch(`/api/providers`, {
+    fetch(`assets/fakepi/providers.json`, {
       method: 'GET',
       headers: Object.assign({}, {
         'Accept': 'application/json',
@@ -290,7 +293,8 @@ const fetchCategories = () => {
      console.log(pair[0]+ ', '+ pair[1]);
   }*/
   return (dispatch) => (
-    fetch(`/api/categories`, {
+    //fetch(`/api/categories`, {
+    fetch(`assets/fakepi/categories.json`, {
       method: 'GET',
       headers: Object.assign({}, {
         'Accept': 'application/json',
@@ -372,7 +376,8 @@ const fetchExtras = (provider) => {
      console.log(pair[0]+ ', '+ pair[1]);
   }*/
   return (dispatch) => (
-    fetch(`/api/${provider}/extras`, {
+    //fetch(`/api/${provider}/extras`, {
+    fetch(`assets/fakepi/providers/${provider}.json`, {
       method: 'GET',
       headers: Object.assign({}, {
         'Accept': 'application/json',
@@ -447,7 +452,8 @@ const fetchExemptions = (provider) => {
      console.log(pair[0]+ ', '+ pair[1]);
   }*/
   return (dispatch) => (
-    fetch(`/api/${provider}/extras/exemptions`, {
+    //fetch(`/api/${provider}/extras/exemptions`, {
+    fetch(`assets/fakepi/exemptions.json`, {
       method: 'GET',
       headers: Object.assign({}, {
         'Accept': 'application/json',

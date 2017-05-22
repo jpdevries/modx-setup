@@ -1,0 +1,50 @@
+[
+   {
+      "key":"blog",
+      "title":"Blog",
+      "dependent": [
+         "getresources",
+         "collections",
+         "blockdown",
+         "formit",
+         "formalicious",
+         "content-blocks",
+         "redactor",
+         "getpage",
+         "seo-tab",
+         "seo-pro",
+         "google-analytics-dashboard-widget",
+         "wayfinder",
+         "breadcrumbs",
+         "googlesitemap",
+         "simplesearch",
+         "twitterx",
+         "batcher",
+         "taglister",
+         "archivist",
+         "quip",
+         "tagger"
+      ]
+   },
+   {
+      "key":"custom-site",
+      "title":"Custom Site",
+      "checked":true
+   },
+   {
+      "key":"portfolio-site",
+      "title":"Portfolio Site"
+   },
+   {
+      "key":"webshop",
+      "title":"Webshop"
+   },
+   {
+      "key":"web-app",
+      "title":"Web App"
+   },
+   {
+      "key":"api",
+      "title":"API"
+   }
+]

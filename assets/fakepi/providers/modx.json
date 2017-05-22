@@ -1,0 +1,183 @@
+{
+  "provider": "modx.com",
+  "extras": {
+    "getresources": {
+      "title": "getResources",
+      "description": "getResources is a general-purpose listing and summarization snippet",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "utility",
+      "type": "radio",
+      "name": "getresources-pdotools",
+      "default": true
+    },
+    "collections": {
+      "title": "Collections",
+      "description": "Manage large groups of resources as collections. Great for blogging",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content"
+    },
+    "formit": {
+      "title": "FormIt",
+      "description": "A dynamic form processing Snippet",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content"
+    },
+    "pdotools": {
+      "title": "pdoTools",
+      "description": "Useful stuff",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "utility",
+      "type": "radio",
+      "name": "getresources-pdotools"
+    },
+    "getpage": {
+      "title": "getPage",
+      "description": "A generic wrapper snippet for returning paged results and navigation from snippets that return limitable collections",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content"
+    },
+    "seo-tab": {
+      "title": "SEOTab",
+      "description": "SEO Tab is a MODX Extra that helps you optimise your pages for the best possible performance in search engines, like Google",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "marketing"
+    },
+    "seo-pro": {
+      "title": "SEOPro",
+      "description": "MODX SEO Pro is your buddy when it comes to Search Engine Optimization (SEO) in MODX",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "marketing"
+    },
+    "google-analytics-dashboard-widget": {
+      "title": "Google Analytics Dashboard Widget",
+      "description": "Google Analytics Dashboard Widget is a custom MODx dashboard widget that will show data from Google Analytics",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "marketing"
+    },
+    "wayfinder": {
+      "title": "Wayfinder",
+      "description": "Create custom navigation by using chunks as output templates",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content"
+    },
+    "breadcrumbs": {
+      "title": "Breadcrumbs",
+      "description": "Create a breadcrumb page trail navigation",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content"
+    },
+    "googlesitemap": {
+      "title": "Tagger",
+      "description": "Generates a Google SiteMap XML feed",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content"
+    },
+    "simplesearch": {
+      "title": "SimpleSearch",
+      "description": "Add a search form to your website or app",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content"
+    },
+    "twitterx": {
+      "title": "TwitterX",
+      "description": "Integrates Twitter 1.1 API",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "social"
+    },
+    "batcher": {
+      "title": "Batcher",
+      "description": "Perform bulk actions on your content",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "utility"
+    },
+    "taglister": {
+      "title": "TagLister",
+      "description": "A simple tag listing snippet that grabs tags from a TV value",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content"
+    },
+    "archivist": {
+      "title": "Archivist",
+      "description": "Automatically generates archive navigation, friendly-url mapping, and wordpress-style archives",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content"
+    },
+    "quip": {
+      "title": "Quip",
+      "description": "A simple commenting system complete with a backend management interface",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "social"
+    },
+    "tagger": {
+      "title": "Tagger",
+      "description": "Robust and performant tag management system",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "content"
+    },
+    "tinymce": {
+      "title": "TinyMCE",
+      "description": "Adds the TinyMCE richtext editor to MODX",
+      "version": "1.0.0",
+      "release": "pl",
+      "transport": "https://modx.com/extras/download/?id=52c184b562cf240b35006e33",
+      "href": "http://google.com",
+      "category": "editing",
+      "name": "redactor-tinymce",
+      "type": "radio"
+    }
+  }
+}
