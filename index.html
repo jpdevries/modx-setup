@@ -1,0 +1,1326 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<!-- DO NOT EDIT this is JUST FOR GH-PAGES -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Setup MODX</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body class="no-packages-loaded">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Add your site or application content here -->
+    <main role="main" data-class="mx-setup-upgrade">
+        <div>
+            <section id="welcome">
+                <div>
+                    <img id="logo" src="assets/img/modx-color.svg" alt="MODX Logo">
+                    <h1>Welcome to MODX<br><small>Let's get started</small></h1>
+                    <label for="choose_lang" class="field">Choose a language</label>
+                    <select value="en" name="choose_lang" id="choose_lang">
+                        <option value="en">en (English)</option>
+                        <option value="nl">nl (Dutch)</option>
+                    </select>
+                    <details id="config-key-details">
+                        <summary class="field">Configuration Key</summary>
+                        <div>
+                            <input type="text" placeholder="config" value="config" name="configkey" id="configkey" aria-label="Configuration Key">
+                        </div>
+                    </details>
+                    <p id="a11y-prefs-btn">
+                        <a href="a11y-prefs" class="subtle" title="Accessibility Preferences">♿️<span hidden class="visually-hidden"> Accessibility Preferences</span></a>
+                    </p>
+                    <div>
+                        <a id="continue" href="#installation-options" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+                    </div>
+                </div>
+            </section>
+      </div>
+<aside id="breadcrumb">
+  <div>
+    <ul>
+      <li class="active" data-crumb="welcome">
+        <a href="#welcome">Welcome</a>
+      </li>
+      <li class="active" data-crumb="installation-options">
+        <a href="#installation-options">Installation Options</a>
+      </li>
+      <li data-crumb="connection-information">
+        <a href="#connection-information">Connection Information</a>
+      </li>
+      <li data-crumb="admin-user">
+        <a href="#admin-user">Admin User</a>
+      </li>
+      <li data-crumb="context-installation">
+        <a href="#context-installation">Context &amp; Connectors</a>
+      </li>
+      <li data-crumb="installation-status">
+        <a href="#installation-status">Installation Status</a>
+      </li>
+      <li data-crumb="setup-complete">
+        <a href="#setup-complete">Setup Complete</a>
+      </li>
+    </ul>
+  </div>
+</aside>
+      <div>
+        <section hidden id="a11y-prefs">
+            <div>
+                <h2>♿️<br>Accessibility Preferences</h2>
+                <p class="balanced">At MODX <a href="#"  class="subtle">our goal is to provide creative freedom to everyone</a>. Here you can <a href="#" class="subtle">manage your accessibility preferences</a> and <a href="#" class="subtle">adjust MODX to your&nbsp;needs</a>.</p>
+                <p class="balanced">As always, feel free to <a href="https://forums.modx.com/board?board=281" target="_modx-forum-a11y" class="subtle">discuss accessibility with the MODX&nbsp;Community</a>.</p>
+                <div class="a11y-preference-modules">
+                    <div class="font-size widget">
+                        <div class="neat container">
+                            <h2>Legibility</h2>
+                            <noscript id="fontsize__noscript">Please Enable JavaScript in a modern browser to use manage legibility preferences</noscript>
+                            <fieldset>
+                                <legend id="fontsize__legend"><span a11y-hidden="">Choose a </span>Font Size</legend>
+                                <div class="field">
+                                    <label for="fontsize__regular"><input type="radio" id="fontsize__regular" name="fontsize" checked="">&nbsp;Regular</label>
+                                </div>
+                                <div class="field">
+                                    <label for="fontsize__large"><input type="radio" id="fontsize__large" name="fontsize" value="large">&nbsp;Large</label>
+                                </div>
+                                <div class="field">
+                                    <label for="fontsize__xl"><input type="radio" id="fontsize__xl" name="fontsize" value="xl">&nbsp;Extra–Large</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+    <div class="typeface widget">
+        <div class="neat container">
+            <h2>Typeface</h2>
+            <form>
+                <noscript id="typeface__noscript">Please Enable JavaScript in a modern browser to chose a typeface</noscript>
+                <fieldset>
+                    <legend id="typeface__legend"><span a11y-hidden="">Choose a </span>Typeface</legend>
+                    <div class="field">
+                        <label for="typeface__system"><input type="radio" id="typeface__system" name="typeface" checked="">&nbsp;System</label>
+                    </div>
+                    <div class="field">
+                        <label for="typeface__opendyslexic"><input type="radio" id="typeface__opendyslexic" name="typeface" value="opendyslexic">&nbsp;OpenDyslexic</label>
+                    </div>
+                    <div class="field">
+                        <label for="typeface__opensans"><input type="radio" id="typeface__opensans" name="typeface" value="opensans">&nbsp;Open Sans</label>
+                    </div>
+                    <div class="field">
+                        <label for="typeface__raleway"><input type="radio" id="typeface__raleway" name="typeface" value="raleway">&nbsp;Raleway</label>
+                    </div>
+                    <div class="field">
+                        <label for="typeface__ubuntu"><input type="radio" id="typeface__ubuntu" name="typeface" value="ubuntu">&nbsp;Ubuntu</label>
+                    </div>
+                    <div class="field">
+                        <label for="typeface__fira"><input type="radio" id="typeface__fira" name="typeface" value="fira">&nbsp;Fira</label>
+                    </div>
+                    <div class="field">
+                        <label for="typeface__anonpro"><input type="radio" id="typeface__anonpro" name="typeface" value="anonpro">&nbsp;Anonymous Pro</label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="contrast widget">
+        <div class="neat container">
+            <h2>Contrast</h2>
+            <form>
+                <noscript id="contrast__noscript">Please Enable JavaScript in a modern browser to manage contrast preferences</noscript>
+                <fieldset>
+                    <legend id="contrast__legend">Contrast Preference<span aria-hidden="true">s</span></legend>
+                    <div class="field">
+                        <label for="contrast__normal"><input type="radio" id="contrast__normal" name="contrast" checked="">&nbsp;Normal</label>
+                    </div>
+                    <div class="field">
+                        <label for="contrast__highcontrast"><input type="radio" id="contrast__highcontrast" name="contrast" value="highcontrast">&nbsp;Black on White</label>
+                    </div>
+                    <div class="field">
+                        <label for="contrast__highcontrast_white-on-black"><input type="radio" id="contrast__highcontrast_white-on-black" name="contrast" value="contrast__highcontrast_white-on-black">&nbsp;White on Black</label>
+                    </div>
+                    <div class="field">
+                        <label for="contrast__auto"><input type="radio" id="contrast__auto" name="contrast" value="auto">&nbsp;Auto<span a11y-hidden="">matic</span></label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="reducemotion widget">
+        <div class="neat container">
+            <h2>Motor</h2>
+            <form>
+                <noscript id="reducemotion__noscript">Please Enable JavaScript in a modern browser manage animation preferences</noscript>
+                <div class="field">
+                    <label for="drag-n-drop">
+                      <input type="checkbox" id="drag-n-drop" name="reducemotion" value="yes">&nbsp;Disable Drag 'N Drop
+                    </label>
+                </div>
+                <div class="field">
+                    <label for="hit-areas">
+                      <input type="checkbox" id="hit-areas" name="hit-areas" value="yes">&nbsp;Increase Hit Areas
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="reducemotion widget">
+        <div class="neat container">
+            <h2>Animation</h2>
+            <form>
+                <noscript id="reducemotion__noscript">Please Enable JavaScript in a modern browser manage animation preferences</noscript>
+                <div class="field">
+                    <label for="reducemotion"><input type="checkbox" id="reducemotion" name="reducemotion" value="yes">&nbsp;Reduce Motion</label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="visibility widget">
+        <div class="neat container">
+            <h2>Visibility</h2>
+            <form>
+                <noscript id="visibility__noscript">Please Enable JavaScript in a modern browser to manage visibility preferences</noscript>
+                <div class="field">
+                    <label for="visibility__focus"><input type="checkbox" id="visibility__focus" name="focus" value="yes">&nbsp;Exaggerate Focused Cells</label>
+                </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="balanced">
+      <details>
+        <summary>More Options</summary>
+        <div>
+          <fieldset id="a11y-preferences-fieldset">
+            <legend>Set my Preferences</legend>
+            <label for="a11y-preferences-user-level"><input id="a11y-preferences-user-level" name="a11y-preferences-level" type="radio">&ensp;For my user</label>
+            <label for="a11y-preferences-system-level"><input id="a11y-preferences-system-level" name="a11y-preferences-level" type="radio">&ensp;System wide</label>
+            <label for="a11y-preferences-device-level"><input id="a11y-preferences-device-level" name="a11y-preferences-level" type="radio">&ensp;Just this device</label>
+          </fieldset>
+        </div>
+      </details>
+    </div>
+
+
+    <footer>
+      <div class="button-bar">
+        <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
+        <button type="reset" class="button">Reset<span class="visually-hidden"> to Default Options</span></button>
+        <a href="#installation-options" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+      </div>
+    </footer>
+
+    </div>
+    </section>
+    <section id="installation-options">
+        <div>
+            <h2><span class="emoji">📦</span><br>Installation Options</h2>
+            <fieldset>
+                <legend>How would you like to install&nbsp;MODX?</legend>
+                <div class="field">
+                    <label for="new_install">
+                        <input checked type="radio" name="how_install" id="new_install">&nbsp;New Installation
+                    </label>
+                </div>
+                <div class="field">
+                    <label for="upgrade_install">
+                        <input type="radio" name="how_install" id="upgrade_install">&nbsp;Upgrade Existing
+                    </label>
+                </div>
+                <div class="field">
+                    <label for="adv_install">
+                        <input type="radio" name="how_install" id="adv_install">&nbsp;Advanced Upgrade
+                    </label>
+                </div>
+            </fieldset>
+            <!--p class="balanced"><a href="#">Help me choose<span class="visually-hidden"> which installation to use</span>.</a></p-->
+            <details>
+                <summary>More Options</summary>
+                <div>
+                  <p class="subtle balanced oblique">You probably shouldn't mess with this stuff unless you really know what you are&nbsp;doing.</p>
+                    <fieldset>
+                      <legend>Permissions</legend>
+                      <div class="flexible">
+                        <div class="wa-octal-table-wrapper">
+                          <h3>New Folder</h3>
+                          <div aria-live="assertive" aria-atomic="true">
+                            <p hidden aria-label="Probably don't set new folders to be publicly writable and executable" class="dangerous balanced message">📛&ensp;Probably don't do that!!&ensp;📛</p>
+                          </div>
+                          <table class="wa-octal-table" data-octal-target="new-folder-permissions">
+                            <thead>
+                              <tr>
+                                <th>Users</th>
+                                <th colspan="3">Permissions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>User:</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="400">&nbsp;Read</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="200">&nbsp;Write</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="100">&nbsp;Execute</td>
+                              </tr>
+                              <tr>
+                                <td>Group:</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="40">&nbsp;Read</td>
+                                <td><input type="checkbox" name="id" id="" data-octal="20">&nbsp;Write</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="10">&nbsp;Execute</td>
+                              </tr>
+                              <tr>
+                                <td>World:</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="4">&nbsp;Read</td>
+                                <td><input type="checkbox" name="id" id="" data-octal="2">&nbsp;Write</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="1">&nbsp;Execute</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <label for="new-folder-permissions"><input size="4" type="text" name="new-folder-permissions" id="new-folder-permissions" placeholder="0755">&nbsp;Octal</label>
+                        </div>
+
+
+
+                        <div class="wa-octal-table-wrapper">
+
+                          <h3>New File</h3>
+                          <div aria-live="assertive" aria-atomic="true">
+                            <p hidden aria-label="Probably don't set new folders to be publicly writable and executable" class="dangerous balanced message">📛&ensp;Probably don't do that!!&ensp;📛</p>
+                          </div>
+                          <table class="wa-octal-table" data-octal-target="new-file-permissions">
+                            <thead>
+                              <tr>
+                                <th>Users</th>
+                                <th colspan="3">Permissions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>User:</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="400">&nbsp;Read</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="200">&nbsp;Write</td>
+                                <td><input type="checkbox" name="id" id="" data-octal="100">&nbsp;Execute</td>
+                              </tr>
+                              <tr>
+                                <td>Group:</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="40">&nbsp;Read</td>
+                                <td><input type="checkbox" name="id" id="" data-octal="20">&nbsp;Write</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="10">&nbsp;Execute</td>
+                              </tr>
+                              <tr>
+                                <td>World:</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="4">&nbsp;Read</td>
+                                <td><input type="checkbox" name="id" id="" data-octal="2">&nbsp;Write</td>
+                                <td><input checked type="checkbox" name="id" id="" data-octal="1">&nbsp;Execute</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <label for="new-file-permissions"><input size="4" type="text" name="new-file-permissions" id="new-file-permissions" placeholder="0644">&nbsp;Octal</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div class="field">
+                        <label for="powered-by">
+                          <input checked type="checkbox" name="powered-by" id="powered-by"> Send X-Powered-By Header (Credit MODX for empowering your content)
+                        </label>
+                    </div>
+                    <div class="field">
+                        <label for="core-unpacked">
+                            <input checked type="checkbox" name="core-unpacked" id="core-unpacked"> Core Package has been manually unpacked (Recommended for installation on shared servers.)</label>
+                    </div>
+                    <div class="field">
+                        <label for="files-in-place">
+                            <input checked type="checkbox" name="files-in-place" id="files-in-place"> Files are already in-place (Recommended for installation on shared servers.)</label>
+                    </div>
+                </div>
+            </details>
+            <footer>
+              <div class="button-bar">
+                <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#connection-information" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+              </div>
+            </footer>
+        </div>
+    </section>
+
+    <section id="connection-information">
+        <div>
+            <h2><span class="emoji">🗄</span><br>Connection Information</h2>
+            <!--p>MODX needs to connect to a database to get&nbsp;started.</p-->
+            <p class="balanced">MODX has needs. Match it up with a database to get&nbsp;started.</p>
+            <!--p>We all need help from time to time. <a href="#">Find a certified MODX developer.</a></p-->
+            <!--label for="database_type">Database Type</label>
+            <select name="database_type" id="database_type">
+              <option value="">mysql</option>
+              <option value="">sqlsrv</option>
+            </select-->
+            <fieldset>
+                <legend>Database Type</legend>
+                <div class="flexible">
+                  <div class="field">
+                    <label for="mysql">
+                    <input checked type="radio" id="mysql" name="db_type"> mysql</label>
+                  </div>
+                  <div class="field">
+                    <label for="sqlsrv">
+                    <input type="radio" id="sqlsrv" name="db_type"> sqlsrv</label>
+                  </div>
+                </div>
+            </fieldset>
+            <div class="flexible">
+              <fieldset>
+                <legend>Connection Information</legend>
+                <div class="field">
+                    <label for="db_host">Database Host</label>
+                    <input type="text" name="db_host" placeholder="localhost">
+                </div>
+                <div class="field">
+                    <label for="db_name">Database Name</label>
+                    <input type="text" name="db_name" placeholder="modx">
+                </div>
+                <div class="field">
+                    <label for="db_name">Table Prefix</label>
+                    <input type="text" name="table_prefix" placeholder="modx_" value="modx_">
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Credentials</legend>
+                <div class="field">
+                    <label for="db_login">Database Login Name</label>
+                    <input type="text" name="db_login" placeholder="root">
+                </div>
+                <div class="field">
+                    <label for="db_password">Database Password</label>
+                    <input type="text" name="db_password">
+                </div>
+              </fieldset>
+            </div>
+
+
+            <div class="balanced">
+              <p hidden id="test-database-description">Tests database server connection and view&nbsp;collations</p>
+              <button id="test-database-connection" aria-describedby="test-database-description" class="balanced subtle primary">Test database connection</button>
+            </div>
+            <hr>
+            <div class="balanced flexible" data-mx-area="connection-charset">
+              <div class="field">
+                <label for="connection_charset">Connection character set:</label>
+                <select id="database-connection-charset" value="utf8" name="database_connection_charset">
+                    <option value="armscii8">armscii8</option>
+                    <option value="ascii">ascii</option>
+                    <option value="big5">big5</option>
+                    <option value="binary">binary</option>
+                    <option value="cp1250">cp1250</option>
+                    <option value="cp1251">cp1251</option>
+                    <option value="cp1256">cp1256</option>
+                    <option value="cp1257">cp1257</option>
+                    <option value="cp850">cp850</option>
+                    <option value="cp852">cp852</option>
+                    <option value="cp866">cp866</option>
+                    <option value="cp932">cp932</option>
+                    <option value="dec8">dec8</option>
+                    <option value="eucjpms">eucjpms</option>
+                    <option value="euckr">euckr</option>
+                    <option value="gb18030">gb18030</option>
+                    <option value="gb2312">gb2312</option>
+                    <option value="gbk">gbk</option>
+                    <option value="geostd8">geostd8</option>
+                    <option value="greek">greek</option>
+                    <option value="hebrew">hebrew</option>
+                    <option value="hp8">hp8</option>
+                    <option value="keybcs2">keybcs2</option>
+                    <option value="koi8r">koi8r</option>
+                    <option value="koi8u">koi8u</option>
+                    <option value="latin1">latin1</option>
+                    <option value="latin2">latin2</option>
+                    <option value="latin5">latin5</option>
+                    <option value="latin7">latin7</option>
+                    <option value="macce">macce</option>
+                    <option value="macroman">macroman</option>
+                    <option value="sjis">sjis</option>
+                    <option value="swe7">swe7</option>
+                    <option value="tis620">tis620</option>
+                    <option value="ucs2">ucs2</option>
+                    <option value="ujis">ujis</option>
+                    <option value="utf16">utf16</option>
+                    <option value="utf16le">utf16le</option>
+                    <option value="utf32">utf32</option>
+                    <option value="utf8" selected="selected">utf8</option>
+                    <option value="utf8mb4">utf8mb4</option>
+                </select>
+              </div>
+              <div class="balanced field">
+                  <label for="db_collation">Collation</label>
+                  <select id="db_collation" name="db_collation">
+                      <option value="armscii8_bin">armscii8_bin</option>
+                      <option value="armscii8_general_ci">armscii8_general_ci</option>
+                      <option value="ascii_bin">ascii_bin</option>
+                      <option value="ascii_general_ci">ascii_general_ci</option>
+                      <option value="big5_bin">big5_bin</option>
+                      <option value="big5_chinese_ci">big5_chinese_ci</option>
+                      <option value="binary">binary</option>
+                      <option value="cp1250_bin">cp1250_bin</option>
+                      <option value="cp1250_croatian_ci">cp1250_croatian_ci</option>
+                      <option value="cp1250_czech_cs">cp1250_czech_cs</option>
+                      <option value="cp1250_general_ci">cp1250_general_ci</option>
+                      <option value="cp1250_polish_ci">cp1250_polish_ci</option>
+                      <option value="cp1251_bin">cp1251_bin</option>
+                      <option value="cp1251_bulgarian_ci">cp1251_bulgarian_ci</option>
+                      <option value="cp1251_general_ci">cp1251_general_ci</option>
+                      <option value="cp1251_general_cs">cp1251_general_cs</option>
+                      <option value="cp1251_ukrainian_ci">cp1251_ukrainian_ci</option>
+                      <option value="cp1256_bin">cp1256_bin</option>
+                      <option value="cp1256_general_ci">cp1256_general_ci</option>
+                      <option value="cp1257_bin">cp1257_bin</option>
+                      <option value="cp1257_general_ci">cp1257_general_ci</option>
+                      <option value="cp1257_lithuanian_ci">cp1257_lithuanian_ci</option>
+                      <option value="cp850_bin">cp850_bin</option>
+                      <option value="cp850_general_ci">cp850_general_ci</option>
+                      <option value="cp852_bin">cp852_bin</option>
+                      <option value="cp852_general_ci">cp852_general_ci</option>
+                      <option value="cp866_bin">cp866_bin</option>
+                      <option value="cp866_general_ci">cp866_general_ci</option>
+                      <option value="cp932_bin">cp932_bin</option>
+                      <option value="cp932_japanese_ci">cp932_japanese_ci</option>
+                      <option value="dec8_bin">dec8_bin</option>
+                      <option value="dec8_swedish_ci">dec8_swedish_ci</option>
+                      <option value="eucjpms_bin">eucjpms_bin</option>
+                      <option value="eucjpms_japanese_ci">eucjpms_japanese_ci</option>
+                      <option value="euckr_bin">euckr_bin</option>
+                      <option value="euckr_korean_ci">euckr_korean_ci</option>
+                      <option value="gb18030_bin">gb18030_bin</option>
+                      <option value="gb18030_chinese_ci">gb18030_chinese_ci</option>
+                      <option value="gb18030_unicode_520_ci">gb18030_unicode_520_ci</option>
+                      <option value="gb2312_bin">gb2312_bin</option>
+                      <option value="gb2312_chinese_ci">gb2312_chinese_ci</option>
+                      <option value="gbk_bin">gbk_bin</option>
+                      <option value="gbk_chinese_ci">gbk_chinese_ci</option>
+                      <option value="geostd8_bin">geostd8_bin</option>
+                      <option value="geostd8_general_ci">geostd8_general_ci</option>
+                      <option value="greek_bin">greek_bin</option>
+                      <option value="greek_general_ci">greek_general_ci</option>
+                      <option value="hebrew_bin">hebrew_bin</option>
+                      <option value="hebrew_general_ci">hebrew_general_ci</option>
+                      <option value="hp8_bin">hp8_bin</option>
+                      <option value="hp8_english_ci">hp8_english_ci</option>
+                      <option value="keybcs2_bin">keybcs2_bin</option>
+                      <option value="keybcs2_general_ci">keybcs2_general_ci</option>
+                      <option value="koi8r_bin">koi8r_bin</option>
+                      <option value="koi8r_general_ci">koi8r_general_ci</option>
+                      <option value="koi8u_bin">koi8u_bin</option>
+                      <option value="koi8u_general_ci">koi8u_general_ci</option>
+                      <option value="latin1_bin">latin1_bin</option>
+                      <option value="latin1_danish_ci">latin1_danish_ci</option>
+                      <option value="latin1_general_ci">latin1_general_ci</option>
+                      <option value="latin1_general_cs">latin1_general_cs</option>
+                      <option value="latin1_german1_ci">latin1_german1_ci</option>
+                      <option value="latin1_german2_ci">latin1_german2_ci</option>
+                      <option value="latin1_spanish_ci">latin1_spanish_ci</option>
+                      <option value="latin1_swedish_ci">latin1_swedish_ci</option>
+                      <option value="latin2_bin">latin2_bin</option>
+                      <option value="latin2_croatian_ci">latin2_croatian_ci</option>
+                      <option value="latin2_czech_cs">latin2_czech_cs</option>
+                      <option value="latin2_general_ci">latin2_general_ci</option>
+                      <option value="latin2_hungarian_ci">latin2_hungarian_ci</option>
+                      <option value="latin5_bin">latin5_bin</option>
+                      <option value="latin5_turkish_ci">latin5_turkish_ci</option>
+                      <option value="latin7_bin">latin7_bin</option>
+                      <option value="latin7_estonian_cs">latin7_estonian_cs</option>
+                      <option value="latin7_general_ci">latin7_general_ci</option>
+                      <option value="latin7_general_cs">latin7_general_cs</option>
+                      <option value="macce_bin">macce_bin</option>
+                      <option value="macce_general_ci">macce_general_ci</option>
+                      <option value="macroman_bin">macroman_bin</option>
+                      <option value="macroman_general_ci">macroman_general_ci</option>
+                      <option value="sjis_bin">sjis_bin</option>
+                      <option value="sjis_japanese_ci">sjis_japanese_ci</option>
+                      <option value="swe7_bin">swe7_bin</option>
+                      <option value="swe7_swedish_ci">swe7_swedish_ci</option>
+                      <option value="tis620_bin">tis620_bin</option>
+                      <option value="tis620_thai_ci">tis620_thai_ci</option>
+                      <option value="ucs2_bin">ucs2_bin</option>
+                      <option value="ucs2_croatian_ci">ucs2_croatian_ci</option>
+                      <option value="ucs2_czech_ci">ucs2_czech_ci</option>
+                      <option value="ucs2_danish_ci">ucs2_danish_ci</option>
+                      <option value="ucs2_esperanto_ci">ucs2_esperanto_ci</option>
+                      <option value="ucs2_estonian_ci">ucs2_estonian_ci</option>
+                      <option value="ucs2_general_ci">ucs2_general_ci</option>
+                      <option value="ucs2_general_mysql500_ci">ucs2_general_mysql500_ci</option>
+                      <option value="ucs2_german2_ci">ucs2_german2_ci</option>
+                      <option value="ucs2_hungarian_ci">ucs2_hungarian_ci</option>
+                      <option value="ucs2_icelandic_ci">ucs2_icelandic_ci</option>
+                      <option value="ucs2_latvian_ci">ucs2_latvian_ci</option>
+                      <option value="ucs2_lithuanian_ci">ucs2_lithuanian_ci</option>
+                      <option value="ucs2_persian_ci">ucs2_persian_ci</option>
+                      <option value="ucs2_polish_ci">ucs2_polish_ci</option>
+                      <option value="ucs2_roman_ci">ucs2_roman_ci</option>
+                      <option value="ucs2_romanian_ci">ucs2_romanian_ci</option>
+                      <option value="ucs2_sinhala_ci">ucs2_sinhala_ci</option>
+                      <option value="ucs2_slovak_ci">ucs2_slovak_ci</option>
+                      <option value="ucs2_slovenian_ci">ucs2_slovenian_ci</option>
+                      <option value="ucs2_spanish2_ci">ucs2_spanish2_ci</option>
+                      <option value="ucs2_spanish_ci">ucs2_spanish_ci</option>
+                      <option value="ucs2_swedish_ci">ucs2_swedish_ci</option>
+                      <option value="ucs2_turkish_ci">ucs2_turkish_ci</option>
+                      <option value="ucs2_unicode_520_ci">ucs2_unicode_520_ci</option>
+                      <option value="ucs2_unicode_ci">ucs2_unicode_ci</option>
+                      <option value="ucs2_vietnamese_ci">ucs2_vietnamese_ci</option>
+                      <option value="ujis_bin">ujis_bin</option>
+                      <option value="ujis_japanese_ci">ujis_japanese_ci</option>
+                      <option value="utf16_bin">utf16_bin</option>
+                      <option value="utf16_croatian_ci">utf16_croatian_ci</option>
+                      <option value="utf16_czech_ci">utf16_czech_ci</option>
+                      <option value="utf16_danish_ci">utf16_danish_ci</option>
+                      <option value="utf16_esperanto_ci">utf16_esperanto_ci</option>
+                      <option value="utf16_estonian_ci">utf16_estonian_ci</option>
+                      <option value="utf16_general_ci">utf16_general_ci</option>
+                      <option value="utf16_german2_ci">utf16_german2_ci</option>
+                      <option value="utf16_hungarian_ci">utf16_hungarian_ci</option>
+                      <option value="utf16_icelandic_ci">utf16_icelandic_ci</option>
+                      <option value="utf16_latvian_ci">utf16_latvian_ci</option>
+                      <option value="utf16_lithuanian_ci">utf16_lithuanian_ci</option>
+                      <option value="utf16_persian_ci">utf16_persian_ci</option>
+                      <option value="utf16_polish_ci">utf16_polish_ci</option>
+                      <option value="utf16_roman_ci">utf16_roman_ci</option>
+                      <option value="utf16_romanian_ci">utf16_romanian_ci</option>
+                      <option value="utf16_sinhala_ci">utf16_sinhala_ci</option>
+                      <option value="utf16_slovak_ci">utf16_slovak_ci</option>
+                      <option value="utf16_slovenian_ci">utf16_slovenian_ci</option>
+                      <option value="utf16_spanish2_ci">utf16_spanish2_ci</option>
+                      <option value="utf16_spanish_ci">utf16_spanish_ci</option>
+                      <option value="utf16_swedish_ci">utf16_swedish_ci</option>
+                      <option value="utf16_turkish_ci">utf16_turkish_ci</option>
+                      <option value="utf16_unicode_520_ci">utf16_unicode_520_ci</option>
+                      <option value="utf16_unicode_ci">utf16_unicode_ci</option>
+                      <option value="utf16_vietnamese_ci">utf16_vietnamese_ci</option>
+                      <option value="utf16le_bin">utf16le_bin</option>
+                      <option value="utf16le_general_ci">utf16le_general_ci</option>
+                      <option value="utf32_bin">utf32_bin</option>
+                      <option value="utf32_croatian_ci">utf32_croatian_ci</option>
+                      <option value="utf32_czech_ci">utf32_czech_ci</option>
+                      <option value="utf32_danish_ci">utf32_danish_ci</option>
+                      <option value="utf32_esperanto_ci">utf32_esperanto_ci</option>
+                      <option value="utf32_estonian_ci">utf32_estonian_ci</option>
+                      <option value="utf32_general_ci">utf32_general_ci</option>
+                      <option value="utf32_german2_ci">utf32_german2_ci</option>
+                      <option value="utf32_hungarian_ci">utf32_hungarian_ci</option>
+                      <option value="utf32_icelandic_ci">utf32_icelandic_ci</option>
+                      <option value="utf32_latvian_ci">utf32_latvian_ci</option>
+                      <option value="utf32_lithuanian_ci">utf32_lithuanian_ci</option>
+                      <option value="utf32_persian_ci">utf32_persian_ci</option>
+                      <option value="utf32_polish_ci">utf32_polish_ci</option>
+                      <option value="utf32_roman_ci">utf32_roman_ci</option>
+                      <option value="utf32_romanian_ci">utf32_romanian_ci</option>
+                      <option value="utf32_sinhala_ci">utf32_sinhala_ci</option>
+                      <option value="utf32_slovak_ci">utf32_slovak_ci</option>
+                      <option value="utf32_slovenian_ci">utf32_slovenian_ci</option>
+                      <option value="utf32_spanish2_ci">utf32_spanish2_ci</option>
+                      <option value="utf32_spanish_ci">utf32_spanish_ci</option>
+                      <option value="utf32_swedish_ci">utf32_swedish_ci</option>
+                      <option value="utf32_turkish_ci">utf32_turkish_ci</option>
+                      <option value="utf32_unicode_520_ci">utf32_unicode_520_ci</option>
+                      <option value="utf32_unicode_ci">utf32_unicode_ci</option>
+                      <option value="utf32_vietnamese_ci">utf32_vietnamese_ci</option>
+                      <option value="utf8_bin" selected="selected">utf8_bin</option>
+                      <option value="utf8_croatian_ci">utf8_croatian_ci</option>
+                      <option value="utf8_czech_ci">utf8_czech_ci</option>
+                      <option value="utf8_danish_ci">utf8_danish_ci</option>
+                      <option value="utf8_esperanto_ci">utf8_esperanto_ci</option>
+                      <option value="utf8_estonian_ci">utf8_estonian_ci</option>
+                      <option value="utf8_general_ci">utf8_general_ci</option>
+                      <option value="utf8_general_mysql500_ci">utf8_general_mysql500_ci</option>
+                      <option value="utf8_german2_ci">utf8_german2_ci</option>
+                      <option value="utf8_hungarian_ci">utf8_hungarian_ci</option>
+                      <option value="utf8_icelandic_ci">utf8_icelandic_ci</option>
+                      <option value="utf8_latvian_ci">utf8_latvian_ci</option>
+                      <option value="utf8_lithuanian_ci">utf8_lithuanian_ci</option>
+                      <option value="utf8_persian_ci">utf8_persian_ci</option>
+                      <option value="utf8_polish_ci">utf8_polish_ci</option>
+                      <option value="utf8_roman_ci">utf8_roman_ci</option>
+                      <option value="utf8_romanian_ci">utf8_romanian_ci</option>
+                      <option value="utf8_sinhala_ci">utf8_sinhala_ci</option>
+                      <option value="utf8_slovak_ci">utf8_slovak_ci</option>
+                      <option value="utf8_slovenian_ci">utf8_slovenian_ci</option>
+                      <option value="utf8_spanish2_ci">utf8_spanish2_ci</option>
+                      <option value="utf8_spanish_ci">utf8_spanish_ci</option>
+                      <option value="utf8_swedish_ci">utf8_swedish_ci</option>
+                      <option value="utf8_turkish_ci">utf8_turkish_ci</option>
+                      <option value="utf8_unicode_520_ci">utf8_unicode_520_ci</option>
+                      <option value="utf8_unicode_ci">utf8_unicode_ci</option>
+                      <option value="utf8_vietnamese_ci">utf8_vietnamese_ci</option>
+                      <option value="utf8mb4_bin">utf8mb4_bin</option>
+                      <option value="utf8mb4_croatian_ci">utf8mb4_croatian_ci</option>
+                      <option value="utf8mb4_czech_ci">utf8mb4_czech_ci</option>
+                      <option value="utf8mb4_danish_ci">utf8mb4_danish_ci</option>
+                      <option value="utf8mb4_esperanto_ci">utf8mb4_esperanto_ci</option>
+                      <option value="utf8mb4_estonian_ci">utf8mb4_estonian_ci</option>
+                      <option value="utf8mb4_general_ci">utf8mb4_general_ci</option>
+                      <option value="utf8mb4_german2_ci">utf8mb4_german2_ci</option>
+                      <option value="utf8mb4_hungarian_ci">utf8mb4_hungarian_ci</option>
+                      <option value="utf8mb4_icelandic_ci">utf8mb4_icelandic_ci</option>
+                      <option value="utf8mb4_latvian_ci">utf8mb4_latvian_ci</option>
+                      <option value="utf8mb4_lithuanian_ci">utf8mb4_lithuanian_ci</option>
+                      <option value="utf8mb4_persian_ci">utf8mb4_persian_ci</option>
+                      <option value="utf8mb4_polish_ci">utf8mb4_polish_ci</option>
+                      <option value="utf8mb4_roman_ci">utf8mb4_roman_ci</option>
+                      <option value="utf8mb4_romanian_ci">utf8mb4_romanian_ci</option>
+                      <option value="utf8mb4_sinhala_ci">utf8mb4_sinhala_ci</option>
+                      <option value="utf8mb4_slovak_ci">utf8mb4_slovak_ci</option>
+                      <option value="utf8mb4_slovenian_ci">utf8mb4_slovenian_ci</option>
+                      <option value="utf8mb4_spanish2_ci">utf8mb4_spanish2_ci</option>
+                      <option value="utf8mb4_spanish_ci">utf8mb4_spanish_ci</option>
+                      <option value="utf8mb4_swedish_ci">utf8mb4_swedish_ci</option>
+                      <option value="utf8mb4_turkish_ci">utf8mb4_turkish_ci</option>
+                      <option value="utf8mb4_unicode_520_ci">utf8mb4_unicode_520_ci</option>
+                      <option value="utf8mb4_unicode_ci">utf8mb4_unicode_ci</option>
+                      <option value="utf8mb4_vietnamese_ci">utf8mb4_vietnamese_ci</option>
+                  </select>
+              </div>
+            </div>
+
+            <div>
+              <details>
+                <summary class="balanced">FAQs</summary>
+                <div>
+                  <dl>
+                    <dt>What is a database?</dt>
+                    <dd>A database is where stuff goes.</dd>
+                    <dt>I'm lost. I need help.</dt>
+                    <dd>We all need help from time to time. <a href="#">Find a certified MODX developer.</a></dd>
+                    <dt>How do I create a database?</dt>
+                    <dd>Ask your host.</dd>
+                    <dt>What is a database prefix?</dt>
+                    <dd>Blah blah</dd>
+                    <dt>Can I use MODX without manually creating a database?</dt>
+                    <dd>Yes. <a href="https://modxcloud.com" target="_modxcloud">Cloud hosting is available</a>. You are also free to <a href="https://demo.modmore.com" target="_modmoredemo">try the modmore demo</a> at&nbsp;anytime.</dd>
+                  </dl>
+                </div>
+              </details>
+            </div>
+
+            <footer>
+              <div class="button-bar">
+                <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#admin-user" class="primary button">Continue<span class="visually-hidden"> to Admin User</span></a>
+                <!--button disabled type="submit" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></button-->
+              </div>
+            </footer>
+        </div>
+
+    </section>
+    <section id="admin-user">
+        <div>
+            <h2><span class="emoji">👤</span><br>Default Admin User</h2>
+            <p class="balanced">Somebody has to captain this ship. Who should it be?</p>
+            <div class="balanced field">
+              <button class="subtle balanced">Import my MODX User Information</button>
+            </div>
+            <div class="field">
+                <label for="admin_username">Administrator username:</label>
+                <input required type="text" name="admin_username" id="admin_username" placeholder="boatymcboatface">
+            </div>
+            <div class="field">
+                <label for="admin_email">Administrator email:</label>
+                <input required type="email" name="admin_email" id="admin_email" class="email" placeholder="boaty@mcboatface.com">
+            </div>
+            <div class="balanced field">
+              <button class="subtle balanced">Generate a Secure Password</button>
+            </div>
+            <div class="field">
+                <label for="admin_password">Administrator password:</label>
+                <input required type="password" name="admin_password" id="admin_password">
+            </div>
+            <div class="field">
+                <label for="confirm_password">Confirm password:</label>
+                <input required type="password" name="confirm_password" id="confirm_password">
+            </div>
+            <div class="field">
+              <details>
+                <summary class="balanced">Optional fields</summary>
+                <div>
+                  <div class="field">
+                      <label for="given_name">Given Name:</label>
+                      <input required type="text" name="given_name" id="given_name" placeholder="Jane">
+                  </div>
+                  <div class="field">
+                      <label for="family_name">Family Name:</label>
+                      <input required type="text" name="family_name" id="family_name" placeholder="Doe">
+                  </div>
+                  <div class="field">
+                      <label for="birthday">Birthday:</label>
+                      <input required type="date" name="birthday" id="birthday" placeholder="03/10/1986">
+                  </div>
+                  <div class="field">
+                      <label for="gender">Gender:</label>
+                      <select name="gender" id="gender">
+                        <option value="">Unspecified</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                      </select>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <footer>
+              <div class="button-bar">
+                <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#context-installation" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+              </div>
+            </footer>
+        </div>
+    </section>
+    <section id="context-installation">
+        <div>
+            <h2><span class="emoji">🔀</span><br>Context &amp; Connectors</h2>
+            <p>Here you specify where MODX is or should be located, the relative URL your MODX install will be hosted at, and where your connectors will be&nbsp;located.</p>
+            <div class="flexible">
+              <fieldset>
+                <legend>Context</legend>
+                <div class="field">
+                    <label for="absolute_file_path">Absolute Filesystem path to MODX:</label>
+                    <input aria-label="Use custom context path" type="checkbox" name="do_absolute_file_path" id="do_absolute_file_path" data-message="filesystem-path">&ensp;
+                    <input type="text" data-check="do_absolute_file_path" name="context_path" id="absolute_file_path" placeholder="/" value="/">
+                </div>
+                <div class="field">
+                    <label for="url_web_context">URL for web context:</label>
+                    <input aria-label="Use custom URL for web context" type="checkbox" name="do_web_context_path" id="do_web_context_path" data-message="web-context-url">&ensp;
+                    <input type="text" data-check="do_web_context_path" data-preface="http://localhost:3003" name="url_web_context" id="url_web_context" value="/" placeholder="/">
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Connectors</legend>
+                <div class="field">
+                    <label for="url_web_context">Filesystem path for connectors:</label>
+                    <input aria-label="Use custom filesystem path for connectors" type="checkbox" name="do_custom_filesystem_connectors_path" id="do_custom_filesystem_connectors_path">&ensp;
+                    <input data-check="do_custom_filesystem_connectors_path" type="text" name="filesystem_path" id="filesystem_path" placeholder="/modx/connectors">
+                </div>
+                <div class="field">
+                    <label for="url_web_context">URL for connectors:</label>
+                    <input aria-label="Use custom URL for connectors" type="checkbox" name="do_custom_connectors_url" id="do_custom_connectors_url">&ensp;
+                    <input data-check="do_custom_connectors_url" type="text" name="connectors_url" id="connectors_url" placeholder="/connectors">
+                </div>
+              </fieldset>
+            </div>
+            <div>
+              <p class="subtle balanced oblique">
+                Your web context will be hosted at <code id="web-context-url" mx-bind="url_web_context" data-original="https://localhost:3003">https://localhost:3003</code> and located at <code id="filesystem-path" mx-bind="absolute_file_path" data-original="/modx">/modx</code> on your server.<br>
+                Connectors will be hosted at <code id="connectors-url" mx-bind="connectors_url" data-original="/connectors">/connectors</code> and located at <code id="connectors-path" mx-bind="filesystem_path" data-original="/modx/connectors">/modx/connectors</code> on your&nbsp;server
+              </p>
+            </div>
+            <div>
+              <details class="balanced">
+                <summary class="balanced">FAQs</summary>
+                <div style="max-width:28em;margin-left:auto;margin-right:auto">
+                  <dl>
+                    <dt>What is a web context?</dt>
+                    <dd>A web context is usually a web site. But it can be anything. <a href="#">Learn more <span class="visually-hidden">about MODX contexts</span></a></dd>
+                    <dt>What are connectors?</dt>
+                    <dd>Connectors are hook up the MODX interface to your dyanmic database</dd>
+                    <dt>Why would I change the connectors path or URL?</dt>
+                    <dd>Using a non&ndash;default connectors path makes your site less detectable as being created with MODX</dd>
+                  </dl>
+                </div>
+              </details>
+            </div>
+            <footer>
+              <div class="button-bar">
+                <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#installation-status" class="primary button">Skip<span class="visually-hidden"> to Installation Options</span></a>
+                <!--a href="#" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a-->
+              </div>
+            </footer>
+        </div>
+    </section>
+    <section id="installation-status">
+        <div>
+            <h2>⚠️<br>Installation Succeeded with Warnings</h2>
+            <details>
+                <summary>Installation Log</summary>
+                <div>
+                    <pre>Stuff happened</pre>
+                </div>
+            </details>
+            <details>
+                <summary>Success Messages</summary>
+                <div>
+                    <pre>Success</pre>
+                </div>
+            </details>
+            <details open>
+                <summary>Warning Messages</summary>
+                <div>
+                    <pre>Uh oh</pre>
+                </div>
+            </details>
+            <footer>
+              <div class="button-bar">
+                <a href="#" class="button">Back<span class="visually-hidden"> to Installation Options</span></a>
+                <a href="#setup-complete" class="primary button">Continue<span class="visually-hidden"> to Installation Options</span></a>
+              </div>
+            </footer>
+        </div>
+    </section>
+    <section id="setup-complete">
+        <div>
+            <h2>
+              <span class="emoji">🏁</span><br>
+              Setup Complete
+              <small>Welcome to the MODX Community</small>
+            </h2>
+            <p>🎉&ensp;Congratulations! Not only have you successfully installed some nifty software &mdash; you've joined a world wide community who enjoys authoring the web&nbsp;freely. <a href="https://twitter.com/intent/tweet?text=I%20just%20installed%20the%20MODX%20Content%20Management%20System!%20%23MODX" target="_twitter-installed">Tweet this</a>.</p>
+            <p>Now that MODX is installed you may <span class="if-packages-loaded">configure it further or </span>skip straight to <a href="#">your new&nbsp;dashboard</a>.</p>
+
+            <div id="packages-to-install">
+              <div>
+                  <details id="what-ill-be-managing" open>
+                    <summary>What I'll be managing</summary>
+                    <fieldset id="i-want-to-create-a">
+                        <legend>I want to create a:</legend>
+                        <div id="what-ill-be-managing-fields">
+
+                        </div>
+                        <!--div class="field">
+                            <label for="want-blog"><input type="radio" id="want-blog" name="i-want" data-dependent="pkg-getresources pkg-collections pkg-blockdown pkg-formit pkg-formalicious pkg-content-blocks pkg-redactor pkg-getpage pkg-seo-tab pkg-seo-pro pkg-google-analytics-dashboard-widget pkg-wayfinder pkg-breadcrumbs pkg-googlesitemap pkg-simplesearch pkg-twitterx pkg-batcher pkg-taglister pkg-archivist pkg-quip pkg-tagger">&nbsp;Blog</label>
+                        </div>
+                        <div class="field">
+                            <label for="want-custom-site"><input checked type="radio" id="want-custom-site" name="i-want" data-dependent="">&nbsp;Custom Site</label>
+                        </div>
+                        <div class="field">
+                            <label for="want-marketing"><input type="radio" id="want-marketing" name="i-want">&nbsp;Marketing Site</label>
+                        </div>
+                        <div class="field">
+                            <label for="portfolio-site"><input type="radio" id="portfolio-site" name="i-want" data-dependent="pkg-media-sources pkg-media-manager pkg-eureka pkg-ace">&nbsp;Portfolio Site</label>
+                        </div>
+                        <div class="field">
+                            <label for="want-webshop"><input type="radio" id="want-webshop" name="i-want" data-dependent="pkg-simpleab pkg-commerce pkg-seo-tab pkg-seo-pro">&nbsp;Webshop</label>
+                        </div>
+                        <div class="field">
+                            <label for="want-webapp"><input type="radio" id="want-webapp" name="i-want" data-dependent="pkg-getcache pkg-statcache pkg-hybridauth pkg-google-analytics-dashboard-widget pkg-scheduler">&nbsp;Web App</label>
+                        </div>
+                        <div class="field">
+                            <label for="want-api"><input type="radio" id="want-api" name="i-want"  data-dependent="pkg-getcache pkg-statcache pkg-contextrouter pkg-ace pkg-scheduler">&nbsp;Back End API</label>
+                        </div-->
+                    </fieldset>
+                  </details>
+                  <details>
+                    <summary>What I want</summary><!-- (what I really really want) -->
+                    <fieldset id="i-would-like-to">
+                      <legend>I'd like to:</legend>
+                      <div id="i-would-like-to-desires">
+
+                      </div>
+                      <!--label class="field" for="i-want-it-all"><input type="checkbox" name="i-want-it-all" id="i-want-it-all">&ensp;Have it all</label>
+                      <label class="field" for="i-like-versionx"><input type="checkbox" name="i-like-versionx" id="i-like-versionx" data-dependent="pkg-versionx">&ensp;Create versioned backups of my content</label>
+                      <label class="field" for="i-like-formit"><input type="checkbox" name="i-like-formit" id="i-like-formit"  data-dependent="pkg-formit">&ensp;Create my own Forms without coding</label>
+                      <label class="field" for="i-like-collections"><input type="checkbox" name="i-like-collections" id="i-like-collections" data-dependent="want-blog pkg-collections">&ensp;Manage content as collections</label>
+                      <label class="field" for="i-like-content-blocks"><input type="checkbox" name="i-like-content-blocks" id="i-like-content-blocks"  data-dependent="pkg-content-blocks">&ensp;Manage content with layouts and fields</label>
+                      <label class="field" for="i-like-redactor"><input type="radio" name="i-like-rte" id="i-like-redactor"  data-dependent="pkg-redactor">&ensp;Use a premium Rich Text Editor</label>
+                      <label class="field" for="i-like-tinymce"><input type="radio" name="i-like-rte" id="i-like-tinymce"  data-dependent="pkg-tinymce">&ensp;Use a free Rich Text Editor</label>
+                      <label class="field" for="i-like-ace"><input type="checkbox" name="i-like-ace" id="i-like-ace"  data-dependent="pkg-ace">&ensp;Use a syntax highlighter when viewing code</label>
+                      <label class="field" for="i-like-more-gallery"><input type="checkbox" name="i-like-more-gallery" id="i-like-more-gallery"  data-dependent="pkg-more-gallery">&ensp;Use a premium photo gallery Extra</label>
+                      <label class="field" for="i-like-media-sources"><input type="checkbox" name="i-like-media-sources" id="i-like-media-sources"  data-dependent="pkg-media-sources pkg-eureka">&ensp;Manage media by connecting to remote sources</label>
+                      <label class="field" for="i-like-media-manager"><input type="checkbox" name="i-like-media-manager" id="i-like-media-manager"  data-dependent="pkg-media-sources pkg-media-manager">&ensp;Manage media with tags and crops</label>
+                      <label class="field" for="i-like-seo"><input type="checkbox" name="i-like-seo" id="i-like-seo"  data-dependent="pkg-googlesitemap">&ensp;Optimize my content for search engines</label>
+                      <label class="field" for="i-like-google-maps-tv"><input type="checkbox" name="i-like-google-maps-tv" id="i-like-google-maps-tv"  data-dependent="">&ensp;Embed Google Maps in my content</label>
+                      <label class="field" for="i-like-simple-ab"><input type="checkbox" name="i-like-simple-ab" id="i-like-simple-ab"  data-dependent="pkg-simpleab">&ensp;Perform A/B testing</label>
+                      <label class="field" for="i-like-client-config"><input type="checkbox" name="i-like-client-config" id="i-like-client-config"  data-dependent="pkg-client-config">&ensp;Use a user-friendly interface for making site wide changes</label>
+                      <label class="field" for="i-like-quickstart-buttons"><input type="checkbox" name="i-like-quickstart-buttons" id="i-like-quickstart-buttons"  data-dependent="pkg-quickstart-buttons">&ensp;Create quick start shortcuts on my dashboard</label>
+                      <label class="field" for="i-like-markdown"><input type="checkbox" name="i-like-markdown" id="i-like-markdown"  data-dependent="pkg-blockdown">&ensp;Author Content Using MarkDown</label>
+                      <label class="field" for="i-like-hybridauth"><input type="checkbox" name="i-like-hybridauth" id="i-like-hybridauth"  data-dependent="pkg-hybridauth">&ensp;Allow authorization through social networks and other services</label>
+                      <label class="field" for="i-like-babel"><input type="checkbox" name="i-like-babel" id="i-like-babel" data-dependent="pkg-babel">&ensp;I'll be managing Multi&ndash;lingual content</label>
+                      <label class="field" for="i-like-commerce"><input type="checkbox" name="i-like-commerce" id="i-like-commerce">&ensp;Accept Payments</label>
+                      <fieldset class="commerce">
+                        <legend>Commerce</legend>
+                        <label class="field" for="i-like-authorize"><input disabled type="checkbox" data-dirty="true" name="i-like-authorize" id="i-like-authorize">&ensp;Accept payments using Authorize.NET</label>
+                        <label class="field" for="i-like-paypal"><input disabled class="default" type="checkbox" data-dirty="true" name="i-like-paypal" id="i-like-paypal">&ensp;Accept payments using PayPal</label>
+                        <label class="field" for="i-like-mollie"><input disabled type="checkbox" data-dirty="true" name="i-like-mollie" id="i-like-mollie">&ensp;Accept payments using Mollie</label>
+                        <label class="field" for="i-like-stripe"><input disabled type="checkbox" data-dirty="true" name="i-like-stripe" id="i-like-stripe">&ensp;Accept payments using Stripe</label>
+                      </fieldset-->
+                    </fieldset>
+                  </details>
+                  <details>
+                    <summary>Packages to Install</summary>
+                    <p id="premium-extras-trial" class="subtle balanced oblique">Premium Extras are installed hassle&ndash;free as 14 day trials. Try now buy&nbsp;later.</p>
+                    <div>
+                      <p>The MODX Community has many great extras ranging from free to premium. Here you can specify which packages you'd like to start with.</p>
+                      <label for="show-package-descriptions">
+                        <input type="checkbox" id="show-package-descriptions" name="show-package-descriptions">&ensp;Show Package Descriptions&ensp;<small class="caps">(alt+d)</small>
+                      </label>
+                      <div id="foo"></div>
+                    </div>
+
+                    <div>
+                      <label for="show-package-descriptions-bottom">
+                        <input type="checkbox" id="show-package-descriptions-bottom" name="show-package-descriptions">&ensp;Show Package Descriptions&ensp;<small class="caps">(alt+d)</small>
+                      </label>
+                    </div>
+
+                    <!--div hidden>
+                      <p>The MODX Community has many great extras ranging from free to premium. Here you can specify which packages you'd like to start with.</p>
+                      <fieldset id="install-these-packages">
+                        <legend>Install these MODX Packages</legend>
+                        <div>
+                          <details open>
+                            <summary>Editing Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Editing Packages</legend>
+                              <label for="pkg-redactor" class="field">
+                                <input type="radio" name="pkg-redactor-tinymce" id="pkg-redactor" data-preset="blog">&ensp;Redactor by modmore&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Redactor by modmore</span></small></a>
+                              </label>
+                              <label for="pkg-tinymce" class="field">
+                                <input type="radio" name="pkg-redactor-tinymce" id="pkg-tinymce">&ensp;TinyMCE&ensp;<a href="#"><small>more info<span class="visually-hidden"> about TinyMCE</span></small></a>
+                              </label>
+                              <label for="pkg-ace" class="field">
+                                <input type="radio" name="pkg-ace-codemirror" id="pkg-ace">&ensp;Ace&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Ace</span></small></a>
+                              </label>
+                              <label for="pkg-codemirror" class="field">
+                                <input type="radio" name="pkg-ace-codemirror" id="pkg-codemirror">&ensp;CodeMirror&ensp;<a href="#"><small>more info<span class="visually-hidden"> about CodeMirror</span></small></a>
+                              </label>
+                              <label for="pkg-blockdown" class="field">
+                                <input type="checkbox" name="pkg-blockdown" id="pkg-blockdown">&ensp;Blockdown&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Blockdown</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Media Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Media Packages</legend>
+                              <label for="pkg-media-manager" class="field">
+                                <input type="checkbox" name="pkg-media-manager" id="pkg-media-manager">&ensp;Media Manager by Sterc&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Media Manager by Sterc</span></small></a>
+                              </label>
+                              <label for="pkg-more-gallery" class="field">
+                                <input type="checkbox" name="pkg-more-gallery" id="pkg-more-gallery">&ensp;MoreGallery by modmore&ensp;<a href="#"><small>premium<span class="visually-hidden"> about MoreGallery by modmore</span></small></a>
+                              </label>
+                              <label for="pkg-media-sources" class="field">
+                                <input type="checkbox" name="pkg-media-sources" id="pkg-media-sources">&ensp;Media Sources&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Media Sources</span></small></a>
+                              </label>
+                              <label for="pkg-eureka" class="field">
+                                <input type="checkbox" name="pkg-eureka" id="pkg-eureka">&ensp;Eureka Media Browser&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Eureka Media Browser</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Content Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Content Packages</legend>
+                              <label for="pkg-collections" class="field">
+                                <input type="checkbox" name="pkg-collections" id="pkg-collections" data-preset="blog">&ensp;Collections&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Collections</span></small></a>
+                              </label>
+                              <label for="pkg-content-blocks" class="field">
+                                <input type="checkbox" name="pkg-content-blocks" id="pkg-content-blocks">&ensp;ContentBlocks by modmore&ensp;<a href="#"><small>more info<span class="visually-hidden"> about ContentBlocks by modmore</span></small></a>
+                              </label>
+                              <label for="pkg-batcher" class="field">
+                                <input type="checkbox" name="pkg-batcher" id="pkg-batcher">&ensp;Batcher&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Batcher</span></small></a>
+                              </label>
+                              <label for="pkg-getpage" class="field">
+                                <input type="checkbox" name="pkg-getpage" id="pkg-getpage" data-preset="blog" data-pkg-exempt="pkg-pdotools">&ensp;getPage&ensp;<a href="#"><small>more info<span class="visually-hidden"> about getPage</span></small></a>
+                              </label>
+                              <label for="pkg-taglister" class="field">
+                                <input type="checkbox" name="pkg-taglister" id="pkg-taglister" data-preset="blog">&ensp;tagLister&ensp;<a href="#"><small>more info<span class="visually-hidden"> about tagLister</span></small></a>
+                              </label>
+                              <label for="pkg-archivist" class="field">
+                                <input type="checkbox" name="pkg-archivist" id="pkg-archivist" data-preset="blog">&ensp;Archivist&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Archivist</span></small></a>
+                              </label>
+                              <label for="pkg-versionx" class="field">
+                                <input type="checkbox" name="pkg-versionx" id="pkg-versionx">&ensp;VersionX&ensp;<a href="#"><small>more info<span class="visually-hidden"> about VersionX</span></small></a>
+                              </label>
+                              <label for="pkg-formit" class="field">
+                                <input type="checkbox" name="pkg-formit" id="pkg-formit" data-preset="blog">&ensp;FormIt&ensp;<a href="#"><small>more info<span class="visually-hidden"> about FormIt</span></small></a>
+                              </label>
+                              <label for="pkg-formalicious" class="field">
+                                <input type="checkbox" name="pkg-formalicious" id="pkg-formalicious">&ensp;Formalicious by Sterc&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Formalicious by Sterc</span></small></a>
+                              </label>
+                              <label for="pkg-wayfinder" class="field">
+                                <input type="checkbox" name="pkg-wayfinder" id="pkg-wayfinder" data-pkg-exempt="pkg-pdotools">&ensp;Wayfinder&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Wayfinder</span></small></a>
+                              </label>
+                              <label for="pkg-breadcrumbs" class="field">
+                                <input type="checkbox" name="pkg-breadcrumbs" id="pkg-breadcrumbs" data-pkg-exempt="pkg-pdotools">&ensp;Breadcrumbs&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Breadcrumbs</span></small></a>
+                              </label>
+                              <label for="pkg-simplesearch" class="field">
+                                <input type="checkbox" name="pkg-simplesearch" id="pkg-simplesearch">&ensp;SimpleSearch&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Breadcrumbs</span></small></a>
+                              </label>
+                              <label for="pkg-tagger" class="field">
+                                <input type="checkbox" name="pkg-tagger" id="pkg-tagger">&ensp;Tagger&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Tagger</span></small></a>
+                              </label>
+                              <label for="pkg-quip" class="field">
+                                <input type="checkbox" name="pkg-quip" id="pkg-quip">&ensp;Quip&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Quip</span></small></a>
+                              </label>
+                              <label for="pkg-babel" class="field">
+                                <input type="checkbox" name="pkg-babel" id="pkg-babel">&ensp;Babel&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Babel</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Marketing Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Marketing Packages</legend>
+                              <label for="pkg-seo-tab" class="field">
+                                <input type="checkbox" name="pkg-seo-tab" id="pkg-seo-tab" data-preset="blog">&ensp;SEO Tab by Sterc&ensp;<a href="#"><small>more info<span class="visually-hidden"> about SEO Tab by Sterc</span></small></a>
+                              </label>
+                              <label for="pkg-seo-pro" class="field">
+                                <input type="checkbox" name="pkg-seo-pro" id="pkg-seo-pro" data-preset="blog">&ensp;SEO Pro by Sterc&ensp;<a href="#"><small>more info<span class="visually-hidden"> about SEO Pro by Sterc</span></small></a>
+                              </label>
+                              <label for="pkg-google-analytics-dashboard-widget" class="field">
+                                <input type="checkbox" name="pkg-google-analytics-dashboard-widget" id="pkg-google-analytics-dashboard-widget">&ensp;Google Analytics Dashboard Widget&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Google Analytics Dashboard Widget</span></small></a>
+                              </label>
+                              <label for="pkg-simpleab" class="field">
+                                <input type="checkbox" name="pkg-simpleab" id="pkg-simpleab">&ensp;SimpleAB by modmore&ensp;<a href="#"><small>more info<span class="visually-hidden"> about SimpleAB by modmore</span></small></a>
+                              </label>
+                              <label for="pkg-googlesitemap" class="field">
+                                <input type="checkbox" name="pkg-googlesitemap" id="pkg-googlesitemap" data-pkg-exempt="pkg-pdotools">&ensp;GoogleSiteMap&ensp;<a href="#"><small>more info<span class="visually-hidden"> about GoogleSiteMap</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Security Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Security Packages</legend>
+                              <label for="pkg-hybridauth" class="field">
+                                <input type="checkbox" name="pkg-captcha" id="pkg-captcha">&ensp;Captcha&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Captcha</span></small></a>
+                              </label>
+                              <label for="pkg-login" class="field">
+                                <input type="checkbox" name="pkg-login" id="pkg-login">&ensp;Login&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Login</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Social Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Social Packages</legend>
+                              <label for="pkg-hybridauth" class="field">
+                                <input type="checkbox" name="pkg-hybridauth" id="pkg-hybridauth">&ensp;HybridAuth&ensp;<a href="#"><small>more info<span class="visually-hidden"> about HybridAuth</span></small></a>
+                              </label>
+                              <label for="pkg-twitterx" class="field">
+                                <input type="checkbox" name="pkg-twitterx" id="pkg-twitterx">&ensp;TwitterX&ensp;<a href="#"><small>more info<span class="visually-hidden"> about TwitterX</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>E&ndash;Commerce Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">E&ndash;Commerce Packages</legend>
+                              <label for="pkg-commerce" class="field">
+                                <input type="checkbox" name="pkg-commerce" id="pkg-commerce">&ensp;Commerce&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Commerce</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Cacheing Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Cacheing Packages</legend>
+                              <label for="pkg-getcache" class="field">
+                                <input type="checkbox" name="pkg-getcache" id="pkg-getcache" data-preset="blog">&ensp;getCache&ensp;<a href="#"><small>more info<span class="visually-hidden"> about getCache</span></small></a>
+                              </label>
+                              <label for="pkg-statcache" class="field">
+                                <input type="checkbox" name="pkg-statcache" id="pkg-statcache" data-preset="blog">&ensp;statCache&ensp;<a href="#"><small>more info<span class="visually-hidden"> about statCache</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                          <details open>
+                            <summary>Utility Packages</summary>
+                            <fieldset>
+                              <legend class="visually-hidden">Utility Packages</legend>
+                              <label for="pkg-getresources" class="field">
+                                <input type="radio" name="pkg-getresources-pdotools" id="pkg-getresources" data-preset="blog" data-pkg-exempt="pkg-pdotools">&ensp;getResources&ensp;<a href="https://modx.com/extras/package/getresources" target="_getResources"><small>more info<span class="visually-hidden"> about THIS</span></small></a>
+                              </label>
+                              <label for="pkg-pdotools" class="field">
+                                <input type="radio" name="pkg-getresources-pdotools" id="pkg-pdotools">&ensp;pdoTools&ensp;<a href="#"><small>more info<span class="visually-hidden"> about pdoTools</span></small></a>
+                              </label>
+                              <label for="pkg-contextrouter" class="field">
+                                <input type="checkbox" name="pkg-contextrouter" id="pkg-contextrouter">&ensp;ContextRouter&ensp;<a href="#"><small>more info<span class="visually-hidden"> about ContextRouter</span></small></a>
+                              </label>
+                              <label for="pkg-quickstart-buttons" class="field">
+                                <input type="checkbox" name="pkg-quickstart-buttons" id="pkg-quickstart-buttons">&ensp;QuickStart Buttons&ensp;<a href="#"><small>more info<span class="visually-hidden"> about QuickStart Buttons</span></small></a>
+                              </label>
+                              <label for="pkg-client-config" class="field">
+                                <input type="checkbox" name="pkg-client-config" id="pkg-client-config">&ensp;ClientConfig&ensp;<a href="#"><small>more info<span class="visually-hidden"> about ClientConfig</span></small></a>
+                              </label>
+                              <label for="pkg-scheduler" class="field">
+                                <input type="checkbox" name="pkg-scheduler" id="pkg-scheduler">&ensp;Scheduler&ensp;<a href="#"><small>more info<span class="visually-hidden"> about Scheduler</span></small></a>
+                              </label>
+                              <label for="pkg-boilerX" class="field">
+                                <input type="checkbox" name="pkg-boilerX" id="pkg-boilerX">&ensp;HTML5 Boilerplate&ensp;<a href="#"><small>more info<span class="visually-hidden"> about HTML5 Boilerplate</span></small></a>
+                              </label>
+                            </fieldset>
+                          </details>
+                        </div>
+                      </fieldset>
+
+
+
+                    </div-->
+
+
+
+                  </details>
+
+
+                  <hr>
+            </div>
+
+                <!--details>
+                    <summary>Sponsored Messages</summary>
+                    <div>
+                        <ul>
+                            <li><a href="#">Get Swag</a></li>
+                            <li><a href="#">Book a session with a Certified MODX Consultant</a></li>
+                            <li><a href="#">Browse Premium MODX Extras</a></li>
+
+                        </ul>
+                    </div>
+                </details-->
+
+            </div>
+
+
+            <details>
+              <summary>Choose a Theme</summary>
+              <div>
+                <p>With MODX you can start from scratch or with your favorite theme. WIP.</p>
+              </div>
+            </details>
+            <details id="inject-teleport-snapshots">
+              <summary>Inject Teleport Snapshots</summary>
+              <div>
+                <p class="balanced"><a href="#">MODX Teleport allows you to do cool stuff</a>. Inject one or more snapshots&nbsp;below.</p>
+                <div class="balanced">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Transport package</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>complete.package.zip</code></td>
+                        <td>
+                          <button type="button" class="very subtle dangerous">Remove <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                  <table class="action-row">
+                    <thead>
+                      <tr>
+                        <th class="name">Transport package</th>
+                        <th class="visually-hidden">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr tabindex="0">
+                        <td class="name"><code>complete.package.zip</code></td>
+                        <td class="actions">
+                          <button type="button" class="very subtle dangerous" name="remove">Remove <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                          <button type="button" class="very subtle" name="move-up">Move up <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                          <button type="button" class="very subtle" name="move-down">Move down <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                        </td>
+                      </tr>
+                      <tr tabindex="0">
+                        <td class="name"><code>users.package.zip</code></td>
+                        <td class="actions">
+                          <button type="button" class="very subtle dangerous" name="remove">Remove <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                          <button type="button" class="very subtle" name="move-up">Move up <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                          <button type="button" class="very subtle" name="move-down">Move down <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                        </td>
+                      </tr>
+                      <tr tabindex="0">
+                        <td class="name"><code>develop.package.zip</code></td>
+                        <td class="actions">
+                          <button type="button" class="very subtle dangerous" name="remove">Remove <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                          <button type="button" class="very subtle" name="move-up">Move up <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                          <button type="button" class="very subtle" name="move-down">Move down <span class="visually-hidden"><code>complete.package.zip</code> snapshot</span></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <button class="subtle balanced">Upload Teleport Snapshot</button>
+                  <!--button class="subtle balanced">Add Teleport Snapshot by URL</button-->
+                </div>
+              </div>
+            </details>
+            <hr>
+            <!--details>
+              <summary>Enhance MODX with Premium Extras</summary>
+              <div>
+                <ul>
+                  <li>
+                    <a href="https://modmore.com" target="_modmore">modmore</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_modstore">modstore</a>
+                  </li>
+                </ul>
+              </div>
+            </details-->
+            <details>
+                <summary>Explore the MODX Community</summary>
+                <div>
+                    <ul>
+                        <li><a href="#">MODX Forums</a></li>
+                        <li><a href="#">MODX Slack Channel</a></li>
+                        <li><a href="#">Follow MODX on Twitter</a></li>
+                        <li><a href="#">Follow MODX on GitHub</a></li>
+                        <li><a href="#">MODX on LinkedIn</a></li>
+                        <li><a href="#">MODX Facebook Page</a></li>
+                        <li><a href="#">Find a MODX Meetup near you</a></li>
+                    </ul>
+                </div>
+            </details>
+            <p aria-hidden id="youve-chosen-premium" class="subtle balanced oblique">You've chosen to install <span class="num-extras"></span><span class="premium-packages">premium packages</span> as 14 day hassle&ndash;free&nbsp;trial<br>No payment is due at this time</p>
+
+            <footer>
+              <div class="button-bar">
+                <a href="#" class="primary button">Login to MODX<span class="visually-hidden"> to Installation Options</span></a>
+              </div>
+            </footer>
+        </div>
+    </section>
+      </div>
+
+
+
+
+
+    </main>
+
+    <script>
+
+    </script>
+
+    <script src="assets/js/modx-setup.js"></script>
+
+    <!--script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script-->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function() {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = 'https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
