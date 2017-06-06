@@ -1,6 +1,8 @@
 # modx-setup
 Reimagining the MODX installation process. WIP.
 
+I'll rejoice the day I hear someone say "I installed MODX right from my hosting account, told the installer what I want, and was making my own website within an hour. Wanna see it?" and someone asks "What packages did you use?" and they reply "What's a package?"
+
 ## Demo
 [Try the demo](https://jpdevries.github.io/modx-setup/).
 
